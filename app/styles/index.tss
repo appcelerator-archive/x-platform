@@ -1,4 +1,5 @@
 ".container" : {
-	backgroundColor:'white'
+	backgroundColor:'white',
+	navBarHidden:true
 }
 
