@@ -1,0 +1,9 @@
+<Alloy>
+	<View>
+		<View class="container">
+			<View id="topbar">
+				<ImageView id="menuicon"/>
+			</View>
+		</View>
+	</View>
+</Alloy>

@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Chart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="ChartsLib.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div>
+    <canvas id="myChart"> </canvas>
+</div>
+<script>
+Ti.App.addEventListener('renderChart', function(options) {
+ 
+    var canvas = document.getElementById('myChart');
+    canvas.width = 200;
+    canvas.height = 190;
+ 
+    var data = {
+	    labels : ["Day1","Day2","Day3","Day4","Day5"],
+	    datasets : [
+	        {
+	            fillColor : "rgba(220,220,220,0.5)",
+	            strokeColor : "rgba(220,220,220,1)",
+	            pointColor : "rgba(220,220,220,1)",
+	            pointStrokeColor : "#fff",
+	            data : options.data
+	        },
+	    ]
+	};
+ 
+    var ctx = document.getElementById("myChart").getContext("2d");
+    new Chart(ctx).Line(data,options);
+    //Ti.API.info(ctx);
+});
+</script>
+</body>
+</html>

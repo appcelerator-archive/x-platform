@@ -1,0 +1,306 @@
+<h1>Cryptor Object</h1>
+
+<h2>Description</h2>
+
+<p>The Cryptor object provides access to a number of symmetric encryption algorithms. Symmetric encryption
+algorithms come in two "flavors" - block ciphers, and stream ciphers. Block ciphers process data (while
+both encrypting and decrypting) in discrete chunks of data called blocks; stream ciphers operate on
+arbitrary sized data.</p>
+
+<p>The Cryptor object provides access to both block ciphers and stream ciphers with the same API; however some options are available for block ciphers that do not apply to stream ciphers.
+The Android version of this module only exposes block ciphers.</p>
+
+<p>The general operation of a Cryptor is: </p>
+
+<ol>
+<li>Initialize it with raw key data and other optional fields with crypto.createCryptor()</li>
+<li>Process input data via one or more calls to cryptor.update()</li>
+<li>Obtain possible remaining output data with cryptor.final()</li>
+<li>The cryptor object is disposed of by setting the cryptor variable to null. The cryptor object can be reused (with the same key data as provided to crypto.createCryptor()) by calling cryptor.reset() or cryptor.release().</li>
+</ol>
+
+<p>Alternatively, cryptor.encrypt() and cryptor.decrypt() methods are provided for a stateless, one-shot encrypt or decrypt operation.</p>
+
+<h2>Methods</h2>
+
+<h3>createCryptor</h3>
+
+<p>Creates a crypto.cryptor object for use in encrypting or decrypting data.</p>
+
+<h4>Arguments</h4>
+
+<p>Takes one argument, a dictionary with keys:</p>
+
+<ul>
+<li>operation[int]: The cryptor operation to perform (default: crypto.ENCRYPT)
+<ul>
+<li>crypto.ENCRYPT</li>
+<li>crypto.DECRYPT</li>
+</ul></li>
+<li>algorithm[int]: The cryptor algorithm for the operation (default: crypto.ALGORITHM_AES128)
+<ul>
+<li>crypto.ALGORITHM_AES128</li>
+<li>crypto.ALGORITHM_DES</li>
+<li>crypto.ALGORITHM_3DES</li>
+<li>crypto.ALGORITHM_CAST</li>
+<li>crypto.ALGORITHM_RC4</li>
+<li>crypto.ALGORITHM_RC2</li>
+</ul></li>
+<li>options[int]: The cryptor options for the operation (default: 0)
+<ul>
+<li>crypto.OPTION_PKCS7PADDING</li>
+<li>crypto.OPTION_ECBMODE</li>
+</ul></li>
+<li>key[buffer]: The Titanium.Buffer object containing the encryption key</li>
+<li>initializationVector[buffer]: The Titanium.Buffer object containing the initialization vector. If no initialization vector is provided, an initialization vector of all zeroes will be used.</li>
+</ul>
+
+<h4>Properties</h4>
+
+<ul>
+<li><p>resizeBuffer[boolean]: Indicates if the dataOut buffer should be resized to the size needed to hold the result of the operation. Default is true.</p></li>
+<li><p>Each of the arguments listed for the createCryptor method can also be accessed as properties.</p></li>
+</ul>
+
+<h4>Example</h4>
+
+<pre>
+    var cryptor = crypto.createCryptor({
+        algorithm: crypto.ALGORITHM_AES128,
+        options: crypto.OPTION_PKCS7PADDING,
+        key: key,
+        initializationVector: initializationVector
+    });
+</pre>
+
+<h3>encrypt</h3>
+
+<p>Stateless, one-shot encryption operation.</p>
+
+<h4>Arguments</h4>
+
+<ul>
+<li>dataIn[buffer]: The Titanium.Buffer object containing the data to encrypt</li>
+<li>dataInLength[int]: (optional) The number of bytes in the dataIn buffer to encrypt. If this argument is not provided or is &lt; 0, then the length of the dataIn buffer will be used.</li>
+<li>dataOut[buffer]: (optional) The Titanium.Buffer object to receive the encrypted data. If this argument is not provided, then the dataIn buffer will be used. 
+<ul>
+<li>If the cryptor.resizeBuffer property is set to true, then the dataOut buffer will be resized to the size of the encrypted data</li>
+<li>If the cryptor.resizeBuffer property is set to false, then ensure that the dataOut buffer is large enough to receive the encrypted data.</li>
+</ul></li>
+<li>dataOutLength[int]: (optional) The number of bytes available in the dataOut buffer. If this argument is not provided or is &lt; 0, then the length of the dataOut buffer will be used.</li>
+</ul>
+
+<h4>Return Value</h4>
+
+<p>Returns the number of bytes encrypted into the dataOut buffer. If an error occurred, then the return value will be less than zero and will be one of the following values:</p>
+
+<ul>
+<li>crypto.STATUS_ERROR</li>
+<li>crypto.STATUS_PARAMERROR</li>
+<li>crypto.STATUS_BUFFERTOOSMALL</li>
+<li>crypto.STATUS_MEMORYFAILURE</li>
+<li>crypto.STATUS_ALIGNMENTERROR</li>
+<li>crypto.STATUS_DECODEERROR</li>
+<li>crypto.STATUS_UNIMPLEMENTED</li>
+</ul>
+
+<h4>Example</h4>
+
+<pre>
+    // Encrypt the entire buffer
+    var numBytes = cryptor.encrypt(bufferIn, -1, bufferOut, -1);
+    -or-
+    // Encrypt in-place
+    var numBytes = cryptor.encrypt(bufferIn);
+</pre>
+
+<h3>decrypt</h3>
+
+<p>Stateless, one-shot decryption operation.</p>
+
+<h4>Arguments</h4>
+
+<ul>
+<li>dataIn[buffer]: The Titanium.Buffer object containing the data to decrypt</li>
+<li>dataInLength[int]: (optional) The number of bytes in the dataIn buffer to decrypt. If this argument is not provided or is &lt; 0, then the length of the dataIn buffer will be used.</li>
+<li>dataOut[buffer]: (optional) The Titanium.Buffer object to receive the decrypted data. If this argument is not provided, then the dataIn buffer will be used. 
+<ul>
+<li>If the cryptor.resizeBuffer property is set to true, then the dataOut buffer will be resized to the size of the decrypted data</li>
+<li>If the cryptor.resizeBuffer property is set to false, then ensure that the dataOut buffer is large enough to receive the decrypted data.</li>
+</ul></li>
+<li>dataOutLength[int]: (optional) The number of bytes available in the dataOut buffer. If this argument is not provided or is &lt; 0, then the length of the dataOut buffer will be used.</li>
+</ul>
+
+<h4>Return Value</h4>
+
+<p>Returns the number of bytes decrypted into the dataOut buffer. If an error occurred, then the return value will be less than zero and will be one of the following values:</p>
+
+<ul>
+<li>crypto.STATUS_ERROR</li>
+<li>crypto.STATUS_PARAMERROR</li>
+<li>crypto.STATUS_BUFFERTOOSMALL</li>
+<li>crypto.STATUS_MEMORYFAILURE</li>
+<li>crypto.STATUS_ALIGNMENTERROR</li>
+<li>crypto.STATUS_DECODEERROR</li>
+<li>crypto.STATUS_UNIMPLEMENTED</li>
+</ul>
+
+<h4>Example</h4>
+
+<pre>
+    // Decrypt the entire buffer
+    var numBytes = cryptor.decrypt(bufferIn, -1, bufferOut, -1);
+    -or-
+    // Decrypt in-place
+    var numBytes = cryptor.decrypt(bufferIn);
+</pre>
+
+<h3>getOutputLength</h3>
+
+<p>getOutputLength is used to determine the output buffer size required to process a given input size.</p>
+
+<h4>Arguments</h4>
+
+<ul>
+<li>dataInLength[int]: The number of bytes for the operation</li>
+<li>final[boolean]: Indicates if the calculation is for determining the output buffer size for a call to cryptor.final() or cryptor.update(). Set to true for cryptor.final() and false for cryptor.update().</li>
+</ul>
+
+<h4>Return Value</h4>
+
+<p>Returns the number of bytes required for the output buffer</p>
+
+<h4>Example</h4>
+
+<pre>
+    var numBytesNeeded = cryptor.getOutputLength(bufferIn.length, false);
+</pre>
+
+<h3>update</h3>
+
+<p>update is used to encrypt or decrypt data.  This method can be called multiple times. The caller does not need to align input data lengths to block sizes; input is buffered as necessary for block ciphers.</p>
+
+<h4>Arguments</h4>
+
+<ul>
+<li>dataIn[buffer]: The Titanium.Buffer object containing the input data</li>
+<li>dataInLength[int]: (optional) The number of bytes in the dataIn buffer to process. If this argument is not provided or is &lt; 0, then the length of the dataIn buffer will be used.</li>
+<li>dataOut[buffer]: (optional) The Titanium.Buffer object to receive the output data. If this argument is not provided, then the dataIn buffer will be used. 
+<ul>
+<li>If the cryptor.resizeBuffer property is set to true, then the dataOut buffer will be resized to the size of the output data</li>
+<li>If the cryptor.resizeBuffer property is set to false, then ensure that the dataOut buffer is large enough to receive the output data.</li>
+</ul></li>
+<li>dataOutLength[int]: (optional) The number of bytes available in the dataOut buffer. If this argument is not provided or is &lt; 0, then the length of the dataOut buffer will be used.</li>
+</ul>
+
+<h4>Return Value</h4>
+
+<p>Returns the number of bytes moved into the dataOut buffer. If an error occurred, then the return value will be less than zero and will be one of the following values:</p>
+
+<ul>
+<li>crypto.STATUS_ERROR</li>
+<li>crypto.STATUS_PARAMERROR</li>
+<li>crypto.STATUS_BUFFERTOOSMALL</li>
+<li>crypto.STATUS_MEMORYFAILURE</li>
+<li>crypto.STATUS_ALIGNMENTERROR</li>
+<li>crypto.STATUS_DECODEERROR</li>
+<li>crypto.STATUS_UNIMPLEMENTED</li>
+</ul>
+
+<h4>Example</h4>
+
+<pre>
+    // Encrypt the entire buffer into a buffer of fixed size
+    var numBytes = cryptor.update(buffer, -1, fixedBuffer);
+</pre>
+
+<h3>finish</h3>
+
+<p>Finishes encryption and decryption operations and obtains the final data output.</p>
+
+<h4>Arguments</h4>
+
+<ul>
+<li>dataOut[buffer]: The Titanium.Buffer object to receive the output data.
+<ul>
+<li>If the cryptor.resizeBuffer property is set to true, then the dataOut buffer will be resized to the size of the output data</li>
+<li>If the cryptor.resizeBuffer property is set to false, then ensure that the dataOut buffer is large enough to receive the output data.</li>
+</ul></li>
+<li>dataOutLength[int]: (optional) The number of bytes available in the dataOut buffer. If this argument is not provided or is &lt; 0, then the length of the dataOut buffer will be used.</li>
+</ul>
+
+<h4>Return Value</h4>
+
+<p>Returns the number of bytes moved into the dataOut buffer. If an error occurred, then the return value will be less than zero and will be one of the following values:</p>
+
+<ul>
+<li>crypto.STATUS_ERROR</li>
+<li>crypto.STATUS_PARAMERROR</li>
+<li>crypto.STATUS_BUFFERTOOSMALL</li>
+<li>crypto.STATUS_MEMORYFAILURE</li>
+<li>crypto.STATUS_ALIGNMENTERROR</li>
+<li>crypto.STATUS_DECODEERROR</li>
+<li>crypto.STATUS_UNIMPLEMENTED</li>
+</ul>
+
+<h4>Example</h4>
+
+<pre>
+    var numBytes = cryptor.final(fixedBuffer)
+</pre>
+
+<h3>reset</h3>
+
+<p>reset reinitializes an existing cryptor object with a (possibly) new initialization vector.</p>
+
+<h4>Arguments</h4>
+
+<ul>
+<li>initializationVector[buffer]: (optional) The Titanium.Buffer object containing the initialization vector.</li>
+</ul>
+
+<h4>Return Value</h4>
+
+<ul>
+<li>crypto.STATUS_SUCCESS</li>
+<li>crypto.STATUS_ERROR</li>
+<li>crypto.STATUS_PARAMERROR</li>
+<li>crypto.STATUS_BUFFERTOOSMALL</li>
+<li>crypto.STATUS_MEMORYFAILURE</li>
+<li>crypto.STATUS_ALIGNMENTERROR</li>
+<li>crypto.STATUS_DECODEERROR</li>
+<li>crypto.STATUS_UNIMPLEMENTED</li>
+</ul>
+
+<h4>Example</h4>
+
+<pre>
+    cryptor.reset(initializationVector);
+</pre>
+
+<h3>release</h3>
+
+<p>release will dispose of the internal cryptor data</p>
+
+<h4>Return Value</h4>
+
+<ul>
+<li>crypto.STATUS_SUCCESS</li>
+<li>crypto.STATUS_ERROR</li>
+<li>crypto.STATUS_PARAMERROR</li>
+<li>crypto.STATUS_BUFFERTOOSMALL</li>
+<li>crypto.STATUS_MEMORYFAILURE</li>
+<li>crypto.STATUS_ALIGNMENTERROR</li>
+<li>crypto.STATUS_DECODEERROR</li>
+<li>crypto.STATUS_UNIMPLEMENTED</li>
+</ul>
+
+<h4>Example</h4>
+
+<pre>
+    cryptor.release();
+</pre>
+
+<h2>License</h2>
+
+<p>Copyright(c) 2010-2013 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.</p>

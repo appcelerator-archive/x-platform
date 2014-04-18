@@ -1,0 +1,28 @@
+<Alloy>
+	<View class="container">
+		<View id="home" class="menuItemHome">
+			<Label  text="Home">
+		</View>
+		<View id="item2" class="menuItem">
+			<Label text="Map">
+		</View>
+		<View id="item3" class="menuItem">
+			<Label  text="Camera & Photo">
+		</View>
+		<View id="item4" class="menuItem">
+			<Label  text="Barcode">
+		</View>
+		<View id="item5" class="menuItem">
+			<Label text="Charts">
+		</View>
+		<View id="item6" class="menuItem">
+			<Label text="Calendar">
+		</View>
+		<View id="item7" class="menuItem">
+			<Label  text="Encryption">
+		</View>
+		<View id="item8" class="menuItem">
+			<Label  text="Push Notifications">
+		</View>
+	</View>
+</Alloy>

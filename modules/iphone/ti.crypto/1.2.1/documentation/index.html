@@ -1,0 +1,221 @@
+<h1>crypto Module</h1>
+
+<h2>Description</h2>
+
+<p>This module provides access to various encryption and decryption algorithms, and string encodings.</p>
+
+<h2>Getting Started</h2>
+
+<p>View the <a href="http://docs.appcelerator.com/titanium/latest/#!/guide/Using_Titanium_Modules">Using Titanium Modules</a> document for instructions on getting
+started with using this module in your application.</p>
+
+<h2>Accessing the crypto Module</h2>
+
+<p>To access this module from JavaScript, you would do the following:</p>
+
+<pre><code>var crypto = require("ti.crypto");
+</code></pre>
+
+<p>The crypto variable is a reference to the Module object.    </p>
+
+<h2>Reference</h2>
+
+<p>Use the following link(s) to learn more about using the crypto APIs:</p>
+
+<ul>
+<li><a href="http://developer.apple.com/library/ios/#documentation/System/Conceptual/ManPages_iPhoneOS/man3/CCCrypt.3cc.html">iOS Developer Library - Mac OS X Manual Page for CCCrypt(3cc)</a></li>
+</ul>
+
+<h2>Methods</h2>
+
+<h3>createCryptor</h3>
+
+<p>Creates a <a href="cryptor.html">crypto.cryptor</a> object for encrypting and decrypting data. See <a href="cryptor.html">Cryptor</a> for parameters of this method as well as the methods for performing the actual encryption and decryption operations.</p>
+
+<h3>decodeData</h3>
+
+<p>Decodes a source buffer into a string using the specified data type. This is a codec method used for converting data from a source buffer into a displayable string.</p>
+
+<h4>Arguments</h4>
+
+<p>Takes one argument, a dictionary with keys:</p>
+
+<ul>
+<li>source[buffer]: The Titanium.Buffer to decode</li>
+<li>type[string]: The format of the returned string:
+<ul>
+<li>crypto.TYPE_BASE64STRING - result is a base64 encoded string</li>
+<li>crypto.TYPE_HEXSTRING - result is a hexadecimal formatted string</li>
+</ul></li>
+</ul>
+
+<h4>Return Value</h4>
+
+<p>Returns the decoded string</p>
+
+<h4>Example</h4>
+
+<pre>
+    // Set the value of the encrypted text (base64 encoded for readability)
+    cipherTextField.value = crypto.decodeData({
+        source: buffer,
+        type: App.crypto.TYPE_BASE64STRING
+    });
+</pre>
+
+<h3>encodeData</h3>
+
+<p>Encodes the source into the destination buffer using the specified data type. This is a codec method used for converting data to a destination buffer.</p>
+
+<h4>Arguments</h4>
+
+<p>Takes one argument, a dictionary with keys:</p>
+
+<ul>
+<li>source[object]: The data to encode (see 'type' for supported object types)</li>
+<li>dest[buffer]: The Titanium.Buffer to receive the encoded data</li>
+<li>destPosition[int]: The position in dest to set the encoded data (optional, default is 0)</li>
+<li>type[string]: The data type of the source object:
+<ul>
+<li>crypto.TYPE_BASE64STRING - source is a base64 encoded string</li>
+<li>crypto.TYPE_HEXSTRING - source is a hexadecimal formatted string</li>
+<li>crypto.TYPE_BLOB - source is a Titanium.Blob object</li>
+</ul></li>
+</ul>
+
+<h4>Return Value</h4>
+
+<p>Returns the position after the encoded data inside the destination.</p>
+
+<h4>Example</h4>
+
+<pre>
+    // Load the buffer with the base64encoded value from the encrypted text field
+    var buffer = Ti.createBuffer({ length: cipherTextField.value.length });
+    var length = crypto.encodeData({
+        source: cipherTextField.value,
+        dest: buffer,
+        type: App.crypto.TYPE_BASE64STRING
+    });     
+    
+</pre>
+
+<h2>Constants</h2>
+
+<h3>Cryptor Status Codes</h3>
+
+<h4>crypto.STATUS_SUCCESS</h4>
+
+<h4>crypto.STATUS_ERROR</h4>
+
+<h4>crypto.STATUS_PARAMERROR</h4>
+
+<h4>crypto.STATUS_BUFFERTOOSMALL</h4>
+
+<h4>crypto.STATUS_MEMORYFAILURE</h4>
+
+<h4>crypto.STATUS_ALIGNMENTERROR</h4>
+
+<h4>crypto.STATUS_DECODEERROR</h4>
+
+<h4>crypto.STATUS_UNIMPLEMENTED</h4>
+
+<h3>Cryptor Operations</h3>
+
+<h4>crypto.ENCRYPT</h4>
+
+<h4>crypto.DECRYPT</h4>
+
+<h3>Cryptor Algorithms</h3>
+
+<h4>crypto.ALGORITHM_AES128</h4>
+
+<h4>crypto.ALGORITHM_DES</h4>
+
+<h4>crypto.ALGORITHM_3DES</h4>
+
+<h4>crypto.ALGORITHM_CAST</h4>
+
+<h4>crypto.ALGORITHM_RC4</h4>
+
+<h4>crypto.ALGORITHM_RC2</h4>
+
+<h3>Cryptor Options</h3>
+
+<h4>crypto.OPTION_PKCS7PADDING</h4>
+
+<h4>crypto.OPTION_ECBMODE</h4>
+
+<h3>Cryptor Key Sizes</h3>
+
+<h4>crypto.KEYSIZE_AES128</h4>
+
+<h4>crypto.KEYSIZE_AES192</h4>
+
+<h4>crypto.KEYSIZE_AES256</h4>
+
+<h4>crypto.KEYSIZE_DES</h4>
+
+<h4>crypto.KEYSIZE_3DES</h4>
+
+<h4>crypto.KEYSIZE_MINCAST</h4>
+
+<h4>crypto.KEYSIZE_MAXCAST</h4>
+
+<h4>crypto.KEYSIZE_MINRC4</h4>
+
+<h4>crypto.KEYSIZE_MAXRC4</h4>
+
+<h4>crypto.KEYSIZE_MINRC2</h4>
+
+<h4>crypto.KEYSIZE_MINRC2</h4>
+
+<h3>Cryptor Block Sizes</h3>
+
+<h4>crypto.BLOCKSIZE_AES128</h4>
+
+<h4>crypto.BLOCKSIZE_DES</h4>
+
+<h4>crypto.BLOCKSIZE_3DES</h4>
+
+<h4>crypto.BLOCKSIZE_CAST</h4>
+
+<h4>crypto.BLOCKSIZE_RC2</h4>
+
+<h3>Data Types</h3>
+
+<h4>crypto.TYPE_BLOB - A Titanium.Blob object</h4>
+
+<h4>crypto.TYPE_HEXSTRING - A hexadecimal formatted string. Each byte is represented by 2 hexadecimal numbers.</h4>
+
+<h4>crypto.TYPE_BASE64STRING - A Base64 encoded string</h4>
+
+<h2>Using this module</h2>
+
+<ul>
+<li>Copy the module zip file into the root folder of your Titanium application or in the Titanium system folder (e.g. /Library/Application Support/Titanium). </li>
+<li>Set the <code>&lt;module&gt;</code> element in tiapp.xml, such as this: 
+<modules> 
+    <module version="1.0" platform="iphone">ti.crypto</module> 
+</modules> </li>
+</ul>
+
+<h2>Usage</h2>
+
+<p>See example.</p>
+
+<h2>Author</h2>
+
+<p>Jeff English</p>
+
+<h2>Module History</h2>
+
+<p>View the <a href="changelog.html">change log</a> for this module.</p>
+
+<h2>Feedback and Support</h2>
+
+<p>Please direct all questions, feedback, and concerns to <a href="mailto:info@appcelerator.com?subject=iOS%20Crypto%20Module">info@appcelerator.com</a>.</p>
+
+<h2>License</h2>
+
+<p>Copyright(c) 2010-2013 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.</p>

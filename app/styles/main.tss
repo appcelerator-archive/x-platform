@@ -1,0 +1,24 @@
+".container[platform=ios]" : {
+	layout:"vertical",
+	width:"100%",
+	backgroundColor:'white',
+	top:20
+},
+".container[platform=android]" : {
+	layout:"vertical",
+	width:"100%",
+	backgroundColor:'white'
+},
+"#topbar" :{
+	width:'100%',
+	height:40,
+	backgroundColor:'#a22621'
+},
+"#menuicon" :{
+	width:45,
+	height:45,
+	image:'/menu-icon.png',
+	left:10
+}
+
+
