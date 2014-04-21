@@ -1,0 +1,9 @@
+<Alloy>
+	<TableViewRow id="couponRow">
+		<View id="rowView">
+			<Label id="rowTitle"/>
+			<Label id="rowSubtitle"/>
+		</View>
+		<View id="divider"></View>
+	</TableViewRow>
+</Alloy>
