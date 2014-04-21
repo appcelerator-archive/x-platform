@@ -9,6 +9,11 @@
 	width:"100%",
 	backgroundColor:'white'
 },
+".container[platform=mobileweb]" : {
+	layout:"vertical",
+	width:"100%",
+	backgroundColor:'white'
+},
 "#topbar" :{
 	width:'100%',
 	height:40,

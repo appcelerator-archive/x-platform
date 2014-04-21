@@ -7,6 +7,10 @@
 	backgroundColor:'#333',
 	layout:'vertical'
 },
+".container[platform=mobileweb]" : {
+	backgroundColor:'#333',
+	layout:'vertical'
+},
 ".menuItemHome" : {
 	backgroundColor:'#555',
 	width:'100%',
