@@ -5,6 +5,7 @@
 				<ImageView id="menuicon"/>
 				<Label id="winTitle"/>
 			</View>
+			<ScrollView id="sectionsView">
 			<View id="introSection" >
 				<Label id="welcome"/>
 				<Label id="introtext"/>
@@ -24,6 +25,7 @@
 				<View id="geolocator"></View>
 				
 			</View>
-		</View>
+		</ScrollView>
+	</View>
 	</View>
 </Alloy>

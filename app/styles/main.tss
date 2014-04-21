@@ -14,6 +14,11 @@
 	width:"100%",
 	backgroundColor:'white'
 },
+"#sectionsView" :{
+	layout:"vertical",
+	width:"100%",
+	backgroundColor:'white'
+},
 "#topbar" :{
 	width:'100%',
 	height:45,
@@ -84,7 +89,7 @@
 },
 "#geolocationSection" :{
 	layout: "vertical",
-	height: Ti.UI.SIZE,
+	height: 100,
 	width: "100%",
 	top: '-3'
 },

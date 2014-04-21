@@ -1,6 +1,6 @@
 
 //params
-var introduction = "This application demonstrates the cross-platform capabilities of the Appcelerator platform. The application supports iOS, Android, Windows Mobile, Blackberry, Tizen, and mobile web. \n \n Open the menu to see various demonstrations; some demonstrations are also visible below.";
+var introduction = "This application demonstrates the cross-platform capabilities of the Appcelerator platform. The application supports iOS, Android, Windows Mobile, Blackberry, Tizen, and mobile web. \n \nOpen the menu to see various demonstrations; some demonstrations are also visible below.";
 var data = [];
 //coupons data
 var couponsArray = [

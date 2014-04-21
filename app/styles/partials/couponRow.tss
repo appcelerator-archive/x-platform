@@ -1,6 +1,7 @@
 "#couponRow" :{
 	height: "80",
-	backgroundColor :"#ffffff"
+	backgroundColor :"#ffffff",
+	selectionStyle: "none"
 },
 "#rowView" :{
 	backgroundImage: "/images/tablebk.png",
