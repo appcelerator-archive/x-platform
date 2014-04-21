@@ -1,5 +1,8 @@
 var menuOpen = false;
 
+/**
+ * This function show/hides the side menu
+ * */
 var showhidemenu=function(){
 	if (menuOpen){
 		moveTo="0";
