@@ -14,7 +14,7 @@
 				<View id="couponTitleView" class= "sectionHeader">
 					<Label id="couponsTitle" class="sectionTitle"/>
 				</View>
-				<TableView id="couponsTable">
+				<TableView id="couponsTable" onClick="couponClick">
 				</TableView>
 				
 			</View>

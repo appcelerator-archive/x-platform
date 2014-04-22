@@ -39,7 +39,7 @@
 },
 "#introSection" :{
 	layout:"vertical",
-	height:"31%",
+	height:"35%",
 	backgroundColor:"transparent",
 	left: 10,
 	right: 5
@@ -57,7 +57,7 @@
 	top: 10,
 	left: 2,
 	right: 0,
-	bottom: 10,
+	bottom: 5,
 	font:{fontSize: "11"},
 	color: "#555",
 	textAlign: "left"
@@ -95,6 +95,10 @@
 },
 "#geolocationTitle" :{
 	text: "Geolocation"
+},
+"#geolocator" :{
+	height: 100,
+	width: "100%"
 }
 
 
