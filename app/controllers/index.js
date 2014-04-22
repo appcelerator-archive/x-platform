@@ -2,15 +2,21 @@
  * Initializes home
  * */
 function initialize() {
+	// Create menu controller
+	var menu =Alloy.createController("menu");
+	
 	// Add view to menu container exposed by widget
-	$.drawermenu.drawermenuview.add(Alloy.createController("menu").getView());
+	$.drawermenu.drawermenuview.add(menu.getView());
 
 	//Create main view controller
 	var main = Alloy.createController("main");
 
 	//Add click event listener to open/close menu
 	main.menuicon.addEventListener('click', $.drawermenu.showhidemenu);
-
+	
+	//Add click event listener to open/close menu
+	menu.map.addEventListener('click', openMap);
+	
 	// Add view to main view container exposed by widget
 	$.drawermenu.drawermainview.add(main.getView());
 
@@ -21,6 +27,14 @@ function initialize() {
 
 }
 
+/*
+ * EVENT LISTENERS
+ */
+function openMap(){
+	$.drawermenu.showhidemenu();
+	var map = Alloy.createController("map").getView();
+	map.open();
+}
 
 initialize();
 

@@ -1,0 +1,18 @@
+"#locationRow" :{
+	height: "40",
+	backgroundColor :"#ffffff",
+	selectionStyle: "none"
+},
+"#rowView" :{
+	backgroundColor: "#eeeeee",
+	width:"100%",
+	top: 0,
+	bottom: 5,
+	touchEnabled: false
+},
+"#rowTitle" : {
+	width: "auto",
+	left: 20,
+	font: {fontSize :"12"},
+	touchEnabled: false
+}

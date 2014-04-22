@@ -3,6 +3,11 @@
 var introduction = "This application demonstrates the cross-platform capabilities of the Appcelerator platform. The application supports iOS, Android, Windows Mobile, Blackberry, Tizen, and mobile web. \n \nOpen the menu to see various demonstrations; some demonstrations are also visible below.";
 var data = [];
 var favoriteCoupons = [];
+
+//Setup V2 Maps Module
+var Map = require('ti.map');
+var mapview = Map.createView({mapType:Map.NORMAL_TYPE});
+
 //coupons data
 var couponsArray = [
 	{title: "GET 50% OFF", subtitle: "COUPON 1"},
@@ -21,10 +26,7 @@ $.introtext.text = introduction;
 $.couponsTable.data = data;
 
  // Geo-location Section
-if(OS_IOS){
 	//adding a map view
-var Map = require('ti.map');
-var mapview = Map.createView({mapType:Map.STANDARD_TYPE});
 var annotations = Map.createAnnotation({});
 
 //Setup Geolocation
@@ -39,11 +41,15 @@ Ti.Geolocation.getCurrentPosition(function(e) {
 	annotations.title = "My Location";
 	annotations.animated = true;
 	
+	//setting the value of current location
+	Alloy.Globals.myLoc = annotations;
+	
 	}
 });
-mapview.annotations = [annotations];
+//adding annotations
+
+mapview.annotations= [annotations];
 $.geolocator.add(mapview);
-}
 
 //EVENT LISTENERS
 function couponClick(e){

@@ -3,25 +3,25 @@
 		<View id="home" class="menuItemHome">
 			<Label  text="Home">
 		</View>
-		<View id="item2" class="menuItem">
+		<View id="map" class="menuItem">
 			<Label text="Map">
 		</View>
-		<View id="item3" class="menuItem">
+		<View id="camera" class="menuItem">
 			<Label  text="Camera & Photo">
 		</View>
-		<View id="item4" class="menuItem">
+		<View id="barcode" class="menuItem">
 			<Label  text="Barcode">
 		</View>
-		<View id="item5" class="menuItem">
+		<View id="charts" class="menuItem">
 			<Label text="Charts">
 		</View>
-		<View id="item6" class="menuItem">
+		<View id="calendar" class="menuItem">
 			<Label text="Calendar">
 		</View>
-		<View id="item7" class="menuItem">
+		<View id="encryption" class="menuItem">
 			<Label  text="Encryption">
 		</View>
-		<View id="item8" class="menuItem">
+		<View id="pushNotification" class="menuItem">
 			<Label  text="Push Notifications">
 		</View>
 	</View>

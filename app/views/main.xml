@@ -22,7 +22,9 @@
 				<View id="geoTitleView" class= "sectionHeader">
 					<Label id="geolocationTitle" class="sectionTitle"/>
 				</View>
-				<View id="geolocator"></View>
+				<View id="geolocator">
+					
+				</View>
 				
 			</View>
 		</ScrollView>

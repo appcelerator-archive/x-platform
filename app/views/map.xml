@@ -1,4 +1,14 @@
 <Alloy>
+	<Window>
 	<View class="container">
+		<View id="topbar" >
+				<ImageView id="back" onClick="closeWin"/>
+				<Label id="winTitle"/>
+			</View>
+			<View id="mapView">
+				
+			</View>
+			<TableView id="table" onClick="tblClick"/>
 	</View>
+	</Window>
 </Alloy>

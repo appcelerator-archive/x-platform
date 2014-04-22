@@ -1,0 +1,8 @@
+<Alloy>
+	<TableViewRow id="locationRow">
+		<View id="rowView">
+			<Label id="rowTitle"/>
+		</View>
+		<View id="divider"></View>
+	</TableViewRow>
+</Alloy>
