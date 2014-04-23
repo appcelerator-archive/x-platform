@@ -28,5 +28,3 @@ Alloy.Globals.customMapView = (function(){
 		opacity:"50%"
 	});
 })();
-//Global variable for storing current location
-Alloy.Globals.myLoc= {latitude:37.389569, longitude:-122.051651, latitudeDelta:0.5, longitudeDelta:0.5};

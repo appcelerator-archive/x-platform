@@ -1,6 +1,7 @@
 "#table" : {
 	height:Ti.UI.SIZE,
-	layout:"vertical"
+	layout:"vertical",
+	separatorStyle: "none"
 }
 "#mapView" : {
 	height:"55%"
