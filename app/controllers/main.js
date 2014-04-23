@@ -1,4 +1,4 @@
-//Parameters
+//Initialization Parameters
 var currentLocation;
 var favoriteCoupons = [];
 
@@ -32,9 +32,13 @@ function initialize() {
 	setCurrentLocationInMap();
 }
 
-// HELPER METHODS
+/**
+ * HELPER METHODS
+ */
 
-//function to set current location
+/**
+ * function to set current location
+ */
 function setCurrentLocationInMap() {
 	// Geo-location Section
 	var Map = require('ti.map');
@@ -65,8 +69,9 @@ function setCurrentLocationInMap() {
 	mapview.annotations = [annotations];
 	$.geolocator.add(mapview);
 }
-
-//function to add coupons into the table
+/**
+*function to add coupons into the table
+*/
 function addCoupons(couponsArray) {
 	var data = [];
 	// add coupons data to coupons table
@@ -79,8 +84,13 @@ function addCoupons(couponsArray) {
 	}
 	$.couponsTable.data = data;
 }
+/**
+*EVENT LISTENERS
+*/
 
-//EVENT LISTENERS
+/**
+ * adds coupons to favorite coupons list
+ */
 function couponClick(e) {
 	Alloy.Globals.apm.leaveBreadcrumb("couponClick()");
 	Ti.Analytics.featureEvent('CouponClicked');
