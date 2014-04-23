@@ -1,10 +1,10 @@
 /**
- * Initializes home
+ * Home screen Initialization
  * */
 function initialize() {
 	// Create menu controller
-	var menu =Alloy.createController("menu");
-	
+	var menu = Alloy.createController("menu");
+
 	// Add view to menu container exposed by widget
 	$.drawermenu.drawermenuview.add(menu.getView());
 
@@ -13,31 +13,40 @@ function initialize() {
 
 	//Add click event listener to open/close menu
 	main.menuicon.addEventListener('click', $.drawermenu.showhidemenu);
-	
+
 	//Add click event listener to open/close menu
-	menu.map.addEventListener('click', openMap);
-	
+	menu.container.addEventListener('click', openChildWindow);
+
 	// Add view to main view container exposed by widget
 	$.drawermenu.drawermainview.add(main.getView());
 
 	//Setup Android Specific Items
 	if (OS_ANDROID) {
-		$.index.addEventListener("androidBack", $.drawermenu.showhidemenu);
+		$.mainWin.addEventListener("androidBack", $.drawermenu.showhidemenu);
 	}
-
+	if (OS_IOS) {
+		Alloy.Globals.navGroup = $.navGroup;
+	}
 }
 
-/*
- * EVENT LISTENERS
- */
-function openMap(){
-	$.drawermenu.showhidemenu();
-	var map = Alloy.createController("map").getView();
-	map.open();
+/**
+ * Opens the child window when menu item is clicked
+ * */
+function openChildWindow(e) {
+	var menuClicked = e.source.id;
+	if (e.source.id === 'home') {
+		$.drawermenu.showhidemenu();
+	} else {
+		if (e.source.id !== 'container') {
+			var childWindow = Alloy.createController(menuClicked).getView();
+			(OS_IOS) ? Alloy.Globals.navGroup.openWindow(childWindow) : childWindow.open();
+			$.drawermenu.showhidemenu();
+		}
+	}
 }
 
 initialize();
 
 //Open main window
-$.index.open();
+(OS_IOS) ? $.navGroup.open() : $.mainWin.open();
 

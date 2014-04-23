@@ -1,0 +1,8 @@
+<Alloy>
+	<View id="topbar">
+		<View id="imageContainer">
+			<ImageView id="back"/>
+		</View>	
+		<Label id="title"/>
+	</View>
+</Alloy>

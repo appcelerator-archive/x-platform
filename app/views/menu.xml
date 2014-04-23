@@ -1,5 +1,5 @@
 <Alloy>
-	<View class="container">
+	<View id="container" class="container">
 		<View id="home" class="menuItemHome">
 			<Label  text="Home">
 		</View>
@@ -21,7 +21,7 @@
 		<View id="encryption" class="menuItem">
 			<Label  text="Encryption">
 		</View>
-		<View id="pushNotification" class="menuItem">
+		<View id="pushnotifications" class="menuItem">
 			<Label  text="Push Notifications">
 		</View>
 	</View>

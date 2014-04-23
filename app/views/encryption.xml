@@ -1,4 +1,5 @@
 <Alloy>
-	<View class="container">
-	</View>
+	<Window id="encryptionWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+	</Window>
 </Alloy>

@@ -55,6 +55,12 @@ function tblClick(e){
 	mapview.selectAnnotation(annotations[e.row.index]);
 }
 
-function closeWin(){
-	$.map.close();
+$.topBar.back.addEventListener('click',closeWindow);
+$.topBar.setTitle('Mapping');
+
+/**
+ * Closes the window 
+ * */
+function closeWindow(){
+	(OS_IOS) ? Alloy.Globals.navGroup.closeWindow($.mapWin): $.mapWin.close();
 }

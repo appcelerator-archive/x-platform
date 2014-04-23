@@ -1,5 +1,10 @@
 <Alloy>
-	<Window class="container">
-		<Require type="widget" src="com.appcelerator.sidemenu" id="drawermenu"/> 
+	<NavigationWindow id="navGroup" platform="ios">
+		<Window id="mainWin" class="mainContainer">
+			<Require type="widget" src="com.appcelerator.sidemenu" id="drawermenu"/>
+		</Window>
+	</NavigationWindow>
+	<Window id="mainWin" class="mainContainer" platform="android">
+			<Require type="widget" src="com.appcelerator.sidemenu" id="drawermenu"/>
 	</Window>
 </Alloy>

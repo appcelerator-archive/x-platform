@@ -1,0 +1,6 @@
+".childContainer" : {
+	layout:"vertical",
+	width:"100%",
+	backgroundColor:'white',
+	navBarHidden:true
+}
