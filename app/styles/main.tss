@@ -47,7 +47,7 @@
 "#welcome" :{
 	text:"Welcome",
 	color:"#a22621",
-	font:{ fontWeight: 'bold', fontSize: "18"},
+	font:{fontFamily: "HelveticaNeue", fontWeight: 'bold', fontSize: "18"},
 	textAlign: "left",
 	top:10,
 	left: 0,

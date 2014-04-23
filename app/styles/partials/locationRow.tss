@@ -13,6 +13,7 @@
 "#rowTitle" : {
 	width: "auto",
 	left: 20,
-	font: {fontSize :"12"},
+	font: {fontFamily: "HelveticaNeue", fontSize :"14"},
+	color: "#505050",
 	touchEnabled: false
 }
