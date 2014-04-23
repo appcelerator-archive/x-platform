@@ -1,5 +1,7 @@
 <Alloy>
 	<Window id="chartWin" class="childContainer">
 		<Require id="topBar" src="partials/topbar"></Require>
+		<WebView id="chartView"></WebView>
+		<Button id="generateChart" onClick="doChart"/>
 	</Window>
 </Alloy>

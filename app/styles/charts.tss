@@ -1,4 +1,16 @@
-
-".container" : {
-  
+"#chartView" :{
+	height : 250,
+	width : "100%",
+	left : 0,
+	top : 10,
+	showScrollbars : false,
+	touchEnabled : false,
+	url : '/charts/chart.html',
+	backgroundColor : "#444"
+},
+"#generateChart" :{
+	title: "Generate New Chart",
+	top: 40,
+	color: "#ffffff",
+	backgroundColor: "#a22621"
 }
