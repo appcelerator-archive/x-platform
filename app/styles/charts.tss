@@ -1,8 +1,7 @@
 "#chartView" :{
 	height : 250,
-	width : "95%",
 	left : 10,
-	right:15,
+	right:10,
 	top : 10,
 	showScrollbars : false,
 	touchEnabled : false,
