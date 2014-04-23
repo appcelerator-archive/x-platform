@@ -1,7 +1,8 @@
-//Parameters
+//Initialization Parameters
 var annotations = [];
 var locations = [];
 var currentLoc = JSON.parse(Ti.App.Properties.getString('currentLocation'));
+var data = [];
 
 //Setup V2 Maps Module
 var Map = require('ti.map');
@@ -14,7 +15,7 @@ var mapview = Map.createView({
  **/
 function initialize() {
 	//annotations data
-	var data = [currentLoc, {
+	data = [currentLoc, {
 		latitude : 37.389569,
 		longitude : -122.050212,
 		title : 'Appcelerator',
@@ -42,8 +43,13 @@ function initialize() {
 
 }
 
-//HELPER METHODS
+/**
+ * HELPER METHODS
+ */
 
+/**
+ * Add Locations to the table
+ */
 function addLocationsToTable(data) {
 	//Loop through locations and add them to the map and the table
 	for (var i in data) {
@@ -57,40 +63,126 @@ function addLocationsToTable(data) {
 			}));
 			row = Alloy.createController('partials/locationRow', {
 				data : data[i],
-				index : i
+				index : i,
+				hasLoc : true
 			}).getView();
+			//	add long press event on row click for adding into Contacts
+			if (OS_IOS || OS_ANDROID) {
+				row.addEventListener( OS_IOS ? "longpress" : "longclick", addContact);
+				row.addEventListener("touchend", tblClick);
+			} else {
+				row.addEventListener("click", tblClick);
+			}
+
 			locations.push(row);
 		} else {
 			row = Alloy.createController('partials/locationRow', {
 				data : {
 					title : 'My Location Unavailable'
 				},
-				index : i
+				index : -1,
+				hasLoc : false
 			}).getView();
 			locations.push(row);
 		}
+
 	}
 	$.table.setData(locations);
 }
 
+/**
+ * add Contacts to Phonebook
+ **/
+function addContact(params) {
+	Alloy.Globals.apm.leaveBreadcrumb("addContact()");
+	Ti.Analytics.featureEvent('BussinessAddedAsContact');
+
+	if (OS_IOS || OS_ANDROID) {
+
+		if (Ti.Contacts.contactsAuthorization == Ti.Contacts.AUTHORIZATION_AUTHORIZED) {
+			performAddressBookFunction();
+		} else if (Ti.Contacts.contactsAuthorization == Ti.Contacts.AUTHORIZATION_UNKNOWN) {
+			Ti.Contacts.requestAuthorization(function(e) {
+				if (e.success) {
+					performAddressBookFunction();
+				} else {
+					alert("Access to Address Book Denied");
+				}
+			});
+		} else {
+			alert("Access to Address Book Denied");
+		}
+
+		function performAddressBookFunction() {
+			var contactData = data[params.row.index];
+			if (contactData.title && contactData.phone) {
+				if (Ti.Contacts.getPeopleWithName(contactData.title).length == 0) {
+					Ti.Contacts.createPerson({
+						firstName : contactData.title,
+						phone : {
+							work : [contactData.phone]
+						}
+					});
+				}
+
+				var callAlert = Ti.UI.createAlertDialog({
+					title : contactData.title + "\nSaved to Contacts",
+					message : "Would you like to call\n" + contactData.title + " now?\n" + contactData.phone,
+					buttonNames : ["No", "Call"]
+				});
+				callAlert.show();
+				callAlert.addEventListener("click", function(e) {
+					if (e.index == 1) {
+						if (Ti.Platform.model == "Simulator") {
+							alert("Simulator cannot initiate a phone call, but on device the phone app would be opened and call would be initiated to:\n" + contactData.phone);
+						} else {
+							Ti.Platform.openURL("tel:" + contactData.phone);
+						}
+					}
+				});
+			}
+		}
+
+	}
+}
+
+/**
+ * Add Map to Mapview
+ **/
 function addMap() {
 	mapview.setAnnotations(annotations);
+	mapview.setLocation({
+		latitude : annotations[0].latitude,
+		longitude : annotations[0].longitude,
+		latitudeDelta : 0.5,
+		longitudeDelta : 0.5
+	});
 	$.mapView.add(mapview);
 }
 
-//EVENT LISTENERS
-
+/**
+ * EVENT LISTENERS
+ * */
+/**
+ * Marks the location on map
+ */
 function tblClick(e) {
 	Alloy.Globals.apm.leaveBreadcrumb("tblClick()");
 	Ti.Analytics.featureEvent('BusinessClicked');
-	if (annotations.length === locations.length) {
+
+	var index = e.row.index;
+
+	if (annotations.length < locations.length) {
+		index -= 1;
+	}
+	if (e.row.hasLoc) {
 		mapview.setRegion({
-			latitude : annotations[e.row.index].latitude,
-			longitude : annotations[e.row.index].longitude,
-			latitudeDelta : 0.1,
-			longitudeDelta : 0.1
+			latitude : annotations[index].latitude,
+			longitude : annotations[index].longitude,
+			latitudeDelta : 0.5,
+			longitudeDelta : 0.5
 		});
-		mapview.selectAnnotation(annotations[e.row.index]);
+		mapview.selectAnnotation(annotations[index]);
 	}
 
 }
