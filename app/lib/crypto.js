@@ -30,51 +30,52 @@ var Crypto = require('ti.crypto');
 //  KEYSIZE_MINRC2
 //  KEYSIZE_MINRC2
 
-module.exports = (function () {
+module.exports = (function() {
 	var API = {
-		params: null,
-		cryptor: null,
-		key: null,
-		initializationVector: null,
-		
-		init: function (_keySize) {
+		params : null,
+		cryptor : null,
+		key : null,
+		initializationVector : null,
+
+		init : function(_keySize) {
 			API.keySize = Crypto[_keySize];
-			
+
 			// Create a buffer of the specified size to hold the encryption/decryption key
-			API.key = Ti.createBuffer({ length: API.keySize });
-			
-			
+			API.key = Ti.createBuffer({
+				length : API.keySize
+			});
+
 			// For this example, create a key to use based on the key size for the selected algorithm
 			// Keys can be defined using text strings ('value:') or hex values ('hexValue:')
 			switch (API.keySize) {
 				case 1:
 					Crypto.encodeData({
-						source: '11',
-						dest: API.key,
-						type: Crypto.TYPE_HEXSTRING
+						source : '11',
+						dest : API.key,
+						type : Crypto.TYPE_HEXSTRING
 					});
 					break;
 				case 5:
 					// Hex values can be separated by spaces for easier reading
-				    Crypto.encodeData({
-						source: '00 11 22 33 44',
-						dest: API.key,
-						type: Crypto.TYPE_HEXSTRING
+					Crypto.encodeData({
+						source : '00 11 22 33 44',
+						dest : API.key,
+						type : Crypto.TYPE_HEXSTRING
 					});
 					break;
 				case 8:
 					// Or, hex values can be specified as one single sequence of numbers
 					Crypto.encodeData({
-						source: '0011223344556677',
-						dest: API.key,
-						type: Crypto.TYPE_HEXSTRING
+						source : '0011223344556677',
+						dest : API.key,
+						type : Crypto.TYPE_HEXSTRING
 					});
 					break;
 				case 16:
 					Crypto.encodeData({
-						source: '001122334455667788990a0b0c0d0e0f',
-						dest: API.key,
-						type: Crypto.TYPE_HEXSTRING
+						source : '001122334455667788990a0b0c0d0e0f',
+						dest : API.key,
+						type : Crypto.TYPE_HEXSTRING
 					});
 					break;
 				case 24:
@@ -91,75 +92,83 @@ module.exports = (function () {
 					API.key.value = string100 + string100 + string100 + string100 + string100 + '012345678901';
 					break;
 			};
-			
-			API.initializationVector = Ti.createBuffer({ length: 16 });
-			var length = Crypto.encodeData({
-				source: "00 11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff",
-				dest: API.initializationVector,
-				type: Crypto.TYPE_HEXSTRING
+
+			API.initializationVector = Ti.createBuffer({
+				length : 16
 			});
-			
+			var length = Crypto.encodeData({
+				source : "00 11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff",
+				dest : API.initializationVector,
+				type : Crypto.TYPE_HEXSTRING
+			});
+
 			API.cryptor = Crypto.createCryptor({
-				algorithm: Crypto.ALGORITHM_AES128,
-				options: Crypto.OPTION_PKCS7PADDING,
-				key: API.key,
-				initializationVector: API.initializationVector,
-				resizeBuffer:true
+				algorithm : Crypto.ALGORITHM_AES128,
+				options : Crypto.OPTION_PKCS7PADDING,
+				key : API.key,
+				initializationVector : API.initializationVector,
+				resizeBuffer : true
 			});
 		},
-		
-		cleanup: function() {
+
+		cleanup : function() {
 			API.params = null;
 			API.cryptor = null;
 			API.key = null;
 			API.initializationVector = null;
 		},
-		
-		encrypt: function(e) {
+
+		encrypt : function(e) {
+			/**Commenting out as this code was not functional for Android**/
 			// Create the buffer
-			var buffer = Ti.createBuffer({length:e.source.length});
-			
-			//Encode the source to the buffer
-			Crypto.encodeData({
-				source: e.source,
-				dest: buffer,
-				type: Crypto[e.type]
+			// var buffer = Ti.createBuffer({length:e.source.length});
+			//
+			// //Encode the source to the buffer
+			// Crypto.encodeData({
+			// source: e.source,
+			// dest: buffer,
+			// type: Crypto[e.type]
+			// });
+			/** Initializing buffer with value attribute in reference from ti.crypto module example method handleEncrypt**/
+			var buffer = Ti.createBuffer({
+				value : e.source
 			});
-		
 			var numBytes = API.cryptor.encrypt(buffer);
-			
+
 			if (numBytes < 0) {
 				alert('Error occurred during encryption: ' + numBytes);
 			} else {
-				if(e.type == "TYPE_BLOB"){
+				if (e.type == "TYPE_BLOB") {
 					return buffer;
 				} else {
 					return Crypto.decodeData({
-						source: buffer,
-						type: Crypto.TYPE_BASE64STRING
+						source : buffer,
+						type : Crypto.TYPE_BASE64STRING
 					});
 				}
-				
+
 			}
 		},
-	
-		decrypt: function(e) {
+
+		decrypt : function(e) {
 			// Load the buffer with the base64encoded value from the encrypted text field
-			var buffer = Ti.createBuffer({ length: e.source.length });
+			var buffer = Ti.createBuffer({
+				length : e.source.length
+			});
 			var length = Crypto.encodeData({
-				source: e.source,
-				dest: buffer,
-				type: Crypto[e.type]
-			});		
+				source : e.source,
+				dest : buffer,
+				type : Crypto[e.type]
+			});
 			if (length < 0) {
 				Ti.API.info('ERROR: Buffer too small');
 				return;
 			}
-				
+
 			// For this example, use the same buffer for both input and output (in-place)
 			// You can specify separate buffers for both input and output if desired
-			var numBytes = API.cryptor.decrypt(buffer,length);
-			
+			var numBytes = API.cryptor.decrypt(buffer, length);
+
 			if (numBytes < 0) {
 				alert('Error occurred during encryption: ' + numBytes);
 			} else {
@@ -167,6 +176,6 @@ module.exports = (function () {
 			}
 		}
 	};
-	
+
 	return API;
 })();
