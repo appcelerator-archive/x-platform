@@ -1,6 +1,7 @@
 //Initialization Parameters
 var currentLocation;
 var favoriteCoupons = [];
+var couponsArray = [];
 
 /**
  * Home screen Initialization
@@ -11,7 +12,7 @@ function initialize() {
 	var introduction = "This application demonstrates the cross-platform capabilities of the Appcelerator platform. The application supports iOS, Android, Windows Mobile, Blackberry, Tizen, and mobile web. \n \nOpen the menu to see various demonstrations; some demonstrations are also visible below.";
 
 	//coupons data
-	var couponsArray = [{
+	couponsArray = [{
 		title : "GET 50% OFF",
 		subtitle : "COUPON 1"
 	}, {

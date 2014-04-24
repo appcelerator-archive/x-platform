@@ -1,5 +1,6 @@
 <Alloy>
-	<Window id="calendarWin" class="childContainer">
+	<Window id="calendarWin" class="childContainer"  backgroundColor="#555">
 		<Require id="topBar" src="partials/topbar"></Require>
+		<Button id="createEvent" onClick="addCalendarEvent"/>
 	</Window>
 </Alloy>

@@ -1,4 +1,8 @@
-
-".container" : {
-  
+"#createEvent" :{
+	title:"Create Sample Event",
+	top:20,
+	height:Ti.UI.SIZE,
+	color: "#ffffff",
+	backgroundColor: "#a22621",
+	
 }
