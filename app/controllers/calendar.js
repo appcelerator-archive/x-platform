@@ -73,7 +73,8 @@ function performCalendarReadFunctions() {
 		label.text = 'Click button to view calendar events';
 
 		var picker = Ti.UI.createPicker({
-			top : 20
+			top : 20,
+			selectionIndicator: true
 		});
 
 		picker.add(pickerData);
@@ -93,7 +94,8 @@ function performCalendarReadFunctions() {
 			title : 'View events',
 			color : "#ffffff",
 			backgroundColor : "#a22621",
-			top : 10
+			top : 10,
+			style: (OS_IOS)? Titanium.UI.iPhone.SystemButtonStyle.PLAIN : 'none'
 		});
 		$.calendarWin.add(button);
 
