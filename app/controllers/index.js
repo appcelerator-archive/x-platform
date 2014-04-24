@@ -33,12 +33,12 @@ function initialize() {
  * Opens the child window when menu item is clicked
  * */
 function openChildWindow(e) {
-	var menuClicked = e.source.id;
+	var menuClicked = (e.source.controller) ?e.source.controller :  e.source.id;
 	if (e.source.id === 'home') {
 		$.drawermenu.showhidemenu();
 	} else {
 		if (e.source.id !== 'container') {
-			var childWindow = Alloy.createController(menuClicked).getView();
+			var childWindow = Alloy.createController(menuClicked,{data: e.source}).getView();
 			(OS_IOS) ? Alloy.Globals.navGroup.openWindow(childWindow) : childWindow.open();
 			$.drawermenu.showhidemenu();
 		}
