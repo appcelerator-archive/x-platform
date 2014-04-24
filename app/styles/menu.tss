@@ -1,13 +1,4 @@
-".container[platform=ios]" : {
-	backgroundColor:'#333',
-	layout:'vertical',
-	top:20
-},
-".container[platform=android]" : {
-	backgroundColor:'#333',
-	layout:'vertical'
-},
-".container[platform=mobileweb]" : {
+".container" : {
 	backgroundColor:'#333',
 	layout:'vertical'
 },

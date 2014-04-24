@@ -1,16 +1,419 @@
 /**
  * Screen Initialization
  * */
-function initialize(){
-	$.topBar.back.addEventListener('click',closeWindow);
+function initialize() {
+	$.topBar.back.addEventListener('click', closeWindow);
 	$.topBar.setTitle('Barcode');
+	buildUI();
 }
 
 /**
- * Closes the window 
+ * UI Creation
  * */
-function closeWindow(){
-	(OS_IOS)?Alloy.Globals.navGroup.closeWindow($.barcodeWin): $.barcodeWin.close();
+function buildUI() {
+	if (OS_IOS || OS_ANDROID) {
+		var Barcode = require('ti.barcode');
+		Barcode.allowRotation = true;
+		Barcode.displayedMessage = '';
+		Barcode.useLED = true;
+		
+		var buttonView=Ti.UI.createView({
+			backgroundColor:'transparent',
+			width:'100%',
+			height:Ti.UI.SIZE,
+			layout:'horizontal',
+			top:10
+		});
+		var resultView=Ti.UI.createView({
+			backgroundColor:'transparent',
+			width:'95%',
+			height:Ti.UI.SIZE,
+			layout:'vertical',
+			backgroundColor : "#444",
+			top:10
+		});
+		
+		var scrollView = Ti.UI.createScrollView({
+			contentWidth : 'auto',
+			contentHeight : 'auto',
+			top : 0,
+			showVerticalScrollIndicator : true,
+			layout : 'vertical'
+		});
+		scrollView.add(resultView);
+		scrollView.add(buttonView);
+		
+		/**
+		 * Create a chrome for the barcode scanner.
+		 */
+		var overlay = Ti.UI.createView({
+			backgroundColor : 'transparent',
+			top : 0,
+			right : 0,
+			bottom : 0,
+			left : 0
+		});
+		var switchButton = Ti.UI.createButton({
+			title : Barcode.useFrontCamera ? 'Back Camera' : 'Front Camera',
+			textAlign : 'center',
+			color : '#000',
+			backgroundColor : '#fff',
+			style : 0,
+			font : {
+				fontWeight : 'bold',
+				fontSize : 16
+			},
+			borderColor : '#000',
+			borderRadius : 10,
+			borderWidth : 1,
+			opacity : 0.5,
+			width : 220,
+			height : 30,
+			bottom : 10
+		});
+		var oLogo = Ti.UI.createImageView({
+			height : 40,
+			width : 40,
+			top : 10,
+			left : 10,
+			image : "/appicon.png"
+		});
+		overlay.add(oLogo);
+		switchButton.addEventListener('click', function() {
+			Barcode.useFrontCamera = !Barcode.useFrontCamera;
+			switchButton.title = Barcode.useFrontCamera ? 'Back Camera' : 'Front Camera';
+		});
+		overlay.add(switchButton);
+
+		var toggleLEDButton = Ti.UI.createButton({
+			title : Barcode.useLED ? 'LED is On' : 'LED is Off',
+			textAlign : 'center',
+			color : '#000',
+			backgroundColor : '#fff',
+			style : 0,
+			font : {
+				fontWeight : 'bold',
+				fontSize : 16
+			},
+			borderColor : '#000',
+			borderRadius : 10,
+			borderWidth : 1,
+			opacity : 0.5,
+			width : 220,
+			height : 30,
+			bottom : 40
+		});
+		toggleLEDButton.addEventListener('click', function() {
+			Barcode.useLED = !Barcode.useLED;
+			toggleLEDButton.title = Barcode.useLED ? 'LED is On' : 'LED is Off';
+		});
+		overlay.add(toggleLEDButton);
+
+		var cancelButton = Ti.UI.createButton({
+			title : 'Cancel',
+			textAlign : 'center',
+			color : '#000',
+			backgroundColor : '#fff',
+			style : 0,
+			font : {
+				fontWeight : 'bold',
+				fontSize : 16
+			},
+			borderColor : '#000',
+			borderRadius : 10,
+			borderWidth : 1,
+			opacity : 0.5,
+			width : 220,
+			height : 30,
+			top : 20
+		});
+		cancelButton.addEventListener('click', function() {
+			Barcode.cancel();
+		});
+		overlay.add(cancelButton);
+
+		/**
+		 * Create a button that will trigger the barcode scanner.
+		 */
+		var scanCode = Ti.UI.createButton({
+			title : 'Scan Code',
+			width : Ti.UI.SIZE,
+			top : 20,
+			left:10
+		});
+		
+		if (OS_IOS && Ti.Platform.version >= 7) {
+			scanCode.backgroundColor='#a22621';
+			scanCode.color='#fff';
+		}
+		
+		if(OS_ANDROID){
+			scanCode.backgroundColor='#a22621';
+			scanCode.color='#fff';
+		}
+
+		scanCode.addEventListener('click', function() {
+			reset();
+			// Note: while the simulator will NOT show a camera stream in the simulator, you may still call "Barcode.capture"
+			// to test your barcode scanning overlay.
+			Barcode.capture({
+				animate : true,
+				overlay : overlay,
+				showCancel : false,
+				showRectangle : false,
+				keepOpen : true/*,
+				 acceptedFormats: [
+				 Barcode.FORMAT_QR_CODE
+				 ]*/
+			});
+		});
+		buttonView.add(scanCode);
+
+		/**
+		 * Create a button that will show the gallery picker.
+		 */
+		var scanImage = Ti.UI.createButton({
+			title : 'Scan Image from Gallery',
+			width : Ti.UI.SIZE,
+			top : 20,
+			left:10
+		});
+		if (OS_IOS && Ti.Platform.version >= 7) {
+			scanImage.backgroundColor='#a22621';
+			scanImage.color='#fff';
+		}
+		if(OS_ANDROID){
+			scanImage.backgroundColor='#a22621';
+			scanImage.color='#fff';
+		}
+		scanImage.addEventListener('click', function() {
+			reset();
+			Ti.Media.openPhotoGallery({
+				success : function(evt) {
+					Barcode.parse({
+						image : evt.media/*,
+						 acceptedFormats: [
+						 Barcode.FORMAT_QR_CODE
+						 ]*/
+					});
+				}
+			});
+		});
+		buttonView.add(scanImage);
+
+		/**
+		 * Now listen for various events from the Barcode module. This is the module's way of communicating with us.
+		 */
+		var scannedBarcodes = {}, scannedBarcodesCount = 0;
+		function reset() {
+			scannedBarcodes = {};
+			scannedBarcodesCount = 0;
+			cancelButton.title = 'Cancel';
+
+			scanResult.text = ' ';
+			scanContentType.text = ' ';
+			scanParsed.text = ' ';
+		}
+
+
+		Barcode.addEventListener('error', function(e) {
+			scanContentType.text = ' ';
+			scanParsed.text = ' ';
+			scanResult.text = e.message;
+		});
+		Barcode.addEventListener('cancel', function(e) {
+			Ti.API.info('Cancel received');
+		});
+		Barcode.addEventListener('success', function(e) {
+			Ti.API.info('Success called with barcode: ' + e.result);
+			if (!scannedBarcodes['' + e.result]) {
+				scannedBarcodes[e.result] = true;
+				scannedBarcodesCount += 1;
+				cancelButton.title = 'Finished (' + scannedBarcodesCount + ' Scanned)';
+
+				scanResult.text += e.result + ' ';
+				scanContentType.text += parseContentType(e.contentType) + ' ';
+				scanParsed.text += parseResult(e) + ' ';
+			}
+		});
+
+		/**
+		 * Finally, we'll add a couple labels to the window. When the user scans a barcode, we'll stick information about it in
+		 * to these labels.
+		 */
+		resultView.add(Ti.UI.createLabel({
+			text : 'You may need to rotate the device',
+			top : 10,
+			height : Ti.UI.SIZE || 'auto',
+			width : Ti.UI.SIZE || 'auto',
+			color:'#fff'
+		}));
+
+		resultView.add(Ti.UI.createLabel({
+			text : 'Result: ',
+			textAlign : 'left',
+			top : 10,
+			left : 10,
+			color : 'black',
+			height : Ti.UI.SIZE || 'auto',
+			color:'#fff'
+		}));
+		var scanResult = Ti.UI.createLabel({
+			text : ' ',
+			textAlign : 'left',
+			top : 10,
+			left : 10,
+			color : 'black',
+			height : Ti.UI.SIZE || 'auto',
+			color:'#fff'
+		});
+		resultView.add(scanResult);
+
+		resultView.add(Ti.UI.createLabel({
+			text : 'Content Type: ',
+			top : 10,
+			left : 10,
+			textAlign : 'left',
+			color : 'black',
+			height : Ti.UI.SIZE || 'auto',
+			color:'#fff'
+		}));
+		var scanContentType = Ti.UI.createLabel({
+			text : ' ',
+			textAlign : 'left',
+			top : 10,
+			left : 10,
+			color : 'black',
+			height : Ti.UI.SIZE || 'auto',
+			color:'#fff'
+		});
+		resultView.add(scanContentType);
+
+		resultView.add(Ti.UI.createLabel({
+			text : 'Parsed: ',
+			textAlign : 'left',
+			top : 10,
+			left : 10,
+			color : 'black',
+			height : Ti.UI.SIZE || 'auto',
+			color:'#fff'
+		}));
+		var scanParsed = Ti.UI.createLabel({
+			text : ' ',
+			textAlign : 'left',
+			top : 10,
+			left : 10,
+			color : 'black',
+			height : Ti.UI.SIZE || 'auto',
+			color:'#fff'
+		});
+		resultView.add(scanParsed);
+
+		function parseContentType(contentType) {
+			switch (contentType) {
+				case Barcode.URL:
+					return 'URL';
+				case Barcode.SMS:
+					return 'SMS';
+				case Barcode.TELEPHONE:
+					return 'TELEPHONE';
+				case Barcode.TEXT:
+					return 'TEXT';
+				case Barcode.CALENDAR:
+					return 'CALENDAR';
+				case Barcode.GEOLOCATION:
+					return 'GEOLOCATION';
+				case Barcode.EMAIL:
+					return 'EMAIL';
+				case Barcode.CONTACT:
+					return 'CONTACT';
+				case Barcode.BOOKMARK:
+					return 'BOOKMARK';
+				case Barcode.WIFI:
+					return 'WIFI';
+				default:
+					return 'UNKNOWN';
+			}
+		}
+
+		function parseResult(event) {
+			var msg = '';
+			switch (event.contentType) {
+				case Barcode.URL:
+					msg = 'URL = ' + event.result;
+					break;
+				case Barcode.SMS:
+					msg = 'SMS = ' + JSON.stringify(event.data);
+					break;
+				case Barcode.TELEPHONE:
+					msg = 'Telephone = ' + event.data.phonenumber;
+					break;
+				case Barcode.TEXT:
+					msg = 'Text = ' + event.result;
+					break;
+				case Barcode.CALENDAR:
+					msg = 'Calendar = ' + JSON.stringify(event.data);
+					break;
+				case Barcode.GEOLOCATION:
+					msg = 'Latitude = ' + event.data.latitude + '\nLongitude = ' + event.data.longitude;
+					break;
+				case Barcode.EMAIL:
+					msg = 'Email = ' + event.data.email + '\nSubject = ' + event.data.subject + '\nMessage = ' + event.data.message;
+					break;
+				case Barcode.CONTACT:
+					msg = 'Contact = ' + JSON.stringify(event.data);
+					break;
+				case Barcode.BOOKMARK:
+					msg = 'Bookmark = ' + JSON.stringify(event.data);
+					break;
+				case Barcode.WIFI:
+					return 'WIFI = ' + JSON.stringify(event.data);
+				default:
+					msg = 'unknown content type';
+					break;
+			}
+			return msg;
+		}
+
+
+		$.barcodeWin.add(scrollView);
+	} else {
+		var webview = Ti.UI.createWebView({
+			url : "http://zxing.org/w/decode.jspx",
+			top : 60
+		});
+		var back = Ti.UI.createLabel({
+			text : "Back",
+			width : Ti.UI.SIZE,
+			height : 40,
+			left : 10,
+			top : 20,
+			color : "#000"
+		});
+
+		back.addEventListener("click", function() {
+			if (webview.canGoBack()) {
+				webview.goBack();
+			} else {
+				closeWindow();
+			}
+		});
+
+		$.barcodeWin.add(webview);
+		if (!OS_MOBILEWEB) {
+			$.barcodeWin.add(back);
+		}
+
+	}
+
+}
+
+/**
+ * Closes the window
+ * */
+function closeWindow() {
+	(OS_IOS) ? Alloy.Globals.navGroup.closeWindow($.barcodeWin) : $.barcodeWin.close();
 }
 
 initialize();
+

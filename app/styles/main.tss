@@ -1,15 +1,4 @@
-".container[platform=ios]" : {
-	layout:"vertical",
-	width:"100%",
-	backgroundColor:'white',
-	top:20
-},
-".container[platform=android]" : {
-	layout:"vertical",
-	width:"100%",
-	backgroundColor:'white'
-},
-".container[platform=mobileweb]" : {
+".container" : {
 	layout:"vertical",
 	width:"100%",
 	backgroundColor:'white'
