@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <property name="com-appcelerator-apm-id" type="string">5350ae8034e95918ce000014</property>
+    <property name="com-appcelerator-apm-id" type="string">5307d0e287409c25c600003e</property>
     <property name="acs-authbase-url" type="string">https://secure-identity.cloud.appcelerator.com</property>
     <property name="acs-base-url" type="string">https://api.cloud.appcelerator.com</property>
-    <property name="acs-oauth-secret-production" type="string">iaIeUiaJ1mVvQOMHDppcCXLjiazOREsY</property>
-    <property name="acs-oauth-key-production" type="string">83XojxXygBC1YFhra7VSt6Zbj3QA0XJW</property>
-    <property name="acs-api-key-production" type="string">JuKf0o4EIR3n49XxklX5W1a5qrZfaHYv</property>
-    <property name="acs-oauth-secret-development" type="string">ETkbzixG18g6GHigzx7cINHGIRfAfUWV</property>
-    <property name="acs-oauth-key-development" type="string">Hm2xIXbHCZGTOZYdDPQEYku6WVsYiFOG</property>
-    <property name="acs-api-key-development" type="string">qx45ZMvqWXFGjII60BOem72oQBCJOJe0</property>
+    <property name="acs-oauth-secret-development" type="string">GvuHDXfXf6MRcepbhtg8uqYmoELFl8xg</property>
+    <property name="acs-oauth-key-development" type="string">ngfW1EHIhFTukeCnRxrcQrZaWp98HtCH</property>
+    <property name="acs-api-key-development" type="string">sqkcROKvqikLSATpz46eSB9L9iUpaJ3i</property>
+    <property name="acs-oauth-secret-production" type="string">EYXYhP7K2nviru3NG31JhLtL599Xkkve</property>
+    <property name="acs-oauth-key-production" type="string">ZbDhjVX6yvQMism4AlMfZwxxhdeQxmy3</property>
+    <property name="acs-api-key-production" type="string">duvgrRl65rYDjeUJoNNZfLNMCIKsqxzM</property>
     <id>com.appcelerator.crossplatform</id>
-    <name>x-platform</name>
+    <name>CrossPlatform</name>
     <version>1.0</version>
-    <publisher>sapan.varshney</publisher>
+    <publisher>aleard</publisher>
     <url>http://</url>
     <description>not specified</description>
-    <copyright>2014 by sapan.varshney</copyright>
+    <copyright>2014 by aleard</copyright>
     <icon>appicon.png</icon>
-    <fullscreen>false</fullscreen>
-    <navbar-hidden>false</navbar-hidden>
+    <fullscreen>true</fullscreen>
+    <navbar-hidden>true</navbar-hidden>
     <analytics>true</analytics>
-    <guid>8fac5b2a-dbbe-4740-b07e-2c4e0dbff259</guid>
+    <guid>f2705ed9-3f1e-4f4e-b5b0-07b97141acd5</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
         <plist>
@@ -41,9 +41,22 @@
                 <key>UIPrerenderedIcon</key>
                 <false/>
                 <key>UIStatusBarHidden</key>
-                <false/>
+                <true/>
                 <key>UIStatusBarStyle</key>
                 <string>UIStatusBarStyleDefault</string>
+                <key>CFBundleURLTypes</key>
+                <array>
+                    <dict>
+                        <key>CFBundleTypeRole</key>
+                        <string>Editor</string>
+                        <key>CFBundleURLName</key>
+                        <string>com.appcelerator.crossplatform</string>
+                        <key>CFBundleURLSchemes</key>
+                        <array>
+                            <string>touchtest-eab47344-47ea-4245-b327-c4fb703126ab</string>
+                        </array>
+                    </dict>
+                </array>
             </dict>
         </plist>
     </ios>
@@ -71,8 +84,8 @@
                     android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAie3Ougsoxl7tlnxmfTVGiIfL-jT17ZwU"/>
                 <activity
                     android:configChanges="keyboardHidden|orientation"
-                    android:label="@string/app_name"
-                    android:name=".XPlatformActivity" android:theme="@style/Theme.Titanium">
+                    android:label="CrossPlatform"
+                    android:name=".CrossplatformActivity" android:theme="@style/Theme.Titanium">
                     <intent-filter>
                         <action android:name="android.intent.action.MAIN"/>
                         <category android:name="android.intent.category.LAUNCHER"/>
@@ -108,16 +121,20 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="android">ti.cloudpush</module>
-        <module platform="commonjs">ti.cloud</module>
-        <module platform="android" version="2.1.3">ti.map</module>
-        <module platform="iphone" version="2.0.1">ti.map</module>
-        <module platform="android">com.appcelerator.apm</module>
-        <module platform="iphone">com.appcelerator.apm</module>
-        <!--<module platform="android" version="2.0.1">ti.crypto</module>
-        <module platform="iphone" version="1.2.1">ti.crypto</module>-->
+        <module platform="android" version="3.2.1">ti.cloudpush</module>
+        <module deploy-type="test" platform="iphone" version="1.0">com.soasta.touchtest</module>
+        <module deploy-type="test" platform="android" version="1.0">com.soasta.touchtest</module>
         <module platform="iphone" version="1.8.3">ti.barcode</module>
         <module platform="android" version="2.3.4">ti.barcode</module>
+        <module platform="commonjs">ti.cloud</module>
+        <module platform="android" version="2.0.1">ti.crypto</module>
+        <module platform="iphone" version="1.2.1">ti.crypto</module>
+        <module platform="android" version="2.1.3">ti.map</module>
+        <module platform="iphone" version="2.0.1">ti.map</module>
+        <module deploy-type="development" platform="iphone" version="1.0">com.soasta.touchtest</module>
+        <module deploy-type="development" platform="android" version="1.0">com.soasta.touchtest</module>
+        <module platform="android">com.appcelerator.apm</module>
+        <module platform="iphone">com.appcelerator.apm</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
@@ -130,6 +147,7 @@
     <sdk-version>3.2.2.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
+        <!--<plugin>com.soasta.touchtest.android</plugin>-->
     </plugins>
     <tizen appid="1nWLDDpOmg" xmlns:tizen="http://ti.appcelerator.org">
         <tizen:privilege name="http://tizen.org/privilege/system"/>
@@ -180,4 +198,6 @@
         <tizen:privilege name="http://tizen.org/privilege/unlimitedstorage"/>
         <access origin="*" subdomains="true"/>
     </tizen>
+    <property name="com-soasta-touchtest-version" type="string">6937.16</property>
+    <property name="com-soasta-touchtest-ios-appId" type="string">192674</property>
 </ti:app>
