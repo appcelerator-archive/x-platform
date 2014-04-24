@@ -1,10 +1,6 @@
 <Alloy>
 	<Window id="encryptionWin" class="childContainer">
 		<Require id="topBar" src="partials/topbar"></Require>
-		<Label id="label1"></Label>
-		<TextArea id="originalText"></TextArea>
 		<Button id="encrypt" onClick="encrypt"></Button>
-		<Label id="label2"></Label>
-		<Label id="encryptedText"></Label>
 	</Window>
 </Alloy>

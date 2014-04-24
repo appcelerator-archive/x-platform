@@ -13,7 +13,7 @@ function initialize() {
 	$.topBar.back.addEventListener('click', closeWindow);
 	$.topBar.setTitle('Calendar');
 
-// adding controls (view events, picker, scrollview) to the Calendar screen as per authorization
+	// adding controls (view events, picker, scrollview) to the Calendar screen as per authorization
 	if (OS_ANDROID) {
 		performCalendarReadFunctions();
 	} else if (OS_IOS) {
@@ -40,8 +40,8 @@ function performCalendarReadFunctions() {
 		backgroundColor : '#eee',
 		height : 500,
 		top : 5,
-		left: 5,
-		right: 5
+		left : 5,
+		right : 5
 	});
 
 	var label = Ti.UI.createLabel({
@@ -243,6 +243,7 @@ function performCalendarWriteFunctions() {
 		event.createReminder(reminderDetails);
 	}
 }
+
 /**
  * EVENT LISTENER
  */

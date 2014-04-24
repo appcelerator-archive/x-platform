@@ -1,35 +1,7 @@
-"#label1" :{
-	text:"Enter the Text to be Encrypted: ",
-	top:20
-},
-"#originalText" :{
-	borderColor: "#444",
-	left : 20,
-	right: 20,
-	height: Ti.UI.SIZE,
-	color: "#555",
-	textAlign: "left",
-	top: 10
-},
-"#label2" :{
-	text:"ENCRYPTED TEXT ",
-	top: 20,
-	enabled: false
-},
-"#encryptedText" :{
-	borderColor: "#444",
-	borderWidth: 1,
-	left : 20,
-	right: 20,
-	height: Ti.UI.SIZE,
-	color: "#555",
-	textAlign: "center",
-	top: 10,
-	enabled: false
-},
+
 "#encrypt" :{
 	title: "Click to Encrypt",
 	backgroundColor: "#a22621",
 	color: "#ffffff",
-	top: 20
+	top: 40
 }

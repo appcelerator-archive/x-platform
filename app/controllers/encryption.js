@@ -6,18 +6,22 @@ function initialize() {
 	$.topBar.setTitle('Encryption');
 }
 
+
+/**
+ * EVENT LISTENER
+ */
+
+/**
+ * encrypts a sample text
+ */
 function encrypt() {
-	$.originalText.blur();
-	if (OS_IOS) {
-		var crypto = require("/crypto");
-		crypto.init("KEYSIZE_AES128");
-		$.label2.enabled = true;
-		$.encryptedText.enabled = true;
-		$.encryptedText.text = crypto.encrypt({
-			source : $.originalText.value,
-			type : "TYPE_HEXSTRING"
-		});
-	}
+	var crypto = require("/crypto");
+	crypto.init("KEYSIZE_AES128");
+	alert("'This is my text to be encrypted.'\nThis is the encrypted text: " + crypto.encrypt({
+		source : "This is my text to be encrypted.",
+		type : "TYPE_HEXSTRING"
+	}));
+
 }
 
 /**
