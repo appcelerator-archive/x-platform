@@ -1,0 +1,52 @@
+".container" : {
+	width:"100%",
+	backgroundColor:'white',
+	navBarHidden:true,
+	modal: true
+},
+".navBtn" : {
+	height:60,
+	width:60,
+	font:{fontSize:24,fontWeight:"bold"}
+}
+"#webview" : {
+	willHandleTouches:false,
+	top: 0,
+	bottom: 60
+}
+"#nav" : {
+	bottom: 0,
+	height:60,
+	width:"100%",
+	opacity:0.95,
+	backgroundColor:"#2D2D2D"
+}
+"#back" : {
+	title:"<",
+	left:0
+}
+"#forward" : {
+	title:">",
+	left:60
+}
+"#reload" : {
+	title:"Reload",
+	right:10,
+	width:Ti.UI.SIZE,
+	height:60
+}
+"#close" : {
+	title:"Done",
+	width:Ti.UI.SIZE,
+	height:60
+}
+"#print" : {
+	title:"Print",
+	right:10,
+	width:Ti.UI.SIZE,
+	height:60
+},
+"Button[platform=android]" :{
+	color: "#ffffff",
+	backgroundColor:"#2D2D2D"
+}

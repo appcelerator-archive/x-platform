@@ -3,4 +3,7 @@
 	width:"100%",
 	backgroundColor:'white',
 	navBarHidden:true
+},
+"Button" :{
+	style: Titanium.UI.iPhone.SystemButtonStyle.PLAIN,
 }

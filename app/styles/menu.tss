@@ -1,7 +1,8 @@
 ".container[platform=ios]" : {
 	backgroundColor:'#333',
 	layout:'vertical',
-	top:20
+	top:20,
+	bottom:0
 },
 ".container[platform=android]" : {
 	backgroundColor:'#333',

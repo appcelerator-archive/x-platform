@@ -1,28 +1,37 @@
 <Alloy>
-	<View id="container" class="container">
+	<ScrollView id="container" class="container">
 		<View id="home" class="menuItemHome">
-			<Label  text="Home">
+			<Label  text="Home"/>
 		</View>
 		<View id="map" class="menuItem">
-			<Label text="Map">
+			<Label text="Map"/>
 		</View>
 		<View id="camera" class="menuItem">
-			<Label  text="Camera & Photo">
+			<Label  text="Camera & Photo"/>
 		</View>
 		<View id="barcode" class="menuItem">
-			<Label  text="Barcode">
+			<Label  text="Barcode"/>
 		</View>
 		<View id="charts" class="menuItem">
-			<Label text="Charts">
+			<Label text="Charts"/>
 		</View>
 		<View id="calendar" class="menuItem">
-			<Label text="Calendar">
+			<Label text="Calendar"/>
 		</View>
 		<View id="encryption" class="menuItem">
-			<Label  text="Encryption">
+			<Label  text="Encryption"/>
 		</View>
 		<View id="pushnotifications" class="menuItem">
-			<Label  text="Push Notifications">
+			<Label  text="Push Notifications"/>
 		</View>
-	</View>
+		<View id="RemoteHtml" controller="fileViewer" class="menuItem" print="false" url="http://www.appcelerator.com">
+			<Label  text="Remote HTML File"/>
+		</View>
+		<View id="localHtml" controller="fileViewer" class="menuItem" print="false" url="/html/index.html">
+			<Label  text="Local HTML File"/>
+		</View>
+		<View id="localPdf" controller="fileViewer" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios">
+			<Label text="Local PDF File"/>
+		</View>
+	</ScrollView>
 </Alloy>

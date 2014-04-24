@@ -1,0 +1,12 @@
+<Alloy>
+	<Window class="container">
+		<WebView id="webview"/>
+		<View id="nav">
+			<Button id="back" class="navBtn" onClick="back"/>
+			<Button id="forward" class="navBtn" onClick="forward"/>
+			<Button id="reload"  onClick="reload" />
+			<Button id="print" onClick="print" platform="ios"/>
+			<Button id="close" onClick="closeWindow"/>
+		</View>
+	</Window>
+</Alloy>
