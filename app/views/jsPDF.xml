@@ -1,0 +1,7 @@
+<Alloy>
+	<Window id="jspdfWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+		<Label id="infoLabel"></Label>
+		<Button id="runPdf" onClick="generatePDF"></Button>
+	</Window>
+</Alloy>

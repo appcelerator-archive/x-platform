@@ -1,0 +1,15 @@
+"#infoLabel" :{
+	top: 10,
+	text: 'Press the below button to demonstrate how to use jsPDF in Titanium. If you are using Android you will need to run this on the device to view the PDF.',
+	textAlign: "center",
+	color: "black"
+},
+"#runPdf" :{
+	height: 50,
+    title: 'Run PDF Sample',
+    left: 40,
+    right: 40,
+    top: 40,
+    backgroundColor: "#a22621",
+	color: "#ffffff"
+}

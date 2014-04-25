@@ -1,7 +1,8 @@
 ".container" :{
 	backgroundColor:'#333',
 	layout:'vertical',
-	scrollType:"vertical"
+	scrollType:"vertical",
+	contentHeight: "auto"
 },
 ".menuItemHome" : {
 	backgroundColor:'#555',
