@@ -10,7 +10,6 @@
 },
 "#webview" : {
 	willHandleTouches:false,
-	top: 45,
 	bottom: 60
 }
 "#nav" : {

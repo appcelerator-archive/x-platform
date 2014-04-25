@@ -139,18 +139,12 @@ function buildUI() {
 			title : 'Scan Code',
 			width : Ti.UI.SIZE,
 			top : 20,
-			left:10
+			left:10,
+			style: (OS_IOS)? Titanium.UI.iPhone.SystemButtonStyle.PLAIN : 'none',
+			backgroundColor:'#a22621',
+			color:'#fff'
+			
 		});
-		
-		if (OS_IOS && Ti.Platform.version >= 7) {
-			scanCode.backgroundColor='#a22621';
-			scanCode.color='#fff';
-		}
-		
-		if(OS_ANDROID){
-			scanCode.backgroundColor='#a22621';
-			scanCode.color='#fff';
-		}
 
 		scanCode.addEventListener('click', function() {
 			reset();
@@ -176,16 +170,12 @@ function buildUI() {
 			title : 'Scan Image from Gallery',
 			width : Ti.UI.SIZE,
 			top : 20,
-			left:10
+			left:10,
+			style: (OS_IOS)? Titanium.UI.iPhone.SystemButtonStyle.PLAIN : 'none',
+			backgroundColor:'#a22621',
+			color:'#fff'
 		});
-		if (OS_IOS && Ti.Platform.version >= 7) {
-			scanImage.backgroundColor='#a22621';
-			scanImage.color='#fff';
-		}
-		if(OS_ANDROID){
-			scanImage.backgroundColor='#a22621';
-			scanImage.color='#fff';
-		}
+		
 		scanImage.addEventListener('click', function() {
 			reset();
 			Ti.Media.openPhotoGallery({
