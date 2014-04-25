@@ -1,8 +1,67 @@
+"#calendarView" :{
+	layout: "vertical",
+	top: 10,
+	left:10,
+	right:10,
+	height: 0,
+	visible: false
+},
+"#calendarType" :{
+	text: 'Select the calendar type',
+	font: {fontFamily: "HelveticaNeue", fontSize :"14"},
+	color: "black"
+},
+"#calendarPicker" :{
+	top: 10,
+	selectionIndicator:"true"
+},
+"#buttonBar" :{
+	top: 10,
+	height: Ti.UI.SIZE,
+	right: 5,
+	left: 5,
+	layout: "horizontal"
+},
 "#createEvent" :{
 	title:"Create Sample Event",
-	top:20,
+	top:5,
 	height:Ti.UI.SIZE,
 	color: "#ffffff",
 	backgroundColor: "#a22621",
+	width: "60%"
 	
+},
+"#viewEvent" :{
+	title:"View Events",
+	left: 10,
+	top:5,
+	height:Ti.UI.SIZE,
+	color: "#ffffff",
+	backgroundColor: "#a22621",
+	width: 0,
+	visible: false
+},
+"#eventsView[platform=ios]" :{
+	backgroundColor : '#555',
+	top : 10,
+	left : 10,
+	right : 10,
+	height: "23%",
+	visible: false
+},
+"#eventsView[platform=android]" :{
+	backgroundColor : '#555',
+	top : 10,
+	left : 10,
+	right : 10,
+	height: "35%",
+	visible: false
+},
+"#label" :{
+	top: 5,
+	text: "Click on the button to display the events for the selected calendar",
+	font: {fontFamily: "HelveticaNeue", fontSize :"12"},
+	textAlign: "center",
+	color: "#ffffff",
+	backgroundColor: "#555"
 }

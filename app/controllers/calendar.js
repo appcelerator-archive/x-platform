@@ -24,6 +24,7 @@ function initialize() {
 				if (e.success) {
 					performCalendarReadFunctions();
 				} else {
+					$.createEvent.width = "100%";
 					alert('Access to calendar is not allowed');
 				}
 			});
@@ -35,23 +36,11 @@ function initialize() {
  * read events from calendar
  */
 function performCalendarReadFunctions() {
-
-	var scrollView = Ti.UI.createScrollView({
-		backgroundColor : '#eee',
-		height : 500,
-		top : 5,
-		left : 5,
-		right : 5
-	});
-
-	var label = Ti.UI.createLabel({
-		backgroundColor : 'white',
-		text : 'Click on the button to display the events for the selected calendar',
-		textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
-		top : 20
-	});
-	scrollView.add(label);
-
+	$.calendarView.visible = true;
+	$.calendarView.height = Ti.UI.SIZE;
+	$.viewEvent.visible = true;
+	$.viewEvent.width = "36%";
+	$.eventsView.visible = true;
 	var selectableCalendars = Ti.Calendar.allCalendars;
 	for (var i = 0, ilen = selectableCalendars.length; i < ilen; i++) {
 		calendars.push({
@@ -68,19 +57,13 @@ function performCalendarReadFunctions() {
 	}
 
 	if (!calendars.length) {
-		label.text = 'No calendars available. Select at least one in the native calendar before using this app';
+		$.label.text = 'No calendars available. Select at least one in the native calendar before using this app';
 	} else {
-		label.text = 'Click button to view calendar events';
+		$.label.text = 'Click button to view calendar events';
 
-		var picker = Ti.UI.createPicker({
-			top : 20,
-			selectionIndicator: true
-		});
+		$.calendarPicker.add(pickerData);
 
-		picker.add(pickerData);
-		$.calendarWin.add(picker);
-
-		picker.addEventListener('change', function(e) {
+		$.calendarPicker.addEventListener('change', function(e) {
 			for (var i = 0, ilen = calendars.length; i < ilen; i++) {
 				if (calendars[i].name === e.row.title) {
 					selectedCalendarName = calendars[i].name;
@@ -90,17 +73,8 @@ function performCalendarReadFunctions() {
 			}
 		});
 
-		var button = Ti.UI.createButton({
-			title : 'View events',
-			color : "#ffffff",
-			backgroundColor : "#a22621",
-			top : 10,
-			style: (OS_IOS)? Titanium.UI.iPhone.SystemButtonStyle.PLAIN : 'none'
-		});
-		$.calendarWin.add(button);
-
-		button.addEventListener('click', function(e) {
-			label.text = 'Generating...';
+		$.viewEvent.addEventListener('click', function(e) {
+			$.label.text = 'Generating...';
 
 			var currentYear = new Date().getFullYear();
 
@@ -187,11 +161,10 @@ function performCalendarReadFunctions() {
 				print('No events');
 			}
 
-			label.text = consoleString;
+			$.label.text = consoleString;
 		});
 	}
 
-	$.calendarWin.add(scrollView);
 }
 
 /**

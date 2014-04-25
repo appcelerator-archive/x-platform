@@ -1,6 +1,19 @@
 <Alloy>
-	<Window id="calendarWin" class="childContainer"  backgroundColor="#555">
+	<Window id="calendarWin" class="childContainer">
 		<Require id="topBar" src="partials/topbar"></Require>
+		<View id="calendarView">
+			<Label id="calendarType"/>
+			<Picker id="calendarPicker" platform="ios">
+		</Picker>
+		<Picker id="calendarPicker" platform="android" useSpinner="true">
+		</Picker>
+	</View>
+	<View id="buttonBar">
 		<Button id="createEvent" onClick="addCalendarEvent"/>
-	</Window>
+		<Button id="viewEvent"></Button>
+	</View>
+	<ScrollView id="eventsView">
+		<Label id="label"></Label>
+	</ScrollView>
+</Window>
 </Alloy>
