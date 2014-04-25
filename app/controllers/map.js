@@ -151,7 +151,7 @@ function addContact(params) {
  **/
 function addMap() {
 	mapview.setAnnotations(annotations);
-	mapview.setLocation({
+	mapview.setRegion({
 		latitude : annotations[0].latitude,
 		longitude : annotations[0].longitude,
 		latitudeDelta : 0.5,

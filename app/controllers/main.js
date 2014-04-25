@@ -69,13 +69,22 @@ function setCurrentLocationInMap() {
 			Ti.App.Properties.setString('currentLocation', JSON.stringify(currentLocation));
 		}
 	});
+
+	mapview.setRegion({
+		latitude : annotations.latitude,
+		longitude : annotations.longitude,
+		latitudeDelta : 0.5,
+		longitudeDelta : 0.5
+	});
+	
 	//adding annotations
 	mapview.annotations = [annotations];
 	$.geolocator.add(mapview);
 }
+
 /**
-*function to add coupons into the table
-*/
+ *function to add coupons into the table
+ */
 function addCoupons(couponsArray) {
 	var data = [];
 	// add coupons data to coupons table
@@ -88,9 +97,10 @@ function addCoupons(couponsArray) {
 	}
 	$.couponsTable.data = data;
 }
+
 /**
-*EVENT LISTENERS
-*/
+ *EVENT LISTENERS
+ */
 
 /**
  * adds coupons to favorite coupons list
