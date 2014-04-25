@@ -5,7 +5,7 @@ var params = arguments[0] || {};
  * */
 function initialize() {
 	var args = params.data;
-	$.topBar.back.addEventListener('click', closeWindow);
+	$.topBar.imageContainer.addEventListener('click', closeWindow);
 	$.topBar.setTitle(args.title);
 	//Sets the top for ios>=7
 	if (OS_IOS && Ti.Platform.version >= 7) {

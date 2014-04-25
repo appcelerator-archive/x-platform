@@ -196,5 +196,5 @@ function closeWindow() {
 
 initialize();
 
-$.topBar.back.addEventListener('click', closeWindow);
+$.topBar.imageContainer.addEventListener('click', closeWindow);
 $.topBar.setTitle('Mapping');

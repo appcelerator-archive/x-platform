@@ -10,7 +10,7 @@ var pickerData = [];
  * Screen Initialization
  * */
 function initialize() {
-	$.topBar.back.addEventListener('click', closeWindow);
+	$.topBar.imageContainer.addEventListener('click', closeWindow);
 	$.topBar.setTitle('Calendar');
 
 	// adding controls (view events, picker, scrollview) to the Calendar screen as per authorization
