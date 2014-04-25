@@ -8,7 +8,7 @@ var _tempFile = null;
  * Screen Initialization
  * */
 function initialize() {
-	$.topBar.back.addEventListener('click', closeWindow);
+	$.topBar.imageContainer.addEventListener('click', closeWindow);
 	$.topBar.setTitle('Generate PDF File');
 }
 
