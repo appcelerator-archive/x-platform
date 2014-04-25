@@ -1,16 +1,7 @@
-".container[platform=ios]" : {
+".container" :{
 	backgroundColor:'#333',
 	layout:'vertical',
-	top:20,
-	bottom:0
-},
-".container[platform=android]" : {
-	backgroundColor:'#333',
-	layout:'vertical'
-},
-".container[platform=mobileweb]" : {
-	backgroundColor:'#333',
-	layout:'vertical'
+	scrollType:"vertical"
 },
 ".menuItemHome" : {
 	backgroundColor:'#555',
