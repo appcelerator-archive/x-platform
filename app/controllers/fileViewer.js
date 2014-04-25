@@ -7,6 +7,12 @@ function initialize() {
 	var args = params.data;
 	$.topBar.back.addEventListener('click', closeWindow);
 	$.topBar.setTitle(args.title);
+	//Sets the top for ios>=7
+	if (OS_IOS && Ti.Platform.version >= 7) {
+		$.webview.top = 65;
+	} else {
+		$.webview.top = 45;
+	}
 
 	//opening a remote webpage
 	if (args.url) {
