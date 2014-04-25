@@ -1,5 +1,7 @@
 <Alloy>
-	<Window id="pushnotoficationWin" class="childContainer">
+	<Window id="pushnotificationWin" class="childContainer">
 		<Require id="topBar" src="partials/topbar"></Require>
+		
+		<Button id="enablePushBtn" onClick="enablePush"></Button>
 	</Window>
 </Alloy>
