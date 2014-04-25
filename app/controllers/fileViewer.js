@@ -5,6 +5,8 @@ var params = arguments[0] || {};
  * */
 function initialize() {
 	var args = params.data;
+	$.topBar.back.addEventListener('click', closeWindow);
+	$.topBar.setTitle(args.title);
 
 	//opening a remote webpage
 	if (args.url) {

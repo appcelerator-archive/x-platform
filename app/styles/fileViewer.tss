@@ -1,17 +1,16 @@
 ".container" : {
 	width:"100%",
 	backgroundColor:'white',
-	navBarHidden:true,
-	modal: true
+	navBarHidden:true
 },
 ".navBtn" : {
 	height:60,
 	width:60,
 	font:{fontSize:24,fontWeight:"bold"}
-}
+},
 "#webview" : {
 	willHandleTouches:false,
-	top: 0,
+	top: 45,
 	bottom: 60
 }
 "#nav" : {

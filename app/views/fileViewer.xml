@@ -1,5 +1,6 @@
 <Alloy>
 	<Window class="container">
+		<Require id="topBar" src="partials/topbar"></Require>
 		<WebView id="webview"/>
 		<View id="nav">
 			<Button id="back" class="navBtn" onClick="back"/>

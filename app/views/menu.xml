@@ -24,13 +24,13 @@
 		<View id="pushnotifications" class="menuItem">
 			<Label  text="Push Notifications"/>
 		</View>
-		<View id="RemoteHtml" controller="fileViewer" class="menuItem" print="false" url="http://www.appcelerator.com">
+		<View id="RemoteHtml" controller="fileViewer" title="Remote HTML File" class="menuItem" print="false" url="http://www.appcelerator.com">
 			<Label  text="Remote HTML File"/>
 		</View>
-		<View id="localHtml" controller="fileViewer" class="menuItem" print="false" url="/html/index.html">
+		<View id="localHtml" controller="fileViewer" title="Local HTML File" class="menuItem" print="false" url="/html/index.html">
 			<Label  text="Local HTML File"/>
 		</View>
-		<View id="localPdf" controller="fileViewer" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios">
+		<View id="localPdf" controller="fileViewer" title="Local PDF File" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios">
 			<Label text="Local PDF File"/>
 		</View>
 	</ScrollView>
