@@ -1,5 +1,6 @@
 <Alloy>
 	<Window id="cameraWin" class="childContainer">
 		<Require id="topBar" src="partials/topbar"></Require>
+		<Button id="emailPic" onClick="emailPicture"></Button>
 	</Window>
 </Alloy>
