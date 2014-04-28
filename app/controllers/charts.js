@@ -4,9 +4,6 @@
 function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
 	$.topBar.setTitle('Charts');
-	//initialize chart
-	doChart();
-
 }
 
 //EVENT LISTENER
