@@ -1,0 +1,14 @@
+".container" : {
+	layout:"vertical",
+	width:"100%",
+	backgroundColor:'black'
+},
+"#introtext" :{
+	top: 0,
+	left: 2,
+	right: 0,
+	bottom: 5,
+	font:{fontSize: "11"},
+	color: "#fff",
+	textAlign: "left"
+}

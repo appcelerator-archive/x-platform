@@ -6,7 +6,7 @@
 "#sectionsView" :{
 	layout:"vertical",
 	width:"100%",
-	backgroundColor:'white'
+	backgroundColor:'transparent'
 },
 "#topbar" :{
 	width:'100%',

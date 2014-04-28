@@ -1,5 +1,7 @@
 {
-	"global": {}, 
+	"global": {
+		 "theme": ""
+	}, 
 	"env:development": {}, 
 	"env:test": {}, 
 	"env:production": {}, 
