@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="scan_code">Código de exploración</string>
+	<string name="scan_image">Imagen Scan de la Galería</string>
+	<string name="generating">Generación ...</string>
+	<string name="event_title">Evento Muestra</string>
+	<string name="event_notes">Este es un evento de prueba creada por una demostración App Appcelerator.</string>
+	<string name="photo_attached">Foto adjunta</string>
+	<string name="email_id">foo@yahoo.com</string>
+	<string name="pdf_title">título</string>
+	<string name="pdf_subject">Este es el tema</string>
+	<string name="pdf_author">John Doe</string>
+	<string name="pdf_keywords">uno, dos, tres</string>
+	<string name="pdf_creator">alguien</string>
+	<string name="my_location">Mi ubicación</string>
+	<string name="location_unavailable">Mi ubicación no disponible</string>
+	<string name="subscribe">Suscríbete a Canales</string>
+	<string name="unsubscribe">Darse de baja de Canales</string>
+</resources>
