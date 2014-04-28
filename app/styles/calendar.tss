@@ -9,7 +9,7 @@
 "#calendarType" :{
 	text: 'Select the calendar type',
 	font: {fontFamily: "HelveticaNeue", fontSize :"14"},
-	color: "black"
+	color: "#555"
 },
 "#calendarPicker" :{
 	top: 10,

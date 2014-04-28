@@ -1,5 +1,5 @@
 "#couponRow" :{
-	height: "80",
+	height: "70",
 	backgroundColor :"#ffffff",
 	selectionStyle: "none"
 },

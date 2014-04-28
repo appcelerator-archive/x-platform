@@ -2,7 +2,9 @@
 	top: 10,
 	text: 'Press the below button to demonstrate how to use jsPDF in Titanium. If you are using Android you will need to run this on the device to view the PDF.',
 	textAlign: "center",
-	color: "black"
+	color: "#555",
+	left: 5,
+	right:5
 },
 "#runPdf" :{
 	height: 50,
