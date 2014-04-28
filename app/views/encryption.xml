@@ -3,7 +3,10 @@
 		<Require id="topBar" src="partials/topbar"></Require>
 		<Label id="label1"></Label>
 		<TextArea id="originalText"></TextArea>
+		<View id="buttonView">
 		<Button id="encrypt" onClick="encrypt"></Button>
+		<Button id="clear" onClick="clearText"></Button>
+		</View>
 		<Label id="label2"></Label>
 		<Label id="encryptedText"></Label>
 	</Window>

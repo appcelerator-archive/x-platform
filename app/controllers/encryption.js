@@ -12,7 +12,7 @@ function initialize() {
 /**
  * encrypts the text entered by user
  */
-function encrypt() {
+function encrypt(e) {
 	$.originalText.blur();
 	$.label2.enabled = true;
 	$.encryptedText.enabled = true;
@@ -24,6 +24,17 @@ function encrypt() {
 		source : $.originalText.getValue(),
 		type : "TYPE_HEXSTRING"
 	});
+}
+
+/**
+ * Clears the original text as well as the encrypted text and sets focus in the text box.
+ */
+function clearText(e){
+	$.originalText.value= "";
+	$.originalText.focus();
+	$.encryptedText.text = "";
+	$.label2.enabled = false;
+	$.encryptedText.enabled = false;
 }
 
 /**
