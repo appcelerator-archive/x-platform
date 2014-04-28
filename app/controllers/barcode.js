@@ -19,10 +19,10 @@ function buildUI() {
 		
 		var buttonView=Ti.UI.createView({
 			backgroundColor:'transparent',
-			width:'100%',
 			height:Ti.UI.SIZE,
-			layout:'horizontal',
-			top:10
+			top: 10,
+			left: 10,
+			right: 10
 		});
 		var resultView=Ti.UI.createView({
 			backgroundColor:'transparent',
@@ -137,12 +137,13 @@ function buildUI() {
 		 */
 		var scanCode = Ti.UI.createButton({
 			title : 'Scan Code',
-			width : Ti.UI.SIZE,
+			width : "31%",
 			top : 20,
-			left:10,
+			left:0,
 			style: (OS_IOS)? Titanium.UI.iPhone.SystemButtonStyle.PLAIN : 'none',
 			backgroundColor:'#a22621',
-			color:'#fff'
+			color:'#fff',
+			font: {fontFamily : 'helveticaNeue', fontSize: "16"}
 			
 		});
 
@@ -168,12 +169,13 @@ function buildUI() {
 		 */
 		var scanImage = Ti.UI.createButton({
 			title : 'Scan Image from Gallery',
-			width : Ti.UI.SIZE,
+			width : "65%",
 			top : 20,
-			left:10,
+			right:0,
 			style: (OS_IOS)? Titanium.UI.iPhone.SystemButtonStyle.PLAIN : 'none',
 			backgroundColor:'#a22621',
-			color:'#fff'
+			color:'#fff',
+			font: {fontFamily : 'helveticaNeue', fontSize: "16"}
 		});
 		
 		scanImage.addEventListener('click', function() {
