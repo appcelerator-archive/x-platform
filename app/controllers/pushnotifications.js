@@ -59,7 +59,7 @@ function enablePush() {
 	function unsubscribe(){
 		acs.unsubscribe({channel:"main", token:Ti.App.Properties.getString("deviceToken")});
 	    acs.unsubscribe({channel:Ti.Platform.osname, token:Ti.App.Properties.getString("deviceToken")});
-	    $.enablePushBtn.title = "Subscribe to Channels";
+	    $.enablePushBtn.title = L("subscribe");
 		$.enablePushBtn.removeEventListener("click",unsubscribe);
 		$.enablePushBtn.addEventListener("click",enablePush);
 	}
@@ -76,7 +76,7 @@ function enablePush() {
 		Ti.App.Properties.setString("deviceToken", e.deviceToken);
 	    acs.subscribe({channel:"main", token:e.deviceToken});
 	    acs.subscribe({channel:Ti.Platform.osname, token:e.deviceToken});
-	    $.enablePushBtn.title = "Unsubscribe from Channels";
+	    $.enablePushBtn.title = L("unsubscribe");
 		$.enablePushBtn.removeEventListener("click",enablePush);
 		$.enablePushBtn.addEventListener("click",unsubscribe);
 	}

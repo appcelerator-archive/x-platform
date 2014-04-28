@@ -74,7 +74,7 @@ function performCalendarReadFunctions() {
 		});
 
 		$.viewEvent.addEventListener('click', function(e) {
-			$.label.text = 'Generating...';
+			$.label.text = L('generating');
 
 			var currentYear = new Date().getFullYear();
 
@@ -176,8 +176,8 @@ function performCalendarWriteFunctions() {
 	var date1 = new Date(new Date().getTime() + 3000), date2 = new Date(new Date().getTime() + 903000);
 	Ti.API.info('Date1 : ' + date1 + 'Date2 : ' + date2);
 	var event = defCalendar.createEvent({
-		title : 'Sample Event',
-		notes : 'This is a test event created by an Appcelerator Demo App.',
+		title : L("event_title"),
+		notes : L("event_notes"),
 		location : 'Appcelerator Inc',
 		begin : date1,
 		end : date2,

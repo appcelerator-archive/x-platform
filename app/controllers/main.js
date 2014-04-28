@@ -61,7 +61,7 @@ function setCurrentLocationInMap() {
 		if (e.coords.longitude && e.coords.latitude) {
 			annotations.latitude = e.coords.latitude;
 			annotations.longitude = e.coords.longitude;
-			annotations.title = "My Location";
+			annotations.title = L("my_location");
 			annotations.animated = true;
 
 			//setting the value of current location

@@ -136,7 +136,7 @@ function buildUI() {
 		 * Create a button that will trigger the barcode scanner.
 		 */
 		var scanCode = Ti.UI.createButton({
-			title : 'Scan Code',
+			title : L("scan_code"),
 			width : "31%",
 			top : 20,
 			left:0,
@@ -168,7 +168,7 @@ function buildUI() {
 		 * Create a button that will show the gallery picker.
 		 */
 		var scanImage = Ti.UI.createButton({
-			title : 'Scan Image from Gallery',
+			title : L("scan_image"),
 			width : "65%",
 			top : 20,
 			right:0,

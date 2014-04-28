@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="scan_code">Scan Code</string>
+	<string name="scan_image">Scan Image from Gallery</string>
+	<string name="generating">Generating...</string>
+	<string name="event_title">Sample Event</string>
+	<string name="event_notes">This is a test event created by an Appcelerator Demo App.</string>
+	<string name="photo_attached">Photo Attached</string>
+	<string name="email_id">foo@yahoo.com</string>
+	<string name="pdf_title">Title</string>
+	<string name="pdf_subject">This is the subject</string>
+	<string name="pdf_author">John Doe</string>
+	<string name="pdf_keywords">one, two, three</string>
+	<string name="pdf_creator">Someone</string>
+	<string name="my_location">My Location</string>
+	<string name="location_unavailable">My Location Unavailable</string>
+	<string name="subscribe">Subscribe to Channels</string>
+	<string name="unsubscribe">Unsubscribe from Channels</string>
+</resources>

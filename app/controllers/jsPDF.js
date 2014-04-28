@@ -22,11 +22,11 @@ function initialize() {
 function generatePDF(e) {
 	var doc = new _jsPDF();
 	doc.setProperties({
-		title : 'Title',
-		subject : 'This is the subject',
-		author : 'John Doe',
-		keywords : 'one, two, three',
-		creator : 'Someone'
+		title : L('pdf_title'),
+		subject : L('pdf_subject'),
+		author : L('pdf_author'),
+		keywords : L('pdf_keywords'),
+		creator : L('pdf_creator')
 	});
 
 	var imgSample1 = Ti.Filesystem.resourcesDirectory + 'image1.jpg';

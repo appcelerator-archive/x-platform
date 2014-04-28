@@ -78,7 +78,7 @@ function addLocationsToTable(data) {
 		} else {
 			row = Alloy.createController('partials/locationRow', {
 				data : {
-					title : 'My Location Unavailable'
+					title : L('location_unavailable')
 				},
 				index : -1,
 				hasLoc : false

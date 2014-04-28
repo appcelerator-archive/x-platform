@@ -35,8 +35,8 @@ function emailPicture(){
 		photo.write(event.media);
 		setTimeout(function(){
 			var emailDialog = Ti.UI.createEmailDialog({
-				subject : "Photo Attached",
-				toRecipients : ['foo@yahoo.com']
+				subject : L("photo_attached"),
+				toRecipients : [L("email_id")]
 			});
 			emailDialog.addAttachment(photo);
 			emailDialog.open();
