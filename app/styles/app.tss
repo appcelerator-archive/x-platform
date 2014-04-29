@@ -6,5 +6,5 @@
 },
 "Button" :{
 	style: Titanium.UI.iPhone.SystemButtonStyle.PLAIN,
-	height: 50
+	height: 40
 }
