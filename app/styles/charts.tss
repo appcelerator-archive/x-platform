@@ -10,7 +10,7 @@
 },
 "#generateChart" :{
 	title: "Generate New Chart",
-	top: 40,
+	top: 10,
 	color: "#ffffff",
 	backgroundColor: "#a22621",
 	left: 30,

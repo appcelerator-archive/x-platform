@@ -21,8 +21,7 @@ function buildUI() {
 			backgroundColor:'transparent',
 			height:Ti.UI.SIZE,
 			top: 10,
-			left: 10,
-			right: 10
+			width:'95%'
 		});
 		var resultView=Ti.UI.createView({
 			backgroundColor:'transparent',
@@ -33,15 +32,13 @@ function buildUI() {
 			top:10
 		});
 		
-		var scrollView = Ti.UI.createScrollView({
-			contentWidth : 'auto',
-			contentHeight : 'auto',
-			top : 0,
-			showVerticalScrollIndicator : true,
-			layout : 'vertical'
+		var containerView=Ti.UI.createView({
+			width:'100%',
+			height:Ti.UI.SIZE,
+			layout:'vertical'
 		});
-		scrollView.add(resultView);
-		scrollView.add(buttonView);
+		containerView.add(resultView);
+		containerView.add(buttonView);
 		
 		/**
 		 * Create a chrome for the barcode scanner.
@@ -138,7 +135,6 @@ function buildUI() {
 		var scanCode = Ti.UI.createButton({
 			title : L("scan_code"),
 			width : "31%",
-			top : 20,
 			left:0,
 			height: 40,
 			style: (OS_IOS)? Titanium.UI.iPhone.SystemButtonStyle.PLAIN : 'none',
@@ -171,7 +167,6 @@ function buildUI() {
 		var scanImage = Ti.UI.createButton({
 			title : L("scan_image"),
 			width : "65%",
-			top : 20,
 			right:0,
 			height: 40,
 			style: (OS_IOS)? Titanium.UI.iPhone.SystemButtonStyle.PLAIN : 'none',
@@ -370,7 +365,7 @@ function buildUI() {
 		}
 
 
-		$.barcodeWin.add(scrollView);
+		$.barcodeWin.add(containerView);
 	} else {
 		var webview = Ti.UI.createWebView({
 			url : "http://zxing.org/w/decode.jspx",
