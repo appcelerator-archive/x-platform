@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.3.1
+description: Exposes the AirPrint API to Titanium Mobile applications.
+author: Dawson Toth
+license: Apache License, Version 2.0
+copyright: Copyright (c) 2010-2013 by Appcelerator, Inc.
+
+
+# these should not be edited
+name: airprint
+moduleid: ti.airprint
+guid: ebd45fea-93b5-4ab7-bb03-b6d462aab32f
+platform: iphone
+minsdk: 2.1.3.GA

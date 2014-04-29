@@ -1,0 +1,52 @@
+<h1>Ti.AirPrint Module</h1>
+
+<h2>Description</h2>
+
+<p>Exposes the AirPrint API to Titanium Mobile applications.</p>
+
+<h2>Getting Started</h2>
+
+<p>View the <a href="http://docs.appcelerator.com/titanium/latest/#!/guide/Using_Titanium_Modules">Using Titanium Modules</a> document for instructions on getting
+started with using this module in your application.</p>
+
+<h2>Accessing the Ti.AirPrint Module</h2>
+
+<p>To access this module from JavaScript, you would do the following:</p>
+
+<pre>var AirPrint = require('ti.airprint');</pre>
+
+<h2>Functions</h2>
+
+<h3>Ti.AirPrint.print({...})</h3>
+
+<p>Prints a document by showing a popover on the iPad or a modal window on other iOS devices.</p>
+
+<h4>Arguments</h4>
+
+<p>Takes one argument, a dictionary with the following keys:</p>
+
+<ul>
+<li>url[string]: The URL to an image or PDF. Can be local or remote, but must be accessible to the app.</li>
+<li>showsPageRange[boolean] (optional): Whether or not to show the page range selector in the popover.</li>
+<li>view[object] (optional): On the iPad, the object from which the popover should originate.</li>
+</ul>
+
+<h3>Ti.AirPrint.canPrint()</h3>
+
+<p>Returns whether or not the current device supports printing. Note that a printer does not need to be attached for this to return true.</p>
+
+<h2>Usage</h2>
+
+<p>See example.</p>
+
+<h2>Author</h2>
+
+<p>Dawson Toth</p>
+
+<h2>Feedback and Support</h2>
+
+<p>Please direct all questions, feedback, and concerns to <a href="mailto:info@appcelerator.com?subject=iOS%20AirPrint%20Module">info@appcelerator.com</a>.</p>
+
+<h2>License</h2>
+
+<p>Copyright(c) 2010-2013 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.</p>
