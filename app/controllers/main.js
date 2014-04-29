@@ -68,17 +68,18 @@ function setCurrentLocationInMap() {
 			currentLocation = annotations;
 			Ti.App.Properties.setString('currentLocation', JSON.stringify(currentLocation));
 		}
+
+		mapview.setRegion({
+			latitude : annotations.latitude,
+			longitude : annotations.longitude,
+			latitudeDelta : 0.5,
+			longitudeDelta : 0.5
+		});
+		//adding annotations
+		mapview.annotations = [annotations];
 	});
 
-	mapview.setRegion({
-		latitude : annotations.latitude,
-		longitude : annotations.longitude,
-		latitudeDelta : 0.5,
-		longitudeDelta : 0.5
-	});
 	
-	//adding annotations
-	mapview.annotations = [annotations];
 	$.geolocator.add(mapview);
 }
 
