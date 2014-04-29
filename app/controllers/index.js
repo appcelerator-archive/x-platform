@@ -40,7 +40,6 @@ function openChildWindow(e) {
 		if (e.source.id !== 'container') {
 			var childWindow = Alloy.createController(menuClicked,{data: e.source}).getView();
 			(OS_IOS) ? Alloy.Globals.navGroup.openWindow(childWindow) : childWindow.open();
-			$.drawermenu.showhidemenu();
 		}
 	}
 }

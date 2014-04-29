@@ -2,7 +2,7 @@
 	<Window id="encryptionWin" class="childContainer">
 		<Require id="topBar" src="partials/topbar"></Require>
 		<Label id="label1"></Label>
-		<TextArea id="originalText"></TextArea>
+		<TextArea id="originalText" value="This is my text to be encrypted."></TextArea>
 		<View id="buttonView">
 		<Button id="encrypt" onClick="encrypt"></Button>
 		<Button id="clear" onClick="clearText"></Button>
