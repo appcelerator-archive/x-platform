@@ -7,7 +7,6 @@
 	right:5
 },
 "#runPdf" :{
-	height: 50,
     title: 'Run PDF Sample',
     left: 40,
     right: 40,

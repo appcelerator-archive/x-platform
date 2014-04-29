@@ -25,7 +25,6 @@
 "#createEvent" :{
 	title:"Create Sample Event",
 	top:5,
-	height:Ti.UI.SIZE,
 	color: "#ffffff",
 	backgroundColor: "#a22621",
 	width: "60%"
@@ -35,7 +34,6 @@
 	title:"View Events",
 	left: 10,
 	top:5,
-	height:Ti.UI.SIZE,
 	color: "#ffffff",
 	backgroundColor: "#a22621",
 	width: 0,
@@ -46,7 +44,7 @@
 	top : 10,
 	left : 10,
 	right : 10,
-	height: "23%",
+	height: "18%",
 	visible: false
 },
 "#eventsView[platform=android]" :{
