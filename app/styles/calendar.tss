@@ -18,8 +18,8 @@
 "#buttonBar" :{
 	top: 10,
 	height: Ti.UI.SIZE,
-	right: 5,
-	left: 5,
+	right: 10,
+	left: 10,
 	layout: "horizontal"
 },
 "#createEvent" :{

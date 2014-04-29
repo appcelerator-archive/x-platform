@@ -34,18 +34,19 @@
 	title: "Click to Encrypt",
 	backgroundColor: "#a22621",
 	color: "#ffffff",
-	left: 10,
+	left: 0,
 	width: "55%"
 },
 "#clear" :{
 	title: "Clear Text",
 	backgroundColor: "#a22621",
 	color: "#ffffff",
-	left: 10,
-	width: "35%"
+	right: 0,
+	width: "40%"
 },
 "#buttonView" :{
 	top: 20,
-	layout: "horizontal",
-	height: Ti.UI.SIZE
+	height: Ti.UI.SIZE,
+	left: 20,
+	right: 20
 }
