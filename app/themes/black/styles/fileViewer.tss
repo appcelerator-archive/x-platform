@@ -1,0 +1,6 @@
+".container" : {
+	width:"100%",
+	backgroundColor:'black',
+	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
+	navBarHidden:true
+}
