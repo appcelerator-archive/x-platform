@@ -6,7 +6,7 @@ var params = arguments[0] || {};
 function initialize() {
 	var args = params.data;
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
-	$.topBar.setTitle(args.title);
+	$.topBar.setTitle(args.titleText);
 	//Sets the top for ios>=7
 	if (Ti.Platform.version.split('.')[0] >= 7) {
 		$.webview.top = 65;

@@ -1,6 +1,6 @@
 <Alloy>
 	<TableView id="container" class="container">
-			<TableViewRow id="home" class="menuItem" sepratorColor="transparent">
+			<TableViewRow id="home" class="menuItem">
 				<View class="rowContainer">
 					<Label  text="Home"/>
 				</View>
@@ -40,25 +40,26 @@
 					<Label  text="Push Notifications"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="RemoteHtml" controller="fileViewer"  class="menuItem" print="false" url="http://www.appcelerator.com" >
+			<TableViewRow id="RemoteHtml" controller="fileViewer"  titleText="Remote HTML File" class="menuItem" print="false" url="http://www.appcelerator.com" >
 				<View class="rowContainer">
 					<Label  text="Remote HTML File"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="localHtml" controller="fileViewer"  class="menuItem" print="false" url="/html/index.html" >
+			<TableViewRow id="localHtml" controller="fileViewer" titleText="Local HTML File" class="menuItem" print="false" url="/html/index.html" >
 				<View class="rowContainer">
 					<Label  text="Local HTML File"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="localPdf" controller="fileViewer"  class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios" >
+			<TableViewRow id="localPdf" controller="fileViewer" titleText="Local PDF File" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios" >
 				<View class="rowContainer">
 					<Label  text="Local PDF File"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="jsPDF" class="menuItem" platform="ios,android">
+			<TableViewRow id="jsPDF" class="menuItem">
 				<View class="rowContainer">
 					<Label  text="Generate PDF File"/>
 				</View>
 			</TableViewRow>
+			
 	</TableView>
 </Alloy>
