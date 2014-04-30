@@ -1,19 +1,17 @@
-".container" :{
+".container[platform=ios]" :{
 	backgroundColor:'#333',
-	layout:'vertical',
-	scrollType:"vertical",
-	contentHeight: "auto"
+	separatorStyle: Titanium.UI.iPhone.TableViewSeparatorStyle.NONE ,
+	separatorColor:'transparent'
 },
-".menuItemHome" : {
-	backgroundColor:'#555',
-	width:'100%',
-	height:40
+".container[platform=android]" :{
+	backgroundColor:'#333',
+	separatorColor:'transparent'
 },
 ".menuItem" : {
-	backgroundColor:'#444',
+	backgroundColor:'#333',
 	width:'100%',
-	height:40,
-	top:5
+	rowHeight:50,
+	selectedBackgroundColor:"#555"
 },
 "Label" : {
 	color:'#fff',
@@ -22,4 +20,12 @@
 	},
 	left:'20',
 	touchEnabled:false
+},
+".rowContainer" :{
+	top:5,
+	height:"40",
+	backgroundColor:"#444",
+	backgroundSelectedColor:"#555",
+	touchEnabled:false
 }
+

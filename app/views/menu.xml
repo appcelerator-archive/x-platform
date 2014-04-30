@@ -1,40 +1,64 @@
 <Alloy>
-	<ScrollView id="container" class="container">
-		<View id="home" class="menuItemHome">
-			<Label  text="Home"/>
-		</View>
-		<View id="map" class="menuItem">
-			<Label text="Map"/>
-		</View>
-		<View id="camera" class="menuItem">
-			<Label  text="Camera & Photo"/>
-		</View>
-		<View id="barcode" class="menuItem">
-			<Label  text="Barcode"/>
-		</View>
-		<View id="charts" class="menuItem">
-			<Label text="Charts"/>
-		</View>
-		<View id="calendar" class="menuItem">
-			<Label text="Calendar"/>
-		</View>
-		<View id="encryption" class="menuItem">
-			<Label  text="Encryption"/>
-		</View>
-		<View id="pushnotifications" class="menuItem">
-			<Label  text="Push Notifications"/>
-		</View>
-		<View id="RemoteHtml" controller="fileViewer" title="Remote HTML File" class="menuItem" print="false" url="http://www.appcelerator.com">
-			<Label  text="Remote HTML File"/>
-		</View>
-		<View id="localHtml" controller="fileViewer" title="Local HTML File" class="menuItem" print="false" url="/html/index.html">
-			<Label  text="Local HTML File"/>
-		</View>
-		<View id="localPdf" controller="fileViewer" title="Local PDF File" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios">
-			<Label text="Local PDF File"/>
-		</View>
-		<View id="jsPDF" class="menuItem" platform="ios,android">
-		<Label text="Generate PDF File"/>
-		</View>
-	</ScrollView>
+	<TableView id="container" class="container">
+			<TableViewRow id="home" class="menuItem" sepratorColor="transparent">
+				<View class="rowContainer">
+					<Label  text="Home"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="map" class="menuItem" >
+				<View class="rowContainer">
+					<Label  text="Map"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="camera" class="menuItem" >
+				<View class="rowContainer">
+					<Label  text="Camera & Photo"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="barcode" class="menuItem" >
+				<View class="rowContainer">
+					<Label  text="Barcode"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="charts" class="menuItem" >
+				<View class="rowContainer">
+					<Label  text="Charts"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="calendar" class="menuItem" >
+				<View class="rowContainer">
+					<Label  text="Calendar"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="encryption" class="menuItem" >
+				<View class="rowContainer">
+					<Label  text="Encryption"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="pushnotifications" class="menuItem" >
+				<View class="rowContainer">
+					<Label  text="Push Notifications"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="RemoteHtml" controller="fileViewer"  class="menuItem" print="false" url="http://www.appcelerator.com" >
+				<View class="rowContainer">
+					<Label  text="Remote HTML File"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="localHtml" controller="fileViewer"  class="menuItem" print="false" url="/html/index.html" >
+				<View class="rowContainer">
+					<Label  text="Local HTML File"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="localPdf" controller="fileViewer"  class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios" >
+				<View class="rowContainer">
+					<Label  text="Local PDF File"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="jsPDF" class="menuItem" platform="ios,android">
+				<View class="rowContainer">
+					<Label  text="Generate PDF File"/>
+				</View>
+			</TableViewRow>
+	</TableView>
 </Alloy>
