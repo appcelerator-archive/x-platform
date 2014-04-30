@@ -8,7 +8,7 @@ function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
 	$.topBar.setTitle(args.title);
 	//Sets the top for ios>=7
-	if (OS_IOS && Ti.Platform.version >= 7) {
+	if (Ti.Platform.version.split('.')[0] >= 7) {
 		$.webview.top = 65;
 	} else {
 		$.webview.top = 45;
