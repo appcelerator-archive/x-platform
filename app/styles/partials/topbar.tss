@@ -1,7 +1,7 @@
 "#imageContainer":{
 	heigth:44,
 	width:44,
-	left:2
+	left:0
 },
 "#topbar":{
 	width:'100%',
@@ -12,8 +12,7 @@
 "#back":{
 	width:15,
 	height:25,
-	image:'/images/backarrow.png',
-	
+	image:'/images/backarrow.png'
 },
 "#title":{
 	color: "#ffffff",

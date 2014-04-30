@@ -45,7 +45,7 @@
 	width: "40%"
 },
 "#buttonView" :{
-	top: 20,
+	top: 10,
 	height: Ti.UI.SIZE,
 	left: 20,
 	right: 20
