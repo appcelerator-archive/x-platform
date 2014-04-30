@@ -5,7 +5,7 @@ var currentLoc = JSON.parse(Ti.App.Properties.getString('currentLocation'));
 var data = [];
 
 //Setup V2 Maps Module
-var Map = OS_IOS || OS_ANDROID ? require("ti.map") : Ti.Map;
+var Map = (OS_IOS || OS_ANDROID) ? require("ti.map") : Ti.Map;
 var mapview = Map.createView({
 	mapType : Map.NORMAL_TYPE
 });
@@ -43,8 +43,10 @@ function initialize() {
 
 	//show closest location
 	setTimeout(function() {
-		var closestLoc = findClosest(data);
-		alert(closestLoc + " is the closest location.\n");
+		if (currentLoc) {
+			var closestLoc = findClosest(data);
+			alert(closestLoc + " is the closest location.\n");
+		}
 	}, 500);
 
 }
@@ -70,7 +72,7 @@ function addLocationsToTable(data) {
 	//Loop through locations and add them to the map and the table
 	for (var i in data) {
 		var row;
-		if (data[i]) {
+		if (data[i] && data[i] !== null) {
 			annotations.push(Map.createAnnotation({
 				latitude : data[i].latitude,
 				longitude : data[i].longitude,
@@ -186,12 +188,12 @@ function tblClick(e) {
 	Alloy.Globals.apm.leaveBreadcrumb("tblClick()");
 	Ti.Analytics.featureEvent('BusinessClicked');
 
-	var index = e.row.index;
+	var index = this.index;
 
 	if (annotations.length < locations.length) {
 		index -= 1;
 	}
-	if (e.row.hasLoc) {
+	if (this.hasLoc) {
 		mapview.setRegion({
 			latitude : annotations[index].latitude,
 			longitude : annotations[index].longitude,
