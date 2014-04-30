@@ -4,7 +4,7 @@
 			<Require type="widget" src="com.appcelerator.sidemenu" id="drawermenu"/>
 		</Window>
 	</NavigationWindow>
-	<Window id="mainWin" class="mainContainer" platform="android">
+	<Window id="mainWin" class="mainContainer" platform="android,mobileweb">
 			<Require type="widget" src="com.appcelerator.sidemenu" id="drawermenu"/>
 	</Window>
 </Alloy>

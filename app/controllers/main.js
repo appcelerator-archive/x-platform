@@ -45,40 +45,37 @@ function initialize() {
  */
 function setCurrentLocationInMap() {
 	// Geo-location Section
-	var Map = require('ti.map');
+	var Map = OS_IOS || OS_ANDROID ? require("ti.map") : Ti.Map;
 	var mapview = Map.createView({
 		mapType : Map.NORMAL_TYPE
 	});
-
 	var annotations = Map.createAnnotation();
-
 	//Setup Geolocation
 	Ti.Geolocation.purpose = "Setting your location";
 	Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_LOW;
 	Ti.Geolocation.preferredProvider = "gps";
-
 	Ti.Geolocation.getCurrentPosition(function(e) {
-		if (e.coords.longitude && e.coords.latitude) {
+		if (e.coords && e.coords.latitude) {
 			annotations.latitude = e.coords.latitude;
 			annotations.longitude = e.coords.longitude;
 			annotations.title = L("my_location");
-			annotations.animated = true;
 
 			//setting the value of current location
 			currentLocation = annotations;
 			Ti.App.Properties.setString('currentLocation', JSON.stringify(currentLocation));
+
+			mapview.setRegion({
+				latitude : annotations.latitude,
+				longitude : annotations.longitude,
+				latitudeDelta : 0.5,
+				longitudeDelta : 0.5
+			});
 		}
 	});
 
-	mapview.setRegion({
-		latitude : annotations.latitude,
-		longitude : annotations.longitude,
-		latitudeDelta : 0.5,
-		longitudeDelta : 0.5
-	});
-	
 	//adding annotations
 	mapview.annotations = [annotations];
+
 	$.geolocator.add(mapview);
 }
 
