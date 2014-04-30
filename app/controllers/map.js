@@ -5,7 +5,7 @@ var currentLoc = JSON.parse(Ti.App.Properties.getString('currentLocation'));
 var data = [];
 
 //Setup V2 Maps Module
-var Map = require('ti.map');
+var Map = OS_IOS || OS_ANDROID ? require("ti.map") : Ti.Map;
 var mapview = Map.createView({
 	mapType : Map.NORMAL_TYPE
 });
@@ -41,11 +41,27 @@ function initialize() {
 	//adding map to mapview with annotations
 	addMap();
 
+	//show closest location
+	setTimeout(function() {
+		var closestLoc = findClosest(data);
+		alert(closestLoc + " is the closest location.\n");
+	}, 500);
+
 }
 
 /**
  * HELPER METHODS
  */
+
+/**
+ * finds the closest location
+ */
+function findClosest(data) {
+	var closestData = data.slice();
+	closestData.shift();
+	var closest = require("closest");
+	return closest(currentLoc.latitude, currentLoc.longitude, closestData).title;
+}
 
 /**
  * Add Locations to the table
