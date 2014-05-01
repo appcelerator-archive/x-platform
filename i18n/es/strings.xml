@@ -16,4 +16,24 @@
 	<string name="location_unavailable">Mi ubicación no disponible</string>
 	<string name="subscribe">Suscríbete a Canales</string>
 	<string name="unsubscribe">Darse de baja de Canales</string>
+	<string name="click_button">Haga clic en el botón para ver los eventos del calendario seleccionado</string>
+	<string name="intro_text">Esta aplicación muestra las capacidades de plataforma cruzada de la plataforma de Appcelerator. La aplicación es compatible con iOS, Android, Windows Mobile, Blackberry, Tizen y web móvil. \n \nAbrir el menú para ver varias demostraciones; algunas manifestaciones son también visibles a continuación.</string>
+	<string name="create_sample_event">Crear evento Muestra</string>
+	<string name="view_event">Ver Eventos</string>
+	<string name="select_calendar">Seleccione el tipo de calendario</string>
+	<string name="email_picture">Correo electrónico de imágenes</string>
+	<string name="generate_chart">Generar nuevo Gráfico</string>
+	<string name="text_to_encrypt">Introduzca el texto a cifrar: </string>
+	<string name="encrypt_text">texto cifrado </string>
+	<string name="encrypt_click">Haga clic en Cifrar</string>
+	<string name="clear_text">Borrar Text</string>
+	<string name="print">impresión</string>
+	<string name="jsPDF">Pulse el botón de abajo para demostrar cómo utilizar jsPDF en Titanio. Si usted está usando Android tendrá que ejecutar esto en el dispositivo para ver el PDF.</string>
+	<string name="run_pdf">Ejecute PDF Sample</string>
+	<string name="geolocation">geolocalización</string>
+	<string name="coupons">Cupones</string>
+	<string name="welcome">bienvenido</string>
+	<string name="appcelerator">Appcelerator</string>
+	<string name="enable_push">Habilitar notificaciones Push</string>
+	<string name="original_text">Este es mi texto a cifrar.</string>
 </resources>

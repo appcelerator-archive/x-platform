@@ -7,7 +7,7 @@
 	visible: false
 },
 "#calendarType" :{
-	text: 'Select the calendar type',
+	text: L('select_calendar'),
 	font: {fontFamily: "HelveticaNeue", fontSize :"14"},
 	color: "#555"
 },
@@ -23,14 +23,14 @@
 	layout: "horizontal"
 },
 "#createEvent" :{
-	title:"Create Sample Event",
+	title: L('create_sample_event'),
 	top:5,
 	color: "#ffffff",
 	width: "60%"
 	
 },
 "#viewEvent" :{
-	title:"View Events",
+	title:L('view_event'),
 	left: 10,
 	top:5,
 	color: "#ffffff",
@@ -55,7 +55,7 @@
 },
 "#label" :{
 	top: 5,
-	text: "Click on the button to display the events for the selected calendar",
+	text: L('click_button'),
 	font: {fontFamily: "HelveticaNeue", fontSize :"12"},
 	textAlign: "center",
 	color: "#ffffff",

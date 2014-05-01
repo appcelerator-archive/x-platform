@@ -1,6 +1,6 @@
 "#enablePushBtn" :{
 	top: 100,
-	title: "Enable Push Notifications",
+	title: L('enable_push'),
 	color: "#ffffff",
 	textAlign:"center",
 	right: 40,

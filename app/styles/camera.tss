@@ -1,5 +1,5 @@
 "#emailPic" :{
-	title: "Email Picture",
+	title: L('email_picture'),
 	left: 40,
 	right: 40,
 	top: 40,

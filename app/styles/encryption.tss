@@ -1,5 +1,5 @@
 "#label1" :{
-	text:"Enter the Text to be Encrypted: ",
+	text:L('text_to_encrypt'),
 	top:20,
 	color: "#555"
 },
@@ -11,10 +11,11 @@
 	height: 80,
 	color: "#555",
 	textAlign: "left",
-	top: 10
+	top: 10,
+	value:L('original_text')
 },
 "#label2" :{
-	text:"ENCRYPTED TEXT ",
+	text:L('encrypt_text'),
 	top: 20,
 	color: "#555",
 	enabled: false
@@ -31,13 +32,13 @@
 	enabled: false
 },
 "#encrypt" :{
-	title: "Click to Encrypt",
+	title: L('encrypt_click'),
 	color: "#ffffff",
 	left: 0,
 	width: "55%"
 },
 "#clear" :{
-	title: "Clear Text",
+	title: L('clear_text'),
 	color: "#ffffff",
 	right: 0,
 	width: "40%"

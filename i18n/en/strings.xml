@@ -16,4 +16,24 @@
 	<string name="location_unavailable">My Location Unavailable</string>
 	<string name="subscribe">Subscribe to Channels</string>
 	<string name="unsubscribe">Unsubscribe from Channels</string>
+	<string name="click_button">Click on the button to display the events for the selected calendar</string>
+	<string name="intro_text">This application demonstrates the cross-platform capabilities of the Appcelerator platform. The application supports iOS, Android, Windows Mobile, Blackberry, Tizen, and mobile web. \n \nOpen the menu to see various demonstrations; some demonstrations are also visible below.</string>
+	<string name="create_sample_event">Create Sample Event</string>
+	<string name="view_event">View Events</string>
+	<string name="select_calendar">Select the calendar type</string>
+	<string name="email_picture">Email Picture</string>
+	<string name="generate_chart">Generate New Chart</string>
+	<string name="text_to_encrypt">Enter the Text to be Encrypted: </string>
+	<string name="encrypt_text">ENCRYPTED TEXT </string>
+	<string name="encrypt_click">Click to Encrypt</string>
+	<string name="clear_text">Clear Text</string>
+	<string name="print">Print</string>
+	<string name="jsPDF">Press the below button to demonstrate how to use jsPDF in Titanium. If you are using Android you will need to run this on the device to view the PDF.</string>
+	<string name="run_pdf">Run PDF Sample</string>
+	<string name="geolocation">Geolocation</string>
+	<string name="coupons">Coupons</string>
+	<string name="welcome">Welcome</string>
+	<string name="appcelerator">Appcelerator</string>
+	<string name="enable_push">Enable Push Notifications</string>
+	<string name="original_text">This is my text to be encrypted.</string>
 </resources>

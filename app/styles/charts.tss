@@ -9,7 +9,7 @@
 	backgroundColor : "#444"
 },
 "#generateChart" :{
-	title: "Generate New Chart",
+	title: L('generate_chart'),
 	top: 10,
 	color: "#ffffff",
 	left: 30,

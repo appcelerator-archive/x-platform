@@ -10,7 +10,7 @@ var couponsArray = [];
 function initialize() {
 	Alloy.Globals.adjustStatusBar($.container);
 	//params
-	var introduction = "This application demonstrates the cross-platform capabilities of the Appcelerator platform. The application supports iOS, Android, Windows Mobile, Blackberry, Tizen, and mobile web. \n \nOpen the menu to see various demonstrations; some demonstrations are also visible below.";
+	var introduction = L("intro_text");
 
 	//coupons data
 	couponsArray = [{

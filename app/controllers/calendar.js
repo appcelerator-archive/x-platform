@@ -59,7 +59,7 @@ function performCalendarReadFunctions() {
 	if (!calendars.length) {
 		$.label.text = 'No calendars available. Select at least one in the native calendar before using this app';
 	} else {
-		$.label.text = 'Click button to view calendar events';
+		$.label.text = L("click_button");
 
 		$.calendarPicker.add(pickerData);
 

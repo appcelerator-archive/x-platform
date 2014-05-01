@@ -20,7 +20,7 @@
 	left:5
 },
 "#winTitle" :{
-	text: "Appcelerator",
+	text: L('appcelerator'),
 	color: "#ffffff",
 	width: Ti.UI.SIZE,
 	height: 45
@@ -34,7 +34,7 @@
 	right: 5
 },
 "#welcome" :{
-	text:"Welcome",
+	text:L('welcome'),
 	color:"#a22621",
 	font:{fontFamily: "HelveticaNeue", fontWeight: 'bold', fontSize: "18"},
 	textAlign: "left",
@@ -69,7 +69,7 @@
 	textAlign: "left"
 }
 "#couponsTitle" :{
-	text: "Coupons",
+	text: L('coupons'),
 },
 "#couponsTable" :{
 	bottom: 0,
@@ -84,7 +84,7 @@
 	top: "-3"
 },
 "#geolocationTitle" :{
-	text: "Geolocation"
+	text: L('geolocation')
 },
 "#geolocator" :{
 	height: Ti.UI.SIZE,

@@ -43,7 +43,7 @@
 	backgroundColor: "transparent",
 }
 "#print" : {
-	title:"Print",
+	title:L('print'),
 	right:10,
 	width:Ti.UI.SIZE,
 	height:60,
