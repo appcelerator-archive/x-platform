@@ -138,7 +138,7 @@ function buildUI() {
 			left:0,
 			height: 40,
 			style: (OS_IOS)? Titanium.UI.iPhone.SystemButtonStyle.PLAIN : 'none',
-			backgroundColor:'#a22621',
+			backgroundColor:(Alloy.CFG.theme === 'red' || Alloy.CFG.theme === '') ? '#a22621': "#597c90",
 			color:'#fff',
 			font: {fontFamily : 'helveticaNeue', fontSize: "16"}
 			
@@ -170,7 +170,7 @@ function buildUI() {
 			right:0,
 			height: 40,
 			style: (OS_IOS)? Titanium.UI.iPhone.SystemButtonStyle.PLAIN : 'none',
-			backgroundColor:'#a22621',
+			backgroundColor:(Alloy.CFG.theme === 'red' || Alloy.CFG.theme === '') ? '#a22621': "#597c90",
 			color:'#fff',
 			font: {fontFamily : 'helveticaNeue', fontSize: "16"}
 		});

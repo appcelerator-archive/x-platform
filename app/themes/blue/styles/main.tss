@@ -1,0 +1,15 @@
+
+"#topbar" :{
+	width:'100%',
+	height:45,
+	backgroundColor:'#597c90'
+},
+"#welcome" :{
+	text:"Welcome",
+	color:"#597c90",
+	font:{fontFamily: "HelveticaNeue", fontWeight: 'bold', fontSize: "18"},
+	textAlign: "left",
+	top:10,
+	left: 0,
+	width: "auto"
+}

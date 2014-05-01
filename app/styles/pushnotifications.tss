@@ -2,7 +2,6 @@
 	top: 100,
 	title: "Enable Push Notifications",
 	color: "#ffffff",
-	backgroundColor: "#a22621",
 	textAlign:"center",
 	right: 40,
 	left: 40

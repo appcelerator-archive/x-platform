@@ -1,7 +1,0 @@
-".mainContainer" : {
-	backgroundColor:'black',
-	navBarHidden:true,
-	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
-	exitOnClose:true
-}
-

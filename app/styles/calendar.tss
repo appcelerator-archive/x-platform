@@ -26,7 +26,6 @@
 	title:"Create Sample Event",
 	top:5,
 	color: "#ffffff",
-	backgroundColor: "#a22621",
 	width: "60%"
 	
 },
@@ -35,7 +34,6 @@
 	left: 10,
 	top:5,
 	color: "#ffffff",
-	backgroundColor: "#a22621",
 	width: 0,
 	visible: false
 },

@@ -1,10 +1,11 @@
 ".childContainer" : {
 	layout:"vertical",
 	width:"100%",
-	backgroundColor:'black',
-	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
+	backgroundColor:'white',
 	navBarHidden:true
 },
 "Button" :{
 	style: Titanium.UI.iPhone.SystemButtonStyle.PLAIN,
+	height: 40,
+	backgroundColor: "#597c90"
 }

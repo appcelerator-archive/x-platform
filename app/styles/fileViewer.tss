@@ -21,28 +21,33 @@
 }
 "#back" : {
 	title:"<",
-	left:0
+	left:0,
+	backgroundColor: "transparent",
 }
 "#forward" : {
 	title:">",
-	left:60
+	left:60,
+	backgroundColor: "transparent",
 }
 "#reload" : {
 	title:"Reload",
 	right:10,
 	width:Ti.UI.SIZE,
-	height:60
+	height:60,
+	backgroundColor: "transparent",
 }
 "#close" : {
 	title:"Done",
 	width:Ti.UI.SIZE,
-	height:60
+	height:60,
+	backgroundColor: "transparent",
 }
 "#print" : {
 	title:"Print",
 	right:10,
 	width:Ti.UI.SIZE,
-	height:60
+	height:60,
+	backgroundColor: "transparent",
 },
 "Button[platform=android]" :{
 	color: "#ffffff",

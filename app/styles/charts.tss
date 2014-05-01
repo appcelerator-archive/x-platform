@@ -12,7 +12,6 @@
 	title: "Generate New Chart",
 	top: 10,
 	color: "#ffffff",
-	backgroundColor: "#a22621",
 	left: 30,
 	right: 30
 }

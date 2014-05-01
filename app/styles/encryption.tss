@@ -32,14 +32,12 @@
 },
 "#encrypt" :{
 	title: "Click to Encrypt",
-	backgroundColor: "#a22621",
 	color: "#ffffff",
 	left: 0,
 	width: "55%"
 },
 "#clear" :{
 	title: "Clear Text",
-	backgroundColor: "#a22621",
 	color: "#ffffff",
 	right: 0,
 	width: "40%"
