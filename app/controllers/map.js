@@ -209,7 +209,7 @@ function tblClick(e) {
  * Closes the window
  * */
 function closeWindow() {
-	(OS_IOS) ? Alloy.Globals.navGroup.closeWindow($.mapWin) : $.mapWin.close();
+	$.mapWin.close();
 }
 
 initialize();

@@ -79,7 +79,7 @@ function closeWindow() {
 	if (_tempFile != null) {
 		_tempFile.deleteFile();
 	}
-	(OS_IOS) ? Alloy.Globals.navGroup.closeWindow($.jspdfWin) : $.jspdfWin.close();
+	$.jspdfWin.close();
 }
 
 initialize();

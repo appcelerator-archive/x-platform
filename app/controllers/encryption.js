@@ -41,7 +41,7 @@ function clearText(e){
  * Closes the window
  * */
 function closeWindow() {
-	(OS_IOS) ? Alloy.Globals.navGroup.closeWindow($.encryptionWin) : $.encryptionWin.close();
+	$.encryptionWin.close();
 }
 
 initialize();

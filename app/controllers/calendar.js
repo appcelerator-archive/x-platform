@@ -243,7 +243,7 @@ function addCalendarEvent() {
  * Closes the window
  * */
 function closeWindow() {
-	(OS_IOS) ? Alloy.Globals.navGroup.closeWindow($.calendarWin) : $.calendarWin.close();
+	$.calendarWin.close();
 }
 
 initialize();

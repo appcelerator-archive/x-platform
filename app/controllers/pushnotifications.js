@@ -92,7 +92,7 @@ function enablePush() {
  * Closes the window 
  * */
 function closeWindow(){
-	(OS_IOS)?Alloy.Globals.navGroup.closeWindow($.pushnotificationWin): $.pushnotificationWin.close();
+	$.pushnotificationWin.close();
 }
 
 initialize();

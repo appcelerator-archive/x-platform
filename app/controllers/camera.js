@@ -49,7 +49,7 @@ function emailPicture(){
  * Closes the window 
  * */
 function closeWindow(){
-	(OS_IOS)?Alloy.Globals.navGroup.closeWindow($.cameraWin): $.cameraWin.close();
+	$.cameraWin.close();
 }
 
 initialize();

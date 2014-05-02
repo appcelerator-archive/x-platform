@@ -20,7 +20,7 @@ function doChart() {
  * Closes the window
  * */
 function closeWindow() {
-	(OS_IOS) ? Alloy.Globals.navGroup.closeWindow($.chartWin) : $.chartWin.close();
+	$.chartWin.close();
 }
 
 initialize();

@@ -24,9 +24,6 @@ function initialize() {
 	if (OS_ANDROID) {
 		$.mainWin.addEventListener("androidBack", $.drawermenu.showhidemenu);
 	}
-	if (OS_IOS) {
-		Alloy.Globals.navGroup = $.navGroup;
-	}
 }
 
 /**
@@ -39,8 +36,7 @@ function openChildWindow(e) {
 	} else {
 		if (e.source.id !== 'container') {
 			var childWindow = Alloy.createController(menuClicked,{data: e.source}).getView();
-			(OS_IOS) ? Alloy.Globals.navGroup.openWindow(childWindow) : childWindow.open();
-			$.drawermenu.showhidemenu();
+			childWindow.open({modal:true});
 		}
 	}
 }
@@ -48,5 +44,6 @@ function openChildWindow(e) {
 initialize();
 
 //Open main window
-(OS_IOS) ? $.navGroup.open() : $.mainWin.open();
+$.mainWin.open();
+
 

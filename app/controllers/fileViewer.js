@@ -85,7 +85,7 @@ Ti.App.addEventListener('app:fromWebView', function(e) {
  * Closes the window
  * */
 function closeWindow() {
-	(OS_IOS) ? Alloy.Globals.navGroup.closeWindow($.fileViewer) : $.fileViewer.close();
+	$.fileViewer.close();
 }
 
 initialize();

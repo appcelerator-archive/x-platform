@@ -401,7 +401,7 @@ function buildUI() {
  * Closes the window
  * */
 function closeWindow() {
-	(OS_IOS) ? Alloy.Globals.navGroup.closeWindow($.barcodeWin) : $.barcodeWin.close();
+	$.barcodeWin.close();
 }
 
 initialize();
