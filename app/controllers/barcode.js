@@ -83,7 +83,7 @@ function buildUI() {
 		overlay.add(switchButton);
 
 		var toggleLEDButton = Ti.UI.createButton({
-			title : Barcode.useLED ? L('ledOn') : l('ledOff'),
+			title : Barcode.useLED ? L('ledOn') : L('ledOff'),
 			textAlign : 'center',
 			color : '#000',
 			backgroundColor : '#fff',
@@ -102,7 +102,7 @@ function buildUI() {
 		});
 		toggleLEDButton.addEventListener('click', function() {
 			Barcode.useLED = !Barcode.useLED;
-			toggleLEDButton.title = Barcode.useLED ? L('ledOn') : l('ledOff');
+			toggleLEDButton.title = Barcode.useLED ? L('ledOn') : L('ledOff');
 		});
 		overlay.add(toggleLEDButton);
 

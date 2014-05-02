@@ -80,4 +80,7 @@
 	<string name="event_in">event(s) in</string>
 	<string name="done">Done</string>
 	<string name="reload">Reload</string>
+	<string name="save_contacts"> \nSaved to Contacts</string>
+	<string name="push_fail">Failed to register for push notifications! </string>
+	<string name="push_receive">Received push: </string>
 </resources>

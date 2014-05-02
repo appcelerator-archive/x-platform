@@ -144,7 +144,7 @@ function addContact(params) {
 				}
 
 				var callAlert = Ti.UI.createAlertDialog({
-					title : contactData.title + "\nSaved to Contacts",
+					title : contactData.title + L("save_contacts"),
 					message : L("wouldCall").toString() + contactData.title + L("now").toString() + contactData.phone,
 					buttonNames : [L("no").toString(), L("call").toString()]
 				});

@@ -3,7 +3,7 @@
  * */
 function initialize(){
 	$.topBar.imageContainer.addEventListener('click',closeWindow);
-	$.topBar.setTitle(L('pushNotifications'));
+	$.topBar.setTitle(L('pushNotification'));
 }
 var acs = require("/acs");
 
@@ -65,7 +65,7 @@ function enablePush() {
 	}
 	
 	function receivePush(e) {
-	    alert('Received push: ' + JSON.stringify(e));
+	    alert(L('push_receive') + JSON.stringify(e));
 	}
 	
 	/**
@@ -82,7 +82,7 @@ function enablePush() {
 	}
 	
 	function deviceTokenError(e) {
-	    alert('Failed to register for push notifications! ' + e.error);
+	    alert(L('push_fail') + e.error);
 	}
 
 
