@@ -45,7 +45,7 @@ function initialize() {
 	setTimeout(function() {
 		if (currentLoc) {
 			var closestLoc = findClosest(data);
-			alert(closestLoc + " is the closest location.\n");
+			alert(closestLoc + L('closestLoc').toString());
 		}
 	}, 500);
 
@@ -124,11 +124,11 @@ function addContact(params) {
 				if (e.success) {
 					performAddressBookFunction();
 				} else {
-					alert("Access to Address Book Denied");
+					alert(L('accessDenied').toString());
 				}
 			});
 		} else {
-			alert("Access to Address Book Denied");
+			alert(L('accessDenied').toString());
 		}
 
 		function performAddressBookFunction() {
@@ -145,14 +145,14 @@ function addContact(params) {
 
 				var callAlert = Ti.UI.createAlertDialog({
 					title : contactData.title + "\nSaved to Contacts",
-					message : "Would you like to call\n" + contactData.title + " now?\n" + contactData.phone,
-					buttonNames : ["No", "Call"]
+					message : L("wouldCall").toString() + contactData.title + L("now").toString() + contactData.phone,
+					buttonNames : [L("no").toString(), L("call").toString()]
 				});
 				callAlert.show();
 				callAlert.addEventListener("click", function(e) {
 					if (e.index == 1) {
 						if (Ti.Platform.model == "Simulator") {
-							alert("Simulator cannot initiate a phone call, but on device the phone app would be opened and call would be initiated to:\n" + contactData.phone);
+							alert(L("simulatorErr").toString()+ contactData.phone);
 						} else {
 							Ti.Platform.openURL("tel:" + contactData.phone);
 						}
@@ -215,4 +215,4 @@ function closeWindow() {
 initialize();
 
 $.topBar.imageContainer.addEventListener('click', closeWindow);
-$.topBar.setTitle('Mapping');
+$.topBar.setTitle(L('mapping'));

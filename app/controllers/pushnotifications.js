@@ -3,7 +3,7 @@
  * */
 function initialize(){
 	$.topBar.imageContainer.addEventListener('click',closeWindow);
-	$.topBar.setTitle('Push Notifications');
+	$.topBar.setTitle(L('pushNotifications'));
 }
 var acs = require("/acs");
 

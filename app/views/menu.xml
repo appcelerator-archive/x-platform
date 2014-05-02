@@ -40,17 +40,17 @@
 					<Label id="label8"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="RemoteHtml" controller="fileViewer"  titleText="Remote HTML File" class="menuItem" print="false" url="http://www.appcelerator.com" >
+			<TableViewRow id="RemoteHtml" controller="fileViewer" class="menuItem" print="false" url="http://www.appcelerator.com" >
 				<View class="rowContainer">
 					<Label id="label9"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="localHtml" controller="fileViewer" titleText="Local HTML File" class="menuItem" print="false" url="/html/index.html" >
+			<TableViewRow id="localHtml" controller="fileViewer" class="menuItem" print="false" url="/html/index.html" >
 				<View class="rowContainer">
 					<Label id="label10"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="localPdf" controller="fileViewer" titleText="Local PDF File" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios" >
+			<TableViewRow id="localPdf" controller="fileViewer" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios" >
 				<View class="rowContainer">
 					<Label id="label11"/>
 				</View>

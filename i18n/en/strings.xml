@@ -48,4 +48,12 @@
 	<string name="localHtml">Local HTML File</string>
 	<string name="localPdf">Local PDF File</string>
 	<string name="generatePdf">Generate PDF File</string>
+	<string name="mapping">Mapping</string>
+	<string name="closestLoc">  is the closest location. \n</string>
+	<string name="accessDenied">Access to Address Book Denied</string>
+	<string name="wouldCall">Would you like to call\n</string>
+	<string name="now"> now?\n</string>
+	<string name="no"> No</string>
+	<string name="call">Call</string>
+	<string name="simulatorErr">Simulator cannot initiate a phone call, but on device the phone app would be opened and call would be initiated to:\n </string>
 </resources>

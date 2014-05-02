@@ -63,4 +63,13 @@
 },
 "#label12" :{
 	text: L('generatePdf')
+},
+"#RemoteHtml" :{
+	titleText:L('remoteHtml')
+},
+"#localHtml" :{
+	titleText:L('localHtml')
+},
+"#localPdf" :{
+	titleText:L('localPdf')
 }

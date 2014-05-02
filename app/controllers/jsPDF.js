@@ -9,7 +9,7 @@ var _tempFile = null;
  * */
 function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
-	$.topBar.setTitle('Generate PDF File');
+	$.topBar.setTitle(L('generatePdf'));
 }
 
 /**

@@ -3,7 +3,7 @@
  * */
 function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
-	$.topBar.setTitle('Encryption');
+	$.topBar.setTitle(L('encryption'));
 }
 
 /**

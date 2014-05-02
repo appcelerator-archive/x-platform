@@ -3,7 +3,7 @@
  * */
 function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
-	$.topBar.setTitle('Charts');
+	$.topBar.setTitle(L('charts'));
 }
 
 //EVENT LISTENER
