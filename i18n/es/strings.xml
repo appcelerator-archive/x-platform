@@ -80,11 +80,17 @@
 	<string name="event_in">evento (s) en</string>
 	<string name="done">hecho</string>
 	<string name="reload">recargar</string>
-	<string name="save_contacts"> \nGuardado en Contactos</string>
-	<string name="push_fail">No se pudo registrar para notificaciones push! </string>
-	<string name="push_receive">Recibido empuje: </string>
-	<string name="sub_success">Con éxito suscrito al </string>
-	<string name="channel"> empujar canal.</string>
-	<string name="sub_failure">Inscrita en los </string>
-	<string name="error"> Error: \n </string>
+	<string name="save_contacts">\nGuardado en Contactos</string>
+	<string name="push_fail">No se pudo registrar para notificaciones push!</string>
+	<string name="push_receive">Recibido empuje:</string>
+	<string name="sub_success">Con éxito suscrito al</string>
+	<string name="channel">empujar canal.</string>
+	<string name="sub_failure">Inscrita en los</string>
+	<string name="error">Error: \n</string>
+	<string name="get_50_off">50% de descuento</string>
+	<string name="get_10_off_purchase">$ 10 de descuento en compra</string>
+	<string name="sale_ends_tomorrow">VENTA TERMINA MAÑANA</string>
+	<string name="coupon_1">CUPÓN 1</string>
+	<string name="coupon_2">CUPÓN 2</string>
+	<string name="coupon_3">CUPÓN 3</string>
 </resources>

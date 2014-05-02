@@ -5,7 +5,7 @@
 	backgroundColor:'#597c90'
 },
 "#welcome" :{
-	text:"Welcome",
+	text:L('welcome'),
 	color:"#597c90",
 	font:{fontFamily: "HelveticaNeue", fontWeight: 'bold', fontSize: "18"},
 	textAlign: "left",

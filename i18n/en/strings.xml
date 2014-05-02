@@ -87,4 +87,10 @@
 	<string name="channel"> push channel.</string>
 	<string name="sub_failure">Unsubscribed from the </string>
 	<string name="error"> Error: \n </string>
+	<string name="get_50_off">GET 50% OFF</string>
+	<string name="get_10_off_purchase">$10 OFF PURCHASE</string>
+	<string name="sale_ends_tomorrow">SALE ENDS TOMORROW</string>
+	<string name="coupon_1">COUPON 1</string>
+	<string name="coupon_2">COUPON 2</string>
+	<string name="coupon_3">COUPON 3</string>
 </resources>

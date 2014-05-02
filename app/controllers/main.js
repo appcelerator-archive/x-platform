@@ -14,14 +14,14 @@ function initialize() {
 
 	//coupons data
 	couponsArray = [{
-		title : "GET 50% OFF",
-		subtitle : "COUPON 1"
+		title : L("get_50_off"),
+		subtitle : L("coupon_1")
 	}, {
-		title : "$10 OFF PURCHASE",
-		subtitle : "COUPON 2"
+		title : L("get_10_off_purchase"),
+		subtitle : L("coupon_2")
 	}, {
-		title : "SALE ENDS TOMORROW",
-		subtitle : "COUPON 3"
+		title : L("sale_ends_tomorrow"),
+		subtitle : L("coupon_3")
 	}];
 
 	//set introduction text
