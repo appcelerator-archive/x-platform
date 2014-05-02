@@ -28,40 +28,40 @@
 	backgroundSelectedColor:"#555",
 	touchEnabled:false
 },
-"#label1" :{
+"#lblhome" :{
 	text: L('home')
 },
-"#label2" :{
+"#lblmap" :{
 	text: L('map')
 },
-"#label3" :{
+"#lblcamera" :{
 	text: L('camera')
 },
-"#label4" :{
+"#lblbarcode" :{
 	text: L('barcode')
 },
-"#label5" :{
+"#lblcharts" :{
 	text: L('charts')
 },
-"#label6" :{
+"#lblcalendar" :{
 	text: L('calendar')
 },
-"#label7" :{
+"#lblencryption" :{
 	text: L('encryption')
 },
-"#label8" :{
+"#lblpush" :{
 	text: L('pushNotification')
 },
-"#label9" :{
+"#lblremoteHtml" :{
 	text: L('remoteHtml')
 },
-"#label10" :{
+"#lbllocalHtml" :{
 	text: L('localHtml')
 },
-"#label11" :{
+"#lbllocalPdf" :{
 	text: L('localPdf')
 },
-"#label12" :{
+"#lblgeneratePdf" :{
 	text: L('generatePdf')
 },
 "#RemoteHtml" :{

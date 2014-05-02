@@ -2,62 +2,62 @@
 	<TableView id="container" class="container">
 			<TableViewRow id="home" class="menuItem">
 				<View class="rowContainer">
-					<Label id="label1"/>
+					<Label id="lblhome"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="map" class="menuItem" >
 				<View class="rowContainer">
-					<Label id="label2"/>
+					<Label id="lblmap"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="camera" class="menuItem" >
 				<View class="rowContainer">
-					<Label id="label3"/>
+					<Label id="lblcamera"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="barcode" class="menuItem" >
 				<View class="rowContainer">
-					<Label id="label4"/>
+					<Label id="lblbarcode"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="charts" class="menuItem" >
 				<View class="rowContainer">
-					<Label id="label5"/>
+					<Label id="lblcharts"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="calendar" class="menuItem" >
 				<View class="rowContainer">
-					<Label id="label6"/>
+					<Label id="lblcalendar"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="encryption" class="menuItem" >
 				<View class="rowContainer">
-					<Label id="label7"/>
+					<Label id="lblencryption"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="pushnotifications" class="menuItem" >
 				<View class="rowContainer">
-					<Label id="label8"/>
+					<Label id="lblpush"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="RemoteHtml" controller="fileViewer" class="menuItem" print="false" url="http://www.appcelerator.com" >
 				<View class="rowContainer">
-					<Label id="label9"/>
+					<Label id="lblremoteHtml"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="localHtml" controller="fileViewer" class="menuItem" print="false" url="/html/index.html" >
 				<View class="rowContainer">
-					<Label id="label10"/>
+					<Label id="lbllocalHtml"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="localPdf" controller="fileViewer" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios" >
 				<View class="rowContainer">
-					<Label id="label11"/>
+					<Label id="lbllocalPdf"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="jsPDF" class="menuItem">
 				<View class="rowContainer">
-					<Label id="label12"/>
+					<Label id="lblgeneratePdf"/>
 				</View>
 			</TableViewRow>
 			
