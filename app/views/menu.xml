@@ -10,7 +10,13 @@
 					<Label id="lblmap"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="camera" class="menuItem" >
+			<!-- platform='ios,android' not working with TableViewRow, hence seprating it-->
+			<TableViewRow id="camera" class="menuItem" platform="ios">
+				<View class="rowContainer">
+					<Label  text="Camera & Photo"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="camera" class="menuItem" platform="android">
 				<View class="rowContainer">
 					<Label id="lblcamera"/>
 				</View>
@@ -20,22 +26,42 @@
 					<Label id="lblbarcode"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="charts" class="menuItem" >
+			<TableViewRow id="charts" class="menuItem" platform="ios">
+				<View class="rowContainer">
+					<Label  text="Charts"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="charts" class="menuItem" platform="android">
 				<View class="rowContainer">
 					<Label id="lblcharts"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="calendar" class="menuItem" >
+			<TableViewRow id="calendar" class="menuItem" platform="ios">
+				<View class="rowContainer">
+					<Label  text="Calendar"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="calendar" class="menuItem" platform="android">
 				<View class="rowContainer">
 					<Label id="lblcalendar"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="encryption" class="menuItem" >
+			<TableViewRow id="encryption" class="menuItem" platform="ios">
 				<View class="rowContainer">
 					<Label id="lblencryption"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="pushnotifications" class="menuItem" >
+			<TableViewRow id="encryption" class="menuItem" platform="android">
+				<View class="rowContainer">
+					<Label  text="Encryption"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="pushnotifications" class="menuItem"  platform="ios">
+				<View class="rowContainer">
+					<Label  text="Push Notifications"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="pushnotifications" class="menuItem"  platform="android">
 				<View class="rowContainer">
 					<Label id="lblpush"/>
 				</View>
@@ -55,7 +81,12 @@
 					<Label id="lbllocalPdf"/>
 				</View>
 			</TableViewRow>
-			<TableViewRow id="jsPDF" class="menuItem">
+			<TableViewRow id="jsPDF" class="menuItem" platform="ios">
+				<View class="rowContainer">
+					<Label  text="Generate PDF File"/>
+				</View>
+			</TableViewRow>
+			<TableViewRow id="jsPDF" class="menuItem" platform="android">
 				<View class="rowContainer">
 					<Label id="lblgeneratePdf"/>
 				</View>

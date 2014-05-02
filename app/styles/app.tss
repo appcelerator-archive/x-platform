@@ -4,8 +4,12 @@
 	backgroundColor:'white',
 	navBarHidden:true
 },
-"Button" :{
+"Button[platform=ios]" :{
 	style: Titanium.UI.iPhone.SystemButtonStyle.PLAIN,
+	height: 40,
+	backgroundColor: "#a22621"
+},
+"Button[platform=android, mobileweb]" :{
 	height: 40,
 	backgroundColor: "#a22621"
 }

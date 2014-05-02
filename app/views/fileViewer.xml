@@ -5,9 +5,9 @@
 		<View id="nav">
 			<Button id="back" class="navBtn" onClick="back"/>
 			<Button id="forward" class="navBtn" onClick="forward"/>
-			<Button id="reload"  onClick="reload" />
-			<Button id="print" onClick="print" platform="ios"/>
-			<Button id="close" onClick="closeWindow"/>
+			<Button id="reload" class="navBtn"  onClick="reload" />
+			<Button id="print" class="navBtn" onClick="print" platform="ios"/>
+			<Button id="close" class="navBtn"  onClick="closeWindow"/>
 		</View>
 	</Window>
 </Alloy>

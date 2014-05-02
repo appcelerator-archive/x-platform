@@ -3,11 +3,6 @@
 	backgroundColor:'white',
 	navBarHidden:true
 },
-".navBtn" : {
-	height:60,
-	width:60,
-	font:{fontSize:24,fontWeight:"bold"}
-},
 "#webview" : {
 	willHandleTouches:false,
 	bottom: 60
@@ -23,33 +18,34 @@
 	title:"<",
 	left:0,
 	backgroundColor: "transparent",
+	font:{fontSize:24,fontWeight:"bold"}
 }
 "#forward" : {
 	title:">",
 	left:60,
 	backgroundColor: "transparent",
+	font:{fontSize:24,fontWeight:"bold"}
 }
 "#reload" : {
 	title:L('reload'),
 	right:10,
 	width:Ti.UI.SIZE,
-	height:60,
 	backgroundColor: "transparent",
 }
 "#close" : {
 	title:L('done'),
 	width:Ti.UI.SIZE,
-	height:60,
 	backgroundColor: "transparent",
 }
 "#print" : {
 	title:L('print'),
 	right:10,
 	width:Ti.UI.SIZE,
-	height:60,
 	backgroundColor: "transparent",
 },
-"Button[platform=android]" :{
+".navBtn" : {
+	height:60,
+	width:60,
 	color: "#ffffff",
 	backgroundColor:"#2D2D2D"
 }
