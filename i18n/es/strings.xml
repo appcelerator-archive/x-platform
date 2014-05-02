@@ -83,4 +83,8 @@
 	<string name="save_contacts"> \nGuardado en Contactos</string>
 	<string name="push_fail">No se pudo registrar para notificaciones push! </string>
 	<string name="push_receive">Recibido empuje: </string>
+	<string name="sub_success">Con éxito suscrito al </string>
+	<string name="channel"> empujar canal.</string>
+	<string name="sub_failure">Inscrita en los </string>
+	<string name="error"> Error: \n </string>
 </resources>

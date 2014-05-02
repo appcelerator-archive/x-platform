@@ -83,4 +83,8 @@
 	<string name="save_contacts"> \nSaved to Contacts</string>
 	<string name="push_fail">Failed to register for push notifications! </string>
 	<string name="push_receive">Received push: </string>
+	<string name="sub_success">Successfully subscribed to the </string>
+	<string name="channel"> push channel.</string>
+	<string name="sub_failure">Unsubscribed from the </string>
+	<string name="error"> Error: \n </string>
 </resources>

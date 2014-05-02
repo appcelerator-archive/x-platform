@@ -29,7 +29,7 @@ function subscribe(_params){
 		    type:OS_IOS?"ios":"android"
 		}, function (e) {
 		    if (e.success) {
-		        alert('Successfully subscribed to the '+(_params.channel || "main")+' push channel.');
+		        alert(L('sub_success')+(_params.channel || "main")+ L('channel'));
 		    } else {
 		        alert('Error:\n' +
 		            ((e.error && e.message) || JSON.stringify(e)));
@@ -47,9 +47,9 @@ function unsubscribe(_params){
 		    device_token: _params.token
 		}, function (e) {
 		    if (e.success) {
-		        alert('Unsubscribed from the '+(_params.channel || 'main')+' push channel.');
+		        alert(L('sub_failure') +(_params.channel || 'main')+ L('channel'));
 		    } else {
-		        alert('Error:\n' +
+		        alert(L('error') +
 		            ((e.error && e.message) || JSON.stringify(e)));
 		    }
 		});
