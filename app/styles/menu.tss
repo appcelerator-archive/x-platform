@@ -27,5 +27,40 @@
 	backgroundColor:"#444",
 	backgroundSelectedColor:"#555",
 	touchEnabled:false
+},
+"#label1" :{
+	text: L('home')
+},
+"#label2" :{
+	text: L('map')
+},
+"#label3" :{
+	text: L('camera')
+},
+"#label4" :{
+	text: L('barcode')
+},
+"#label5" :{
+	text: L('charts')
+},
+"#label6" :{
+	text: L('calendar')
+},
+"#label7" :{
+	text: L('encryption')
+},
+"#label8" :{
+	text: L('pushNotification')
+},
+"#label9" :{
+	text: L('remoteHtml')
+},
+"#label10" :{
+	text: L('localHtml')
+},
+"#label11" :{
+	text: L('localPdf')
+},
+"#label12" :{
+	text: L('generatePdf')
 }
-

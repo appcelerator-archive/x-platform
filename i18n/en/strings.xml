@@ -36,4 +36,16 @@
 	<string name="appcelerator">Appcelerator</string>
 	<string name="enable_push">Enable Push Notifications</string>
 	<string name="original_text">This is my text to be encrypted.</string>
+	<string name="home">Home</string>
+	<string name="map">Map</string>
+	<string name="camera">Camera &amp; Photo</string>
+	<string name="barcode">Barcode</string>
+	<string name="charts">Charts</string>
+	<string name="calendar">Calendar</string>
+	<string name="encryption">Encryption</string>
+	<string name="pushNotification">Push Notifications</string>
+	<string name="remoteHtml">Remote HTML File</string>
+	<string name="localHtml">Local HTML File</string>
+	<string name="localPdf">Local PDF File</string>
+	<string name="generatePdf">Generate PDF File</string>
 </resources>

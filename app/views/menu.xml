@@ -2,62 +2,62 @@
 	<TableView id="container" class="container">
 			<TableViewRow id="home" class="menuItem">
 				<View class="rowContainer">
-					<Label  text="Home"/>
+					<Label id="label1"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="map" class="menuItem" >
 				<View class="rowContainer">
-					<Label  text="Map"/>
+					<Label id="label2"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="camera" class="menuItem" >
 				<View class="rowContainer">
-					<Label  text="Camera & Photo"/>
+					<Label id="label3"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="barcode" class="menuItem" >
 				<View class="rowContainer">
-					<Label  text="Barcode"/>
+					<Label id="label4"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="charts" class="menuItem" >
 				<View class="rowContainer">
-					<Label  text="Charts"/>
+					<Label id="label5"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="calendar" class="menuItem" >
 				<View class="rowContainer">
-					<Label  text="Calendar"/>
+					<Label id="label6"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="encryption" class="menuItem" >
 				<View class="rowContainer">
-					<Label  text="Encryption"/>
+					<Label id="label7"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="pushnotifications" class="menuItem" >
 				<View class="rowContainer">
-					<Label  text="Push Notifications"/>
+					<Label id="label8"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="RemoteHtml" controller="fileViewer"  titleText="Remote HTML File" class="menuItem" print="false" url="http://www.appcelerator.com" >
 				<View class="rowContainer">
-					<Label  text="Remote HTML File"/>
+					<Label id="label9"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="localHtml" controller="fileViewer" titleText="Local HTML File" class="menuItem" print="false" url="/html/index.html" >
 				<View class="rowContainer">
-					<Label  text="Local HTML File"/>
+					<Label id="label10"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="localPdf" controller="fileViewer" titleText="Local PDF File" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios" >
 				<View class="rowContainer">
-					<Label  text="Local PDF File"/>
+					<Label id="label11"/>
 				</View>
 			</TableViewRow>
 			<TableViewRow id="jsPDF" class="menuItem">
 				<View class="rowContainer">
-					<Label  text="Generate PDF File"/>
+					<Label id="label12"/>
 				</View>
 			</TableViewRow>
 			
