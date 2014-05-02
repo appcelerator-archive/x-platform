@@ -51,7 +51,7 @@ function buildUI() {
 			left : 0
 		});
 		var switchButton = Ti.UI.createButton({
-			title : Barcode.useFrontCamera ? 'Back Camera' : 'Front Camera',
+			title : Barcode.useFrontCamera ? L('backCam') : L('frontCam'),
 			textAlign : 'center',
 			color : '#000',
 			backgroundColor : '#fff',
@@ -78,12 +78,12 @@ function buildUI() {
 		overlay.add(oLogo);
 		switchButton.addEventListener('click', function() {
 			Barcode.useFrontCamera = !Barcode.useFrontCamera;
-			switchButton.title = Barcode.useFrontCamera ? 'Back Camera' : 'Front Camera';
+			switchButton.title = Barcode.useFrontCamera ? L('backCam') : L('frontCam');
 		});
 		overlay.add(switchButton);
 
 		var toggleLEDButton = Ti.UI.createButton({
-			title : Barcode.useLED ? 'LED is On' : 'LED is Off',
+			title : Barcode.useLED ? L('ledOn') : l('ledOff'),
 			textAlign : 'center',
 			color : '#000',
 			backgroundColor : '#fff',
@@ -102,12 +102,12 @@ function buildUI() {
 		});
 		toggleLEDButton.addEventListener('click', function() {
 			Barcode.useLED = !Barcode.useLED;
-			toggleLEDButton.title = Barcode.useLED ? 'LED is On' : 'LED is Off';
+			toggleLEDButton.title = Barcode.useLED ? L('ledOn') : l('ledOff');
 		});
 		overlay.add(toggleLEDButton);
 
 		var cancelButton = Ti.UI.createButton({
-			title : 'Cancel',
+			title : L('cancel'),
 			textAlign : 'center',
 			color : '#000',
 			backgroundColor : '#fff',
@@ -231,7 +231,7 @@ function buildUI() {
 		 * to these labels.
 		 */
 		resultView.add(Ti.UI.createLabel({
-			text : 'You may need to rotate the device',
+			text : L('rotateDevice'),
 			top : 10,
 			height : Ti.UI.SIZE || 'auto',
 			width : Ti.UI.SIZE || 'auto',
@@ -239,7 +239,7 @@ function buildUI() {
 		}));
 
 		resultView.add(Ti.UI.createLabel({
-			text : 'Result: ',
+			text : L('result'),
 			textAlign : 'left',
 			top : 10,
 			left : 10,
@@ -259,7 +259,7 @@ function buildUI() {
 		resultView.add(scanResult);
 
 		resultView.add(Ti.UI.createLabel({
-			text : 'Content Type: ',
+			text : L('content'),
 			top : 10,
 			left : 10,
 			textAlign : 'left',
@@ -279,7 +279,7 @@ function buildUI() {
 		resultView.add(scanContentType);
 
 		resultView.add(Ti.UI.createLabel({
-			text : 'Parsed: ',
+			text : L('parse'),
 			textAlign : 'left',
 			top : 10,
 			left : 10,

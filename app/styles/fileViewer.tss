@@ -30,14 +30,14 @@
 	backgroundColor: "transparent",
 }
 "#reload" : {
-	title:"Reload",
+	title:L('reload'),
 	right:10,
 	width:Ti.UI.SIZE,
 	height:60,
 	backgroundColor: "transparent",
 }
 "#close" : {
-	title:"Done",
+	title:L('done'),
 	width:Ti.UI.SIZE,
 	height:60,
 	backgroundColor: "transparent",

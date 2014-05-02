@@ -57,7 +57,7 @@ function performCalendarReadFunctions() {
 	}
 
 	if (!calendars.length) {
-		$.label.text = 'No calendars available. Select at least one in the native calendar before using this app';
+		$.label.text = L('noCalAvail');
 	} else {
 		$.label.text = L("click_button");
 
@@ -117,19 +117,19 @@ function performCalendarReadFunctions() {
 
 			function printEvent(event) {
 				if (event.allDay) {
-					print('Event: ' + event.title + '; ' + event.begin + ' (all day)');
+					print(L('event') + event.title + '; ' + event.begin + L('all_day'));
 				} else {
-					print('Event: ' + event.title + '; ' + event.begin + ' ' + event.begin + '-' + event.end);
+					print(L('event') + event.title + '; ' + event.begin + ' ' + event.begin + '-' + event.end);
 				}
 
 				var reminders = event.reminders;
 				if (reminders && reminders.length) {
-					print('There is/are ' + reminders.length + ' reminder(s)');
+					print(L('there_is_are') + reminders.length + L('reminder'));
 					for (var i = 0; i < reminders.length; i++) {
 						printReminder(reminders[i]);
 					}
 				}
-				print('hasAlarm? ' + event.hasAlarm);
+				print(L('has_alarm') + event.hasAlarm);
 				var alerts = event.alerts;
 				if (alerts && alerts.length) {
 					for (var i = 0; i < alerts.length; i++) {
@@ -139,26 +139,26 @@ function performCalendarReadFunctions() {
 
 				var status = event.status;
 				if (status == Ti.Calendar.STATUS_TENTATIVE) {
-					print('This event is tentative');
+					print(L('tentative_event'));
 				}
 				if (status == Ti.Calendar.STATUS_CONFIRMED) {
-					print('This event is confirmed');
+					print(L('confirmed_event'));
 				}
 				if (status == Ti.Calendar.STATUS_CANCELED) {
-					print('This event was canceled');
+					print(L('canceled_event'));
 				}
 			}
 
 			var events = calendar.getEventsInYear(currentYear);
 			if (events && events.length) {
-				print(events.length + ' event(s) in ' + currentYear);
+				print(events.length + L('event_in') + currentYear);
 				print('');
 				for (var i = 0; i < events.length; i++) {
 					printEvent(events[i]);
 					print('');
 				}
 			} else {
-				print('No events');
+				print(L('no_event'));
 			}
 
 			$.label.text = consoleString;
