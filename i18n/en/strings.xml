@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+	<string name="app_name">CrossPlatform</string>
 	<string name="scan_code">Scan Code</string>
 	<string name="scan_image">Scan Image from Gallery</string>
 	<string name="generating">Generating...</string>
