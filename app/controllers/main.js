@@ -105,10 +105,10 @@ function couponClick(e) {
 	Ti.Analytics.featureEvent('CouponClicked');
 	var couponIndex = parseInt(e.row.index);
 	if (favoriteCoupons.indexOf(couponsArray[couponIndex]) != "-1") {
-		alert("Coupon " + (couponIndex + 1) + L("alreadyFav"));
+		alert(L('coupon') + (couponIndex + 1) + L("alreadyFav"));
 	} else {
 		favoriteCoupons.push(couponsArray[couponIndex]);
-		alert("Coupon " + (couponIndex + 1) + L("addFav"));
+		alert(L('coupon') + (couponIndex + 1) + L("addFav"));
 	}
 }
 
