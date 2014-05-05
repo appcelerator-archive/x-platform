@@ -2,7 +2,9 @@
 	<View>
 		<View id="container" class="container">
 			<View id="topbar" >
-				<ImageView id="menuicon"/>
+				<View id="iconContainer">
+					<ImageView id="menuicon"/>
+				</View>
 				<Label id="winTitle"/>
 			</View>
 			<ScrollView id="sectionsView">

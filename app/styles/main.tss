@@ -13,11 +13,15 @@
 	height:45,
 	backgroundColor:'#a22621'
 },
-"#menuicon" :{
-	width:45,
-	height:45,
-	image:'/images/menu-icon.png',
+"#iconContainer" :{
+	height:45, 
+	width:45, 
 	left:5
+},
+"#menuicon" :{
+	width:23,
+	height:23,
+	image:'/images/menu-icon.png'
 },
 "#winTitle" :{
 	text: L('appcelerator'),

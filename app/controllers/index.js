@@ -12,7 +12,7 @@ function initialize() {
 	var main = Alloy.createController("main");
 
 	//Add click event listener to open/close menu
-	main.menuicon.addEventListener('click', $.drawermenu.showhidemenu);
+	main.iconContainer.addEventListener('click', $.drawermenu.showhidemenu);
 
 	//Add click event listener to open/close menu
 	menu.container.addEventListener('click', openChildWindow);
