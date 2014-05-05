@@ -197,7 +197,7 @@ function buildUI() {
 		function reset() {
 			scannedBarcodes = {};
 			scannedBarcodesCount = 0;
-			cancelButton.title = 'Cancel';
+			cancelButton.title = L('cancel');
 
 			scanResult.text = ' ';
 			scanContentType.text = ' ';
