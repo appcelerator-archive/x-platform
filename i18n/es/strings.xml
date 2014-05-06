@@ -10,6 +10,7 @@
 	<string name="email_id">foo@yahoo.com</string>
 	<string name="pdf_title">título</string>
 	<string name="pdf_subject">Este es el tema</string>
+	<string name="pdf_attached">PDF adjunto</string>
 	<string name="pdf_author">John Doe</string>
 	<string name="pdf_keywords">uno, dos, tres</string>
 	<string name="pdf_creator">alguien</string>
@@ -95,4 +96,6 @@
 	<string name="coupon_1">CUPÓN 1</string>
 	<string name="coupon_2">CUPÓN 2</string>
 	<string name="coupon_3">CUPÓN 3</string>
+	<string name="finish">Terminado (</string>
+	<string name="scanned">escaneada )</string>
 </resources>

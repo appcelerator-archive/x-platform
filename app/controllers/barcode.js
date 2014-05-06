@@ -218,7 +218,7 @@ function buildUI() {
 			if (!scannedBarcodes['' + e.result]) {
 				scannedBarcodes[e.result] = true;
 				scannedBarcodesCount += 1;
-				cancelButton.title = 'Finished (' + scannedBarcodesCount + ' Scanned)';
+				cancelButton.title = L('finish') + scannedBarcodesCount + L('scanned');
 
 				scanResult.text += e.result + ' ';
 				scanContentType.text += parseContentType(e.contentType) + ' ';

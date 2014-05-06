@@ -64,7 +64,7 @@ function generatePDF(e) {
 	doc.save(_tempFile);
 
 	var emailDialog = Ti.UI.createEmailDialog({
-		subject : "PDF Attached",
+		subject : L('pdf_attached'),
 		toRecipients : ['foo@yahoo.com']
 	});
 	emailDialog.addAttachment(_tempFile);
