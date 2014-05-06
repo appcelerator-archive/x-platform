@@ -60,21 +60,19 @@ function setCurrentLocationInMap() {
 
 			//setting the value of current location
 			currentLocation = annotations;
-			Ti.App.Properties.setString('currentLocation', JSON.stringify(currentLocation));
-
+			Alloy.Globals.currentLoc = currentLocation;
 			mapview.setRegion({
 				latitude : annotations.latitude,
 				longitude : annotations.longitude,
 				latitudeDelta : 0.5,
 				longitudeDelta : 0.5
 			});
+			//adding annotations
+			mapview.annotations = [annotations];
 		}
 	});
-
-	//adding annotations
-	mapview.annotations = [annotations];
-
 	$.geolocator.add(mapview);
+	
 }
 
 /**

@@ -1,7 +1,7 @@
 //Initialization Parameters
 var annotations = [];
 var locations = [];
-var currentLoc = JSON.parse(Ti.App.Properties.getString('currentLocation'));
+var currentLoc = Alloy.Globals.currentLoc;
 var data = [];
 
 //Setup V2 Maps Module
