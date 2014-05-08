@@ -19,7 +19,7 @@
 	<string name="subscribe">Suscríbete a Canales</string>
 	<string name="unsubscribe">Darse de baja de Canales</string>
 	<string name="click_button">Haga clic en el botón para ver los eventos del calendario seleccionado</string>
-	<string name="intro_text">Esta aplicación muestra las capacidades de plataforma cruzada de la plataforma de Appcelerator. La aplicación es compatible con iOS, Android, Windows Mobile, Blackberry, Tizen y web móvil. \n \nAbrir el menú para ver varias demostraciones; algunas manifestaciones son también visibles a continuación.</string>
+	<string name="intro_text">Esta aplicación muestra las capacidades de plataforma cruzada de la plataforma de Appcelerator. La aplicación es compatible con iOS, Android, Windows Mobile, Blackberry, Tizen y web móvil.&#xA; &#xA;Abrir el menú para ver varias demostraciones; algunas manifestaciones son también visibles a continuación.</string>
 	<string name="create_sample_event">Crear evento Muestra</string>
 	<string name="view_event">Ver Eventos</string>
 	<string name="select_calendar">Seleccione el tipo de calendario</string>

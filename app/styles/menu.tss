@@ -1,3 +1,8 @@
+"#tableContainer" :{
+	width:Ti.UI.FILL,
+	height:Ti.UI.FILL,
+	backgroundColor:"#333"
+},
 ".container[platform=ios]" :{
 	backgroundColor:'#333',
 	separatorStyle: Titanium.UI.iPhone.TableViewSeparatorStyle.NONE ,
@@ -7,15 +12,16 @@
 	backgroundColor:'#333',
 	separatorColor:'transparent'
 },
-".container[platform=mobileweb]" :{
+".container[platform=mobileweb,blackberry]" :{
 	backgroundColor:'#333',
-	separatorColor:'transparent'
+	separatorColor:'transparent',
+	top:0
 },
 ".menuItem" : {
 	backgroundColor:'#333',
 	width:'100%',
-	rowHeight:50,
-	selectedBackgroundColor:"#555"
+	selectedBackgroundColor:"#555",
+	height:50
 },
 "Label" : {
 	color:'#fff',

@@ -19,7 +19,7 @@
 	<string name="subscribe">Subscribe to Channels</string>
 	<string name="unsubscribe">Unsubscribe from Channels</string>
 	<string name="click_button">Click on the button to display the events for the selected calendar</string>
-	<string name="intro_text">This application demonstrates the cross-platform capabilities of the Appcelerator platform. The application supports iOS, Android, Windows Mobile, Blackberry, Tizen, and mobile web. \n \nOpen the menu to see various demonstrations; some demonstrations are also visible below.</string>
+	<string name="intro_text">This application demonstrates the cross-platform capabilities of the Appcelerator platform. The application supports iOS, Android, Windows Mobile, Blackberry, Tizen, and mobile web.&#xA; &#xA;Open the menu to see various demonstrations; some demonstrations are also visible below.</string>
 	<string name="create_sample_event">Create Sample Event</string>
 	<string name="view_event">View Events</string>
 	<string name="select_calendar">Select the calendar type</string>

@@ -1,26 +1,32 @@
 "#couponRow" :{
-	height: "70",
+	height: 70,
 	backgroundColor :"#ffffff",
 	selectionStyle: "none"
 },
-"#rowView" :{
-	backgroundImage: "/images/tablebk.png",
-	width:"100%",
+"#bgImage" :{
+	image: "/images/tablebk.png",
 	top: 0,
-	bottom: 5,
-	touchEnabled: false
+	touchEnabled: false,
+	left:0,
+	right:0
+},
+//specifying the width and height with bottom doesn't fill the whole container with image on mobile web
+"#bgImage[platform=ios,android,blackberry]" :{
+	width:Ti.UI.FILL,
+	height:Ti.UI.FILL,
+	bottom: 5
 },
 "#rowTitle" : {
 	width: "auto",
 	left: 20,
-	font: {fontSize :"24"},
+	font: {fontSize :20},
 	color: "#ffffff",
 	touchEnabled: false
 },
 "#rowSubtitle" :{
 	bottom: 8,
 	right: 10,
-	font: {fontSize :"8", fontWeight: "bold"},
+	font: {fontSize :8, fontWeight: "bold"},
 	color: "#ffffff",
 	touchEnabled: false
 }

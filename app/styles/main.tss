@@ -1,15 +1,15 @@
 ".container" : {
 	layout:"vertical",
-	width:"100%",
+	width:Ti.UI.FILL,
 	backgroundColor:'white'
 },
 "#sectionsView" :{
 	layout:"vertical",
-	width:"100%",
+	width:Ti.UI.FILL,
 	backgroundColor:'transparent'
 },
 "#topbar" :{
-	width:'100%',
+	width:Ti.UI.FILL,
 	height:45,
 	backgroundColor:'#a22621'
 },
@@ -26,13 +26,11 @@
 "#winTitle" :{
 	text: L('appcelerator'),
 	color: "#ffffff",
-	width: Ti.UI.SIZE,
-	height: 45
-	
+	width: Ti.UI.SIZE	
 },
 "#introSection" :{
 	layout:"vertical",
-	height:"30%",
+	height:Ti.UI.SIZE,
 	backgroundColor:"transparent",
 	left: 10,
 	right: 5
@@ -40,7 +38,7 @@
 "#welcome" :{
 	text:L('welcome'),
 	color:"#a22621",
-	font:{fontFamily: "HelveticaNeue", fontWeight: 'bold', fontSize: "18"},
+	font:{fontFamily: "HelveticaNeue", fontWeight: 'bold', fontSize: 18},
 	textAlign: "left",
 	top:10,
 	left: 0,
@@ -53,12 +51,13 @@
 	bottom: 5,
 	font:{fontSize: "11"},
 	color: "#555",
-	textAlign: "left"
+	textAlign: "left",
+	height:Ti.UI.SIZE
 },
 "#couponsSection" :{
 	layout: "vertical",
 	height: 230,
-	width: "100%"
+	width: Ti.UI.FILL
 },
 ".sectionHeader" :{
 	backgroundColor: "#444",
@@ -68,7 +67,7 @@
 },
 ".sectionTitle" :{
 	left: 10,
-	font:{fontWeight: "bold", fontSize: "12"},
+	font:{fontWeight: "bold", fontSize: 12},
 	color: "#ffffff",
 	textAlign: "left"
 }
@@ -84,15 +83,16 @@
 "#geolocationSection" :{
 	layout: "vertical",
 	height: 200,
-	width: "100%",
-	top: "-3"
+	width: Ti.UI.FILL,
+	top: 0
 },
 "#geolocationTitle" :{
 	text: L('geolocation')
 },
 "#geolocator" :{
-	height: Ti.UI.SIZE,
-	width: "100%"
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	top:0
 }
 
 

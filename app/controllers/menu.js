@@ -1,3 +1,3 @@
 //Sets the top for ios>=7
-Alloy.Globals.adjustStatusBar($.container);
+Alloy.Globals.adjustStatusBar($.tableContainer);
 

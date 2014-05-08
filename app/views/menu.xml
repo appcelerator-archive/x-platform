@@ -1,5 +1,6 @@
 <Alloy>
-	<TableView id="container" class="container">
+	<View id="tableContainer">
+		<TableView id="container" class="container">
 			<TableViewRow id="home" class="menuItem">
 				<View class="rowContainer">
 					<Label id="lblhome"/>
@@ -91,6 +92,6 @@
 					<Label id="lblgeneratePdf"/>
 				</View>
 			</TableViewRow>
-			
-	</TableView>
+		</TableView>
+	</View>
 </Alloy>
