@@ -29,12 +29,12 @@
 "#reload" : {
 	title:L('reload'),
 	right:10,
-	width:Ti.UI.SIZE,
+	width:80,
 	backgroundColor: "transparent",
 }
 "#close" : {
 	title:L('done'),
-	width:Ti.UI.SIZE,
+	width:80,
 	backgroundColor: "transparent",
 }
 "#print" : {

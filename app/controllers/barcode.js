@@ -369,7 +369,7 @@ function buildUI() {
 	} else {
 		var webview = Ti.UI.createWebView({
 			url : "http://zxing.org/w/decode.jspx",
-			top : 60
+			//top : 60
 		});
 		var back = Ti.UI.createLabel({
 			text : "Back",

@@ -36,7 +36,7 @@ function openChildWindow(e) {
 	} else {
 		if (e.row.id !== 'container') {
 			var childWindow = Alloy.createController(menuClicked,{data: e.row}).getView();
-			childWindow.open({modal:true});
+			childWindow.open();
 		}
 	}
 }
