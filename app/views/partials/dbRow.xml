@@ -1,7 +1,13 @@
 <Alloy>
 	<TableViewRow id="localDbRow">
+		<View id="rowView">
 			<Label id="rowTitle"/>
-			<ImageView id="edit"/>
-			<ImageView id="del"/>
+			<View id="edit">
+				<ImageView id="editIcon"/>
+			</View>
+			<View id="del">
+				<ImageView id="delIcon"/>
+			</View>
+		</View>
 	</TableViewRow>
 </Alloy>

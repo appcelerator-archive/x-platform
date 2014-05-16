@@ -1,30 +1,48 @@
 "#localDbRow":{
-	height: 30,
-	backgroundColor: "#eeeeee",
+	height: 70,
 	selectionStyle: "none"
 },
+"#rowView" :{
+	top:0,
+	bottom:10,
+	backgroundColor: "#eeeeee"
+}
 "#rowTitle": {
 	left: 0,
-	right: 50,
+	right: 88,
 	top: 0,
 	bottom: 0,
 	font: {
 		fontFamily: "HelveticaNeue",
-		fontSize: "14"
+		fontSize: "18"
 	},
 	color: "#555",
 	textAlign: "center",
 	bubbleParent: false
 },
 "#edit": {
-	right: 40,
-	width: 25,
-	height: 25,
-	image: "/images/edit.png"
+	top:8,
+	bottom:8,
+	right: 44,
+	height:Ti.UI.SIZE,
+	width: Ti.UI.SIZE
 },
 "#del": {
+	top:8,
+	bottom:8,
 	right: 0,
-	width: 25,
-	height: 25,
+	height:Ti.UI.SIZE,
+	width: Ti.UI.SIZE
+},
+"#editIcon": {
+	width: 44,
+	height: 44,
+	image: "/images/edit.png",
+	touchEnabled: false
+},
+"#delIcon": {
+	width: 44,
+	height: 44,
 	image: "/images/delete.png",
+	touchEnabled: false
 }

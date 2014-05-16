@@ -8,44 +8,52 @@
 	height: Ti.UI.SIZE
 },
 "#firstName":{
-	left: 20,
+	left: 10,
 	text: "First Name :",
 	width: Ti.UI.SIZE,
-	color: "#555"
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
 },
 "#firstNameVal":{
 	width: 180,
 	right: 10,
+	height: 38,
+	font: {fontSize: 18},
 	borderColor: "#555",
 	borderWidth: 1
 },
 "#lastNameView":{
 	height: Ti.UI.SIZE,
-	top: 10
+	top: 15
 },
 "#lastName":{
-	left: 20,
+	left: 10,
 	text: "Last Name :",
 	width: Ti.UI.SIZE,
-	color: "#555"
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
 },
 "#lastNameVal":{
 	width: 180,
 	right: 10,
+	font: {fontSize: 18},
+	height: 38,
 	borderColor: "#555",
 	borderWidth: 1
 },
 "#add":{
-	left: 60,
-	right: 60,
+	width:200,
 	top: 20,
-	title: "Insert",
 	textAlign: "center"
 },
 "#namesTable":{
 	left: 10,
 	right: 10,
 	top: 20,
-	height: 180,
-	borderColor: "#eeeeee"
+	height: 210,
+	borderColor: "#eeeeee",
+	borderWidth: 1,
+	separatorStyle : "none"
 }

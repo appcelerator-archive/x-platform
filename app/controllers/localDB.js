@@ -6,6 +6,7 @@ var id;
 function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
 	$.topBar.setTitle(L('localDB'));
+	$.add.setTitle("Insert");
 	initializeDB();
 }
 
@@ -60,6 +61,16 @@ function updateName(fname, lname, recordId) {
 }
 
 /**
+ * resets the first name last name and insert button
+ */
+function reset() {
+	id = "";
+	$.firstNameVal.value = "";
+	$.lastNameVal.value = "";
+	$.add.title = "Insert";
+}
+
+/**
  * Deletes the record selected
  * */
 function deleteName(id) {
@@ -80,6 +91,10 @@ function deleteName(id) {
 				ok : "OK"
 			}).show();
 			fetchData();
+
+			//Incase the Update option is selected and then the user clicks delete
+			reset();
+
 			db.close();
 		}
 	});
@@ -123,13 +138,17 @@ function performOperations(e) {
 	var action = e.source.id;
 	var fname = e.row.fname;
 	var lname = e.row.lname;
-	var id = e.row.index;
+	var index = e.row.index;
 	switch(action) {
 		case "edit":
-			updateName(fname, lname, id);
+			if (id) {
+				reset();
+			} else {
+				updateName(fname, lname, index);
+			}
 			break;
 		case "del":
-			deleteName(id);
+			deleteName(index);
 			break;
 		default:
 			break;
