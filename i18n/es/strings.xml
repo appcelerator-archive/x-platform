@@ -98,4 +98,5 @@
 	<string name="coupon_3">CUPÓN 3</string>
 	<string name="finish">Terminado (</string>
 	<string name="scanned">escaneada )</string>
+	<string name= "localDB">base de datos local</string> 
 </resources>

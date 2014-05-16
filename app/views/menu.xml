@@ -92,6 +92,11 @@
 					<Label id="lblgeneratePdf"/>
 				</View>
 			</TableViewRow>
+			<TableViewRow id="localDB" class="menuItem">
+				<View class="rowContainer">
+					<Label id="lblLocalDB"/>
+				</View>
+			</TableViewRow>
 		</TableView>
 	</View>
 </Alloy>

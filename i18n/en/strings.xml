@@ -97,5 +97,6 @@
 	<string name="coupon_2">COUPON 2</string>
 	<string name="coupon_3">COUPON 3</string>
 	<string name="finish">Finished ( </string>
-	 <string name="scanned">Scanned) </string>
+	<string name="scanned">Scanned) </string>
+	<string name= "localDB">Local Database</string> 
 </resources>

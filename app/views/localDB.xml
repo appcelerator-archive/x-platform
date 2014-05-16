@@ -1,0 +1,17 @@
+<Alloy>
+	<Window id="localDbWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+		<View id="nameView">
+			<View id="firstNameView">
+				<Label id="firstName"></Label>
+				<TextField id="firstNameVal"></TextField>
+			</View>
+			<View id="lastNameView">
+				<Label id="lastName"></Label>
+				<TextField id="lastNameVal"></TextField>
+			</View>
+			<Button id="add" onClick="addData"/>
+		</View>
+		<TableView id="namesTable" onClick="performOperations"/>
+	</Window>
+</Alloy>

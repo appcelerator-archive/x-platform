@@ -1,0 +1,51 @@
+
+"#nameView":{
+	layout: "vertical",
+	height: Ti.UI.SIZE,
+	top: 20
+},
+"#firstNameView":{
+	height: Ti.UI.SIZE
+},
+"#firstName":{
+	left: 20,
+	text: "First Name :",
+	width: Ti.UI.SIZE,
+	color: "#555"
+},
+"#firstNameVal":{
+	width: 180,
+	right: 10,
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#lastNameView":{
+	height: Ti.UI.SIZE,
+	top: 10
+},
+"#lastName":{
+	left: 20,
+	text: "Last Name :",
+	width: Ti.UI.SIZE,
+	color: "#555"
+},
+"#lastNameVal":{
+	width: 180,
+	right: 10,
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#add":{
+	left: 60,
+	right: 60,
+	top: 20,
+	title: "Insert",
+	textAlign: "center"
+},
+"#namesTable":{
+	left: 10,
+	right: 10,
+	top: 20,
+	height: 180,
+	borderColor: "#eeeeee"
+}

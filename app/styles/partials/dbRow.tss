@@ -1,0 +1,30 @@
+"#localDbRow":{
+	height: 30,
+	backgroundColor: "#eeeeee",
+	selectionStyle: "none"
+},
+"#rowTitle": {
+	left: 0,
+	right: 50,
+	top: 0,
+	bottom: 0,
+	font: {
+		fontFamily: "HelveticaNeue",
+		fontSize: "14"
+	},
+	color: "#555",
+	textAlign: "center",
+	bubbleParent: false
+},
+"#edit": {
+	right: 40,
+	width: 25,
+	height: 25,
+	image: "/images/edit.png"
+},
+"#del": {
+	right: 0,
+	width: 25,
+	height: 25,
+	image: "/images/delete.png",
+}
