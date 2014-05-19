@@ -1,102 +1,43 @@
 <Alloy>
-	<View id="tableContainer">
-		<TableView id="container" class="container">
-			<TableViewRow id="home" class="menuItem">
-				<View class="rowContainer">
-					<Label id="lblhome"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="map" class="menuItem" >
-				<View class="rowContainer">
-					<Label id="lblmap"/>
-				</View>
-			</TableViewRow>
-			<!-- platform='ios,android' not working with TableViewRow, hence seprating it-->
-			<TableViewRow id="camera" class="menuItem" platform="ios">
-				<View class="rowContainer">
-					<Label id="lblcamera"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="camera" class="menuItem" platform="android">
-				<View class="rowContainer">
-					<Label id="lblcamera"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="barcode" class="menuItem" >
-				<View class="rowContainer">
-					<Label id="lblbarcode"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="charts" class="menuItem" platform="ios">
-				<View class="rowContainer">
-					<Label id="lblcharts"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="charts" class="menuItem" platform="android">
-				<View class="rowContainer">
-					<Label id="lblcharts"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="calendar" class="menuItem" platform="ios">
-				<View class="rowContainer">
-					<Label id="lblcalendar"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="calendar" class="menuItem" platform="android">
-				<View class="rowContainer">
-					<Label id="lblcalendar"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="encryption" class="menuItem" platform="ios">
-				<View class="rowContainer">
-					<Label id="lblencryption"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="encryption" class="menuItem" platform="android">
-				<View class="rowContainer">
-					<Label id="lblencryption"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="pushnotifications" class="menuItem"  platform="ios">
-				<View class="rowContainer">
-					<Label id="lblpush"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="pushnotifications" class="menuItem"  platform="android">
-				<View class="rowContainer">
-					<Label id="lblpush"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="RemoteHtml" controller="fileViewer" class="menuItem" print="false" url="http://www.appcelerator.com" >
-				<View class="rowContainer">
-					<Label id="lblremoteHtml"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="localHtml" controller="fileViewer" class="menuItem" print="false" url="/html/index.html" >
-				<View class="rowContainer">
-					<Label id="lbllocalHtml"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="localPdf" controller="fileViewer" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios" >
-				<View class="rowContainer">
-					<Label id="lbllocalPdf"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="jsPDF" class="menuItem" platform="ios">
-				<View class="rowContainer">
-					<Label id="lblgeneratePdf"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="jsPDF" class="menuItem" platform="android">
-				<View class="rowContainer">
-					<Label id="lblgeneratePdf"/>
-				</View>
-			</TableViewRow>
-			<TableViewRow id="localDB" class="menuItem">
-				<View class="rowContainer">
-					<Label id="lblLocalDB"/>
-				</View>
-			</TableViewRow>
-		</TableView>
-	</View>
+	<ScrollView id="container" class="container" onClick="changeBackgroundColor">
+		<View id="home" class="menuItem">
+			<Label  id="lblhome"></Label>
+		</View>
+		<View id="map" class="menuItem">
+			<Label id="lblmap"/>
+		</View>
+		<View id="camera" class="menuItem" platform="ios,android">
+			<Label  id="lblcamera"/>
+		</View>
+		<View id="barcode" class="menuItem">
+			<Label  id="lblbarcode"/>
+		</View>
+		<View id="charts" class="menuItem" platform="ios,android">
+			<Label id="lblcharts"/>
+		</View>
+		<View id="calendar" class="menuItem" platform="ios,android">
+			<Label id="lblcalendar"/>
+		</View>
+		<View id="encryption" class="menuItem" platform="ios,android">
+			<Label  id="lblencryption"/>
+		</View>
+		<View id="pushnotifications" class="menuItem" platform="ios,android">
+			<Label  id="lblpush"/>
+		</View>
+		<View id="RemoteHtml" controller="fileViewer" title="Remote HTML File" class="menuItem" print="false" url="http://www.appcelerator.com">
+			<Label  id="lblremoteHtml"/>
+		</View>
+		<View id="localHtml" controller="fileViewer" title="Local HTML File" class="menuItem" print="false" url="/html/index.html">
+			<Label  id="lbllocalHtml"/>
+		</View>
+		<View id="localPdf" controller="fileViewer" title="Local PDF File" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios">
+			<Label id="lbllocalPdf"/>
+		</View>
+		<View id="jsPDF" class="menuItem" platform="ios,android">
+			<Label id="lblgeneratePdf"/>
+		</View>
+		<View id="localDB" class="menuItem" platform="ios,android">
+			<Label id="lblLocalDB"/>
+		</View>
+	</ScrollView>
 </Alloy>

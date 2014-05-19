@@ -1,43 +1,25 @@
-"#tableContainer" :{
-	width:Ti.UI.FILL,
-	height:Ti.UI.FILL,
-	backgroundColor:"#333"
-},
-".container[platform=ios]" :{
-	backgroundColor:'#333',
-	separatorStyle: Titanium.UI.iPhone.TableViewSeparatorStyle.NONE ,
-	separatorColor:'transparent'
-},
-".container[platform=android]" :{
-	backgroundColor:'#333',
-	separatorColor:'transparent'
-},
-".container[platform=mobileweb,blackberry]" :{
-	backgroundColor:'#333',
-	separatorColor:'transparent',
-	top:0
-},
-".menuItem" : {
-	backgroundColor:'#333',
+".container" :{
+	 backgroundColor:'#333',
+	 layout:'vertical',
+	 scrollType:"vertical",
+	 contentHeight: "auto"
+	 
+ },
+ ".menuItem" : {
+	backgroundColor:'#444',
 	width:'100%',
-	selectedBackgroundColor:"#555",
-	height:50
-},
-"Label" : {
-	color:'#fff',
-	font: {
-		fontSize: 16
-	},
-	left:'20',
-	touchEnabled:false
-},
-".rowContainer" :{
-	top:5,
-	height:"40",
-	backgroundColor:"#444",
-	backgroundSelectedColor:"#555",
-	touchEnabled:false
-},
+	height:40,
+	top:5
+ },
+
+ "Label" : {
+	 color:'#fff',
+	 font: {
+	 fontSize: 16
+	 },
+	 left:'20',
+	 touchEnabled:false
+}
 "#lblhome" :{
 	text: L('home')
 },
