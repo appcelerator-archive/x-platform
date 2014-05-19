@@ -109,6 +109,7 @@
         <permissions>
             <permission>access_internet</permission>
             <permission>access_location_services</permission>
+            <permission>access_shared</permission>
         </permissions>
     </blackberry>
     <mobileweb>

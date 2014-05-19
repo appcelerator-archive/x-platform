@@ -6,7 +6,7 @@
 		<View id="map" class="menuItem">
 			<Label id="lblmap"/>
 		</View>
-		<View id="camera" class="menuItem" platform="ios,android">
+		<View id="camera" class="menuItem" platform="ios,android,blackberry">
 			<Label  id="lblcamera"/>
 		</View>
 		<View id="barcode" class="menuItem">
