@@ -1,12 +1,12 @@
 var id;
-
+var database = Alloy.Globals.db;
 /**
  * Screen Initialization
  * */
 function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
 	$.topBar.setTitle(L('localDB'));
-	$.add.setTitle("Insert");
+	$.add.setTitle(L('insert'));
 	initializeDB();
 }
 
@@ -14,7 +14,7 @@ function initialize() {
  * DB Initialization
  * */
 function initializeDB() {
-	var db = Ti.Database.open('Employee');
+	var db = Ti.Database.open(database);
 	db.execute('CREATE TABLE IF NOT EXISTS Employee (id INTEGER PRIMARY KEY AUTOINCREMENT , firstName TEXT, lastName TEXT);');
 	fetchData();
 	db.close();
@@ -24,7 +24,7 @@ function initializeDB() {
  * Selects data from table
  * */
 function fetchData() {
-	var db = Ti.Database.open('Employee');
+	var db = Ti.Database.open(database);
 	var tableData = [];
 	var resultSet = db.execute('SELECT * from Employee;');
 	while (resultSet.isValidRow()) {
@@ -45,6 +45,8 @@ function createRow(rs) {
 		first_name : rs.fieldByName('firstName'),
 		last_name : rs.fieldByName('lastName'),
 		id : rs.fieldByName('id'),
+		editCallback : updateRow,
+		delCallback : deleteRow
 	}).getView();
 
 	return row;
@@ -53,8 +55,8 @@ function createRow(rs) {
 /**
  * Edits the record selected
  * */
-function updateName(fname, lname, recordId) {
-	$.add.title = "Update";
+function updateRow(fname, lname, recordId) {
+	$.add.title = L('update');
 	id = recordId;
 	$.firstNameVal.value = fname;
 	$.lastNameVal.value = lname;
@@ -67,28 +69,28 @@ function reset() {
 	id = "";
 	$.firstNameVal.value = "";
 	$.lastNameVal.value = "";
-	$.add.title = "Insert";
+	$.add.title = L('insert');
 }
 
 /**
  * Deletes the record selected
  * */
-function deleteName(id) {
+function deleteRow(id) {
 	var dialog = Ti.UI.createAlertDialog({
-		message : "Are you sure you want to delete this record?",
-		ok : "OK",
-		buttonNames : ['OK', 'Cancel'],
+		message : L('delRecord'),
+		ok : L("ok"),
+		buttonNames : [L("ok"), L('cancel')],
 		cancel : 1
 	});
 	dialog.show();
 
 	dialog.addEventListener("click", function(e) {
 		if (e.index === 0) {
-			var db = Ti.Database.open('Employee');
+			var db = Ti.Database.open(database);
 			db.execute('DELETE FROM Employee WHERE id = ?', id);
 			Ti.UI.createAlertDialog({
-				message : "Record Deleted",
-				ok : "OK"
+				message : L('record_deleted'),
+				ok : L("ok")
 			}).show();
 			fetchData();
 
@@ -110,23 +112,25 @@ function deleteName(id) {
 function addData(e) {
 	$.firstNameVal.blur();
 	$.lastNameVal.blur();
-	if ($.firstNameVal.value !== "") {
-		var db = Ti.Database.open('Employee');
+	if ($.firstNameVal.value !== "" && $.firstNameVal.value !== undefined) {
+		var db = Ti.Database.open(database);
 		if (id) {
 			db.execute('UPDATE Employee SET firstName = ? , lastName = ? WHERE id = ?', $.firstNameVal.value, $.lastNameVal.value, id);
 			Ti.UI.createAlertDialog({
-				message : "Record Updated",
-				ok : "OK"
+				message : L('record_updated'),
+				ok : L("ok")
 			}).show();
 			id = "";
 		} else {
+			$.lastNameVal.value = ($.lastNameVal.value === undefined) ? "" : $.lastNameVal.value;
 			db.execute('INSERT INTO Employee (firstName, lastName) VALUES (?, ?)', $.firstNameVal.value, $.lastNameVal.value);
+
 		}
 		db.close();
 		fetchData();
 		$.firstNameVal.value = "";
 		$.lastNameVal.value = "";
-		$.add.title = "Insert";
+		$.add.title = L('insert');
 	}
 
 }
@@ -144,11 +148,11 @@ function performOperations(e) {
 			if (id) {
 				reset();
 			} else {
-				updateName(fname, lname, index);
+				updateRow(fname, lname, index);
 			}
 			break;
 		case "del":
-			deleteName(index);
+			deleteRow(index);
 			break;
 		default:
 			break;

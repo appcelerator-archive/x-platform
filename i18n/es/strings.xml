@@ -98,5 +98,11 @@
 	<string name="coupon_3">CUPÓN 3</string>
 	<string name="finish">Terminado (</string>
 	<string name="scanned">escaneada )</string>
-	<string name= "localDB">base de datos local</string> 
+	<string name= "localDB">base de datos local</string>
+	<string name="insert">Insertar</string>
+	<string name="update">Actualización</string>
+	<string name="delRecord">¿Está seguro que desea eliminar este registro?</string>
+	<string name= "ok">Bueno</string>
+	<string name="record_deleted">Registro eliminado</string>
+	<string name="record_updated">Registro actualizado</string>
 </resources>

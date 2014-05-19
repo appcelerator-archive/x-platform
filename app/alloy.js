@@ -37,3 +37,9 @@ Alloy.Globals.adjustStatusBar = function(container) {
 		container.top = 20;
 	}
 };
+
+
+/**
+ * Name of Local DB
+ */
+Alloy.Globals.db = "Employee";

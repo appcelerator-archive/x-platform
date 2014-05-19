@@ -19,30 +19,34 @@
 	color: "#555",
 	textAlign: "center",
 	bubbleParent: false
+	
 },
+"#rowTitle[platform=blackberry]": {
+	top:10
+}
 "#edit": {
 	top:8,
 	bottom:8,
 	right: 44,
-	height:Ti.UI.SIZE,
-	width: Ti.UI.SIZE
+	width: 44,
+	height: 44,
 },
 "#del": {
 	top:8,
 	bottom:8,
 	right: 0,
-	height:Ti.UI.SIZE,
-	width: Ti.UI.SIZE
-},
-"#editIcon": {
 	width: 44,
 	height: 44,
+},
+"#editIcon": {
+	width: 30,
+	height: 32,
 	image: "/images/edit.png",
 	touchEnabled: false
 },
 "#delIcon": {
-	width: 44,
-	height: 44,
+	width: 30,
+	height: 32,
 	image: "/images/delete.png",
 	touchEnabled: false
 }

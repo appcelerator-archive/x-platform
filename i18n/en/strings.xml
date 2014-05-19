@@ -98,5 +98,11 @@
 	<string name="coupon_3">COUPON 3</string>
 	<string name="finish">Finished ( </string>
 	<string name="scanned">Scanned) </string>
-	<string name= "localDB">Local Database</string> 
+	<string name= "localDB">Local Database</string>
+	<string name="insert">Insert</string>
+	<string name="update">Update</string>
+	<string name="delRecord">Are you sure you want to delete this record?</string>
+	<string name= "ok">OK</string>bueno
+	<string name="record_deleted">Record Deleted</string>
+	<string name="record_updated">Record Updated</string>
 </resources>
