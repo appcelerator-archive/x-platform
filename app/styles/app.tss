@@ -9,6 +9,8 @@
 	height: 40,
 	backgroundColor: "#a22621"
 },
+
+//Button[platform=blackberry] background color not working as per Bug TIMOB-10417
 "Button[platform=android, mobileweb]" :{
 	height: 40,
 	backgroundColor: "#a22621"

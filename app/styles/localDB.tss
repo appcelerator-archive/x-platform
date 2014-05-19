@@ -9,14 +9,14 @@
 },
 "#firstName":{
 	left: 10,
-	text: "First Name :",
+	text: L('first_name'),
 	width: Ti.UI.SIZE,
 	font: {fontSize: 18},
 	color: "#555",
 	textAlign: "left"
 },
 "#firstNameVal":{
-	width: 180,
+	width: 200,
 	right: 10,
 	height: 38,
 	font: {fontSize: 18},
@@ -29,14 +29,14 @@
 },
 "#lastName":{
 	left: 10,
-	text: "Last Name :",
+	text: L('last_name'),
 	width: Ti.UI.SIZE,
 	font: {fontSize: 18},
 	color: "#555",
 	textAlign: "left"
 },
 "#lastNameVal":{
-	width: 180,
+	width: 200,
 	right: 10,
 	font: {fontSize: 18},
 	height: 38,

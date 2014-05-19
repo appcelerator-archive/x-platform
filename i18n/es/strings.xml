@@ -105,4 +105,6 @@
 	<string name= "ok">Bueno</string>
 	<string name="record_deleted">Registro eliminado</string>
 	<string name="record_updated">Registro actualizado</string>
+	<string name="first_name">Nombre :</string>
+	<string name="last_name">Apellido :</string>
 </resources>
