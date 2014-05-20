@@ -112,7 +112,7 @@ function deleteRow(id) {
 function addData(e) {
 	$.firstNameVal.blur();
 	$.lastNameVal.blur();
-	if ($.firstNameVal.value !== "" && $.firstNameVal.value !== undefined) {
+	if (($.firstNameVal.value).trim() !== "" && $.firstNameVal.value !== undefined) {
 		var db = Ti.Database.open(database);
 		if (id) {
 			db.execute('UPDATE Employee SET firstName = ? , lastName = ? WHERE id = ?', $.firstNameVal.value, $.lastNameVal.value, id);
