@@ -67,4 +67,7 @@
 },
 "#lblLocalDB" :{
 	text: L('localDB')
+},
+"#lblVideoPlayer" :{
+	text: "Video Player"
 }

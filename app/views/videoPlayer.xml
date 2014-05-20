@@ -1,0 +1,12 @@
+<Alloy>
+	<Window id="videoPlayerWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+		<View id="movieView">
+			<VideoPlayer id="movie"/>
+		</View>
+		<View id="buttonView">
+			<Button id="localVideo" onClick="playLocal"/>
+			<Button id="remoteVideo"  onClick="playRemote"/>
+		</View>
+	</Window>
+</Alloy>
