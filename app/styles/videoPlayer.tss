@@ -17,11 +17,11 @@
 	 top:0,
 	 left:0,
 	 width:"40%",
-	 title: "Play Local"
+	 title: L('playLocal')
 },
 "#remoteVideo":{
 	 top:0,
 	 right:0,
 	 width:"40%",
-	 title: "Play Remote"
+	 title: L('playRemote')
 }

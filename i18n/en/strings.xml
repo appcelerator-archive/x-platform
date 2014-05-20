@@ -107,4 +107,7 @@
 	<string name="record_updated">Record Updated</string>
 	<string name="first_name">First Name :</string>
 	<string name="last_name">Last Name :</string>
+	<string name="videoPlayer">Video Player</string>
+	<string name="playLocal">Play Local</string>
+	<string name="playRemote">Play Remote</string>
 </resources>

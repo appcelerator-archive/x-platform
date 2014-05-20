@@ -107,4 +107,7 @@
 	<string name="record_updated">Registro actualizado</string>
 	<string name="first_name">Nombre :</string>
 	<string name="last_name">Apellido :</string>
+	<string name="videoPlayer">Reproductor de video</string>
+	<string name="playLocal">Juega local</string>
+	<string name="playRemote">Juego remoto</string>
 </resources>

@@ -4,7 +4,7 @@ var loading  =  Ti.UI.createActivityIndicator();
  * */
 function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
-	$.topBar.setTitle("Video Player");
+	$.topBar.setTitle(L('videoPlayer'));
 	$.movieView.add(loading);
 }
 
