@@ -145,11 +145,7 @@ function performOperations(e) {
 	var index = e.row.index;
 	switch(action) {
 		case "edit":
-			if (id) {
-				reset();
-			} else {
-				updateRow(fname, lname, index);
-			}
+			updateRow(fname, lname, index);
 			break;
 		case "del":
 			deleteRow(index);
