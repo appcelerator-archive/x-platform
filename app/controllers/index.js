@@ -4,12 +4,18 @@
 function initialize() {
 	// Create menu controller
 	var menu = Alloy.createController("menu");
-
-	// Add view to menu container exposed by widget
-	$.drawermenu.drawermenuview.add(menu.getView());
-
+	
 	//Create main view controller
 	var main = Alloy.createController("main");
+	
+	//initializes the slider menu
+	$.drawermenu.init({
+		mainview:main.getView(),
+		menuview:menu.getView(),
+		parent:$.mainWin,
+		duration:200
+	});
+	
 
 	//Add click event listener to open/close menu
 	main.iconContainer.addEventListener('click', $.drawermenu.showhidemenu);
@@ -26,13 +32,9 @@ function initialize() {
 			childrens[i].addEventListener('click', openChildWindow);
 		}
 	}
-
-	// Add view to main view container exposed by widget
-	$.drawermenu.drawermainview.add(main.getView());
-
 	//Setup Android Specific Items
 	if (OS_ANDROID) {
-		$.mainWin.addEventListener("androidBack", $.drawermenu.showhidemenu);
+		$.mainWin.addEventListener("androidBack", showHideMenu);
 	}
 }
 
@@ -43,7 +45,7 @@ function openChildWindow(e) {
 	var source = e.source;
 	var menuClicked = (source.controller) ? source.controller : source.id;
 	if (source.id === 'home') {
-		$.drawermenu.showhidemenu();
+		showHideMenu();
 	} else {
 		if (source.id !== 'container') {
 			var childWindow = Alloy.createController(menuClicked, {
@@ -54,6 +56,15 @@ function openChildWindow(e) {
 	}
 }
 
+/**
+ * This function show/hides the menu
+ * */
+function showHideMenu(){
+	$.drawermenu.showhidemenu();
+	$.drawermenu.menuOpen=!$.drawermenu.menuOpen;
+}
+
+//Initialization stuff
 initialize();
 
 //Open main window

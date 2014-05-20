@@ -1,30 +1,64 @@
 var menuOpen = false;
+var duration = 400;
+var parent;
 
-/**
- * This function show/hides the side menu
- * */
-var showhidemenu=function(){
-	if (menuOpen){
-		moveTo="0";
-		menuOpen=false;
-	}else{
-		moveTo="250dp";
-		menuOpen=true;
-	}
+var init = function(opts) {
+	$.drawermainview.add(opts.mainview);
+	$.drawermenuview.add(opts.menuview);
+	duration = opts.duration;
+	parent = opts.parent;
+	console.log('initialized');
+	setSwipe();
+};
+var setSwipe = function() {
+	parent.addEventListener('swipe', function(e) {
+		if (menuOpen == false && e.direction == 'right') {
+			showhidemenu();
+			menuOpen = true;
+		}
 
-	
-	$.drawermainview.animate({
-		left:moveTo,
-		curve : Ti.UI.ANIMATION_CURVE_EASE_OUT,
-		duration:400
+		if (menuOpen == true && e.direction == 'left') {
+			showhidemenu();
+			menuOpen = false;
+		}
 	});
 };
-if(OS_IOS){
-	$.drawermainview.width=Ti.Platform.displayCaps.platformWidth;
-	Ti.Gesture.addEventListener('orientationchange', function() {
-	    $.drawermainview.width=Ti.Platform.displayCaps.platformWidth;
+var showhidemenu = function() {
+	if (menuOpen) {
+		moveTo = "0";
+		menuOpen = false;
+	} else {
+		moveTo = "250dp";
+		menuOpen = true;
+	}
+
+	var newWidth = Ti.Platform.displayCaps.platformWidth;
+	if (OS_ANDROID)
+		newWidth /= Ti.Platform.displayCaps.logicalDensityFactor;
+	if(!OS_BLACKBERRY){
+		$.drawermainview.width = newWidth;
+	}
+	
+	$.drawermainview.animate({
+		left : moveTo,
+		curve : Ti.UI.ANIMATION_CURVE_EASE_OUT,
+		duration : duration
 	});
-}
+};
 
+Ti.Gesture.addEventListener('orientationchange', function(e) {
+	var newWidth;
+	newWidth = Ti.Platform.displayCaps.platformWidth;
+	if (OS_ANDROID)
+		newWidth /= Ti.Platform.displayCaps.logicalDensityFactor;
+	if(!OS_BLACKBERRY){
+		$.drawermainview.width = newWidth;
+	}	
+});
 
-exports.showhidemenu=showhidemenu;
+exports.init = init;
+exports.showhidemenu = showhidemenu;
+exports.menuOpen = menuOpen;
+exports.setDuration = function(dur) {
+	duration = dur;
+}; 
