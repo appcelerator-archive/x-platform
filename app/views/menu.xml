@@ -42,5 +42,8 @@
 		<View id="videoPlayer" class="menuItem" platform="ios,android,blackberry">
 			<Label id="lblVideoPlayer"/>
 		</View>
+		<View id="audioPlayer" class="menuItem" platform="ios,android">
+			<Label id="lblAudioPlayer"/>
+		</View>
 	</ScrollView>
 </Alloy>

@@ -1,0 +1,49 @@
+
+"#audioView":{
+	layout: "vertical",
+	width: "80%",
+	height: Ti.UI.SIZE,
+	backgroundColor: "#444",
+	top: 20
+},
+"#progressBar":{
+	min: 0,
+	value: 0 ,
+	width: 200 ,
+	height: 30 ,
+	visible: true
+},
+"#buttonView":{
+	top: 10,
+	layout: "horizontal",
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE
+},
+"#pause":{
+	backgroundImage: "/images/pause.png",
+	width: 26,
+	height: 26,
+	backgroundColor: "transparent",
+	enabled: false
+},
+"#stop":{
+	left: 30,
+	backgroundImage: "/images/stop.png",
+	width: 26,
+	height: 26,
+	backgroundColor: "transparent",
+	enabled: false
+},
+"#soundView":{
+	layout: "horizontal" ,
+	top: 20 ,
+	width: Ti.UI.SIZE ,
+	height: Ti.UI.SIZE
+},
+"#playLocal":{
+	title:"Local Sound"  
+},
+"#playRemote":{
+	 left:10,
+	 title:"Remote Sound"
+}

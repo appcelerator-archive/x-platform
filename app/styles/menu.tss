@@ -70,4 +70,7 @@
 },
 "#lblVideoPlayer" :{
 	text: L('videoPlayer')
+},
+"#lblAudioPlayer" :{
+	text: "Audio Player"
 }

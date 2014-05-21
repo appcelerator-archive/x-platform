@@ -1,0 +1,16 @@
+<Alloy>
+	<Window id="audioPlayerWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+		<View id="audioView">
+			<ProgressBar id="progressBar"/>
+			<View id="buttonView" >
+				<Button id="pause" onClick="pauseSound"/>
+				<Button id= "stop"  onClick="stopSound"/>
+			</View>
+		</View>
+		<View id="soundView" >
+			<Button id="playLocal" onClick="playLocalSound"/>
+			<Button id="playRemote" onClick="playRemoteSound"/>
+		</View>
+	</Window>
+</Alloy>
