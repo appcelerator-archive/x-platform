@@ -39,7 +39,7 @@
 		<View id="localDB" class="menuItem" platform="ios,android,blackberry">
 			<Label id="lblLocalDB"/>
 		</View>
-		<View id="videoPlayer" class="menuItem" platform="ios,android">
+		<View id="videoPlayer" class="menuItem" platform="ios,android,blackberry">
 			<Label id="lblVideoPlayer"/>
 		</View>
 	</ScrollView>
