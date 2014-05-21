@@ -23,7 +23,7 @@ function initialize() {
 	//For blackberry platform, source returns the container on which the event is attached
 	//whereas for ios/android it returns the object which is clicked, hence attaching the 
 	//events for every menu item rahther then to the container for BB platform.
-	if (OS_IOS || OS_ANDROID) {
+	if (OS_IOS || OS_ANDROID || OS_MOBILEWEB) {
 		//Add click event listener to menuItem Container
 		menu.container.addEventListener('click', openChildWindow);
 	} else if (OS_BLACKBERRY) {
