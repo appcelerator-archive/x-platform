@@ -5,7 +5,12 @@
 	top: 20
 },
 "#firstNameView":{
-	height: Ti.UI.SIZE
+	height: Ti.UI.SIZE,
+	layout: "horizontal"
+	
+},
+"#firstNameView[platform=ios]":{
+	right:10
 },
 "#firstName":{
 	left: 10,
@@ -16,8 +21,8 @@
 	textAlign: "left"
 },
 "#firstNameVal":{
-	width: 200,
-	right: 10,
+	width: Ti.UI.FILL,
+	left: 10,
 	height: 38,
 	font: {fontSize: 18},
 	borderColor: "#555",
@@ -25,7 +30,11 @@
 },
 "#lastNameView":{
 	height: Ti.UI.SIZE,
-	top: 15
+	top: 15,
+	layout: "horizontal"
+},
+"#lastNameView[platform=ios]":{
+	right:10
 },
 "#lastName":{
 	left: 10,
@@ -36,8 +45,8 @@
 	textAlign: "left"
 },
 "#lastNameVal":{
-	width: 200,
-	right: 10,
+	width: Ti.UI.FILL,
+	left: 10,
 	font: {fontSize: 18},
 	height: 38,
 	borderColor: "#555",
