@@ -1,4 +1,13 @@
-
+"#audioPlayerWin":{
+	width: "100%",
+	backgroundColor: 'white',
+	navBarHidden: true
+},
+"#parent":{
+	layout: "vertical",
+	top: "0",
+	left: "0"
+}
 "#audioView":{
 	layout: "vertical",
 	width: "80%",
@@ -13,7 +22,7 @@
 	height: 30 ,
 	visible: true
 },
-"#buttonView":{
+"#controlView":{
 	top: 10,
 	layout: "horizontal",
 	width: Ti.UI.SIZE,
@@ -34,16 +43,19 @@
 	backgroundColor: "transparent",
 	enabled: false
 },
-"#soundView":{
+"#buttonView":{
 	layout: "horizontal" ,
 	top: 20 ,
-	width: Ti.UI.SIZE ,
+	left: 10,
+	right: 10 ,
 	height: Ti.UI.SIZE
 },
 "#playLocal":{
-	title:"Local Sound"  
+	title:L( 'localSound'),
+	width: "43%"
 },
 "#playRemote":{
-	 left:10,
-	 title:"Remote Sound"
+	left: 15,
+	title:L( 'remoteSound'),
+	width: "50%"
 }

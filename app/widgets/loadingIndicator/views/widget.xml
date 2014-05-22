@@ -1,0 +1,9 @@
+<Alloy>
+	<View id="container">
+		<View id = "indicatorView">
+			<ActivityIndicator id="indicator"/>
+			<Label id = "message"/>
+			<Label id = "empty"/>
+		</View>
+	</View>
+</Alloy>

@@ -10,6 +10,7 @@
 	"os:ios": {},
 	"os:mobileweb": {},
 	"dependencies": {
-		"com.appcelerator.sidemenu": "2.0"
+		"com.appcelerator.sidemenu": "2.0",
+		"loadingIndicator": "1.0"
 	}
 }

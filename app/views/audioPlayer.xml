@@ -1,16 +1,19 @@
 <Alloy>
-	<Window id="audioPlayerWin" class="childContainer">
-		<Require id="topBar" src="partials/topbar"></Require>
-		<View id="audioView">
-			<ProgressBar id="progressBar"/>
-			<View id="buttonView" >
-				<Button id="pause" onClick="pauseSound"/>
-				<Button id= "stop"  onClick="stopSound"/>
+	<Window id="audioPlayerWin">
+		<Require type="widget" src="loadingIndicator" id="indicator"/>
+		<View id="parent">
+			<Require id="topBar" src="partials/topbar"></Require>
+			<View id="audioView">
+				<ProgressBar id="progressBar"platform="ios"/>
+				<View id="controlView" >
+					<Button id="pause" onClick="pauseSound"/>
+					<Button id= "stop"  onClick="stopSound"/>
+				</View>
 			</View>
-		</View>
-		<View id="soundView" >
-			<Button id="playLocal" onClick="playLocalSound"/>
-			<Button id="playRemote" onClick="playRemoteSound"/>
+			<View id="buttonView" >
+				<Button id="playLocal" onClick="playLocalSound"/>
+				<Button id="playRemote" onClick="playRemoteSound"/>
+			</View>
 		</View>
 	</Window>
 </Alloy>

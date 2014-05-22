@@ -5,9 +5,10 @@ var sound = Titanium.Media.createSound();
  * */
 function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
-	$.topBar.setTitle('Audio Player');
+	$.topBar.setTitle(L('audioPlayer'));
 
 }
+
 /**
  * Helper Method
  */
@@ -17,14 +18,18 @@ function initialize() {
  */
 function playSound(url) {
 	sound.release();
-	$.progressBar.value = 0;
 	sound.url = url;
 	$.pause.enabled = true;
 	$.stop.enabled = true;
+	if (OS_IOS) {
+		$.indicator.hide();
+		$.progressBar.value = 0;
+		$.progressBar.max = sound.duration * 1000;
+	}
 	sound.play();
-	Ti.API.info('sound duration ' + sound.duration * 1000 + " seconds");
-	$.progressBar.max = sound.duration * 1000;
+
 }
+
 /**
  * Event Listeners
  */
@@ -42,15 +47,18 @@ function pauseSound() {
 	}
 
 }
+
 /**
  * stops a sound
  */
 function stopSound() {
 	$.pause.backgroundImage = "/images/pause.png";
 	sound.stop();
-	$.progressBar.value = 0;
-}
+	if (OS_IOS) {
+		$.progressBar.value = 0;
+	}
 
+}
 
 /**
  * plays local sound
@@ -60,36 +68,40 @@ function playLocalSound() {
 	playSound(url);
 }
 
-
 /**
  * plays remote sound
  */
 function playRemoteSound() {
+	if (OS_IOS) {
+		$.indicator.show(L('loading'));
+	}
 	var url = "http://www.archive.org/download/CelebrationWav/1.wav";
 	playSound(url);
 }
 
-/*
- * INTERVAL TO UPDATE PROGRESS BAR
+/**
+ * Interval to update the progress bar
  */
-var i = setInterval(function() {
-	if (sound.isPlaying()) {
-		$.progressBar.value = sound.time;
-		
-		//need to refactor
-		if (Math.round((parseInt($.progressBar.getMax()) - parseInt($.progressBar.getValue())) / 1000) === 0) {
-			$.pause.enabled = false;
-			$.stop.enabled = false;
+var interval = setInterval(function() {
+	if (OS_IOS) {
+		if (sound.isPlaying()) {
+			$.progressBar.value = sound.time;
+			if (Math.round((parseInt($.progressBar.getMax()) - parseInt($.progressBar.getValue())) / 1000) === 0) {
+				$.pause.enabled = false;
+				$.stop.enabled = false;
+			}
 		}
 	}
+
 }, 50);
 
 /**
  * Closes the window
  * */
 function closeWindow() {
-	clearInterval(i);
+	sound.reset();
 	sound.release();
+	clearInterval(interval);
 	$.audioPlayerWin.close();
 }
 

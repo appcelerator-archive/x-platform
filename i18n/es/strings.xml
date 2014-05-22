@@ -110,4 +110,8 @@
 	<string name="videoPlayer">Reproductor de video</string>
 	<string name="playLocal">Juega local</string>
 	<string name="playRemote">Juego remoto</string>
+	<string name="localSound">Sonido Local</string>
+	<string name="remoteSound">Sonido Remoto</string>
+	<string name="loading">Loading ...</string>
+	<string name="audioPlayer">Reproductor de Audio</string>
 </resources>

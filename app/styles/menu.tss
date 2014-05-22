@@ -72,5 +72,5 @@
 	text: L('videoPlayer')
 },
 "#lblAudioPlayer" :{
-	text: "Audio Player"
+	text: L('audioPlayer')
 }
