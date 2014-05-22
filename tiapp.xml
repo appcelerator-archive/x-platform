@@ -136,6 +136,7 @@
         <module platform="android">com.appcelerator.apm</module>
         <module platform="iphone">com.appcelerator.apm</module>
         <module platform="iphone" version="1.3.1">ti.airprint</module>
+        <module platform="iphone" version="1.8.2">bencoding.sms</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
