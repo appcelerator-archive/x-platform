@@ -45,5 +45,8 @@
 		<View id="audioPlayer" class="menuItem" platform="ios,android">
 			<Label id="lblAudioPlayer"/>
 		</View>
+		<View id="sms" class="menuItem" platform="ios,android">
+			<Label id="lblSms"/>
+		</View>
 	</ScrollView>
 </Alloy>

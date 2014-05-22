@@ -114,4 +114,7 @@
 	<string name="remoteSound">Remote Sound</string>
 	<string name="loading">Loading ...</string>
 	<string name="audioPlayer">Audio Player</string>
-	</resources>
+	<string name="sms">SMS</string>
+	<string name="mobile_number">Mobile No :</string>
+	<string name="send_sms">Send SMS</string>
+</resources>

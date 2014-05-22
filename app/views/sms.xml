@@ -1,0 +1,10 @@
+<Alloy>
+	<Window id="smsWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+		<View id="content">
+			<Label id="lblMobileNo">
+			<TextField id="txtMobileNo"></TextField>
+		</View>	
+		<Button id="sendSms">
+	</Window>
+</Alloy>
