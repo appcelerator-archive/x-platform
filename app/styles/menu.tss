@@ -73,4 +73,7 @@
 },
 "#lblAudioPlayer" :{
 	text: "Audio Player"
+},
+"#lblSms" :{
+	text: L('sms')
 }

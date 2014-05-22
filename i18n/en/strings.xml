@@ -110,4 +110,7 @@
 	<string name="videoPlayer">Video Player</string>
 	<string name="playLocal">Play Local</string>
 	<string name="playRemote">Play Remote</string>
+	<string name="sms">SMS</string>
+	<string name="mobile_number">Mobile No :</string>
+	<string name="send_sms">Send SMS</string>
 </resources>

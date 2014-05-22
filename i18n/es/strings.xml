@@ -110,4 +110,7 @@
 	<string name="videoPlayer">Reproductor de video</string>
 	<string name="playLocal">Juega local</string>
 	<string name="playRemote">Juego remoto</string>
+	<string name="sms">SMS</string>
+	<string name="mobile_number">número Móvil :</string>
+	<string name="send_sms">Enviar SMS</string>
 </resources>
