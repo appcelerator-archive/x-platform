@@ -30,12 +30,13 @@ function playLocal(e){
  */
 function playRemote(e){
 	var contentURL = 'http://movies.apple.com/media/us/ipad/2010/tours/apple-ipad-video-us-20100127_r848-9cie.mov';
-	if (OS_ANDROID) {
+	if (!OS_IOS) {
 		loading.show();
 		contentURL = "http://dts.podtrac.com/redirect.mp4/twit.cachefly.net/video/aaa/aaa0033/aaa0033_h264b_640x368_256.mp4";
 	}
 	$.movie.url = contentURL;
 	$.movie.play();
+	
 }
 
 
@@ -44,6 +45,7 @@ function playRemote(e){
  * */
 function closeWindow() {
 	$.movie.stop();
+	$.movie.release();
 	$.videoPlayerWin.close();
 }
 

@@ -99,7 +99,6 @@ var interval = setInterval(function() {
  * Closes the window
  * */
 function closeWindow() {
-	sound.reset();
 	sound.release();
 	clearInterval(interval);
 	$.audioPlayerWin.close();
