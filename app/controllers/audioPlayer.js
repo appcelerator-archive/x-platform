@@ -21,6 +21,7 @@ function playSound(url) {
 	sound.url = url;
 	$.pause.enabled = true;
 	$.stop.enabled = true;
+	$.pause.backgroundImage = "/images/pause.png";
 	if (OS_IOS) {
 		$.indicator.hide();
 		$.progressBar.value = 0;
