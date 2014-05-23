@@ -16,7 +16,14 @@ $.movie.addEventListener('load', function(){
 	loading.hide();
 });
 
-
+/**
+ * hides loading indicator when the movie plays - for blackberry
+ */
+$.movie.addEventListener('change', function(e){
+	if(e.state === "Playing"){
+		loading.hide();
+	}
+});
 /**
  * Plays the local video
  */

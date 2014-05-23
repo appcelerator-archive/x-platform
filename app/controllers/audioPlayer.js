@@ -36,15 +36,26 @@ function playSound(url) {
  */
 
 /**
+ * Hiding loading indicator when sound initializes- Works for android only
+ */
+sound.addEventListener('change', function(e) {
+	if (e.state === 3) {
+		$.indicator.hide();
+	}
+});
+
+/**
  * pauses a sound
  */
 function pauseSound() {
 	if (sound.isPaused()) {
 		$.pause.backgroundImage = "/images/pause.png";
 		sound.play();
-	} else {
+	}else if (sound.isPlaying()) {
 		$.pause.backgroundImage = "/images/play.png";
 		sound.pause();
+	}else{
+		$.pause.backgroundImage = "/images/pause.png";
 	}
 
 }
@@ -53,10 +64,12 @@ function pauseSound() {
  * stops a sound
  */
 function stopSound() {
-	$.pause.backgroundImage = "/images/pause.png";
-	sound.stop();
-	if (OS_IOS) {
-		$.progressBar.value = 0;
+	if (sound.isPaused() || sound.isPlaying()) {
+		$.pause.backgroundImage = "/images/pause.png";
+		sound.stop();
+		if (OS_IOS) {
+			$.progressBar.value = 0;
+		}
 	}
 
 }
@@ -73,9 +86,7 @@ function playLocalSound() {
  * plays remote sound
  */
 function playRemoteSound() {
-	if (OS_IOS) {
-		$.indicator.show(L('loading'));
-	}
+	$.indicator.show(L('loading'));
 	var url = "http://www.archive.org/download/CelebrationWav/1.wav";
 	playSound(url);
 }
