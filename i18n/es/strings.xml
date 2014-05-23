@@ -120,4 +120,8 @@
 	<string name="sms_alert_title">No compatible</string>
 	<string name="sms_failure_message">Este dispositivo no admite el envío de mensajes de texto</string>
 	<string name="sms_message">Texto de la muestra</string>
+	<string name="message_sent">Mensaje enviado con éxito</string>
+	<string name="message_cancelled">Mensaje cancelado</string>
+	<string name="message_error">error</string>
+	<string name="message_status">estado</string>
 </resources>
