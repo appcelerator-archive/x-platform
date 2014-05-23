@@ -82,7 +82,7 @@
 },
 "#geolocationSection" :{
 	layout: "vertical",
-	height: 200,
+	height: Ti.UI.FILL,
 	width: Ti.UI.FILL,
 	top: 0
 },

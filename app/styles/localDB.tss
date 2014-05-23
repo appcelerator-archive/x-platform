@@ -9,7 +9,7 @@
 	layout: "horizontal"
 	
 },
-"#firstNameView[platform=ios]":{
+"#firstNameView[platform=ios,blackberry]":{
 	right:10
 },
 "#firstName":{
@@ -33,7 +33,7 @@
 	top: 15,
 	layout: "horizontal"
 },
-"#lastNameView[platform=ios]":{
+"#lastNameView[platform=ios,blackberry]":{
 	right:10
 },
 "#lastName":{
