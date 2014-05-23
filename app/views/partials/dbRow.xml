@@ -1,6 +1,10 @@
 <Alloy>
 	<TableViewRow id="localDbRow">
 		<View id="rowView">
+			<View id="nameView">
+				<Label id="firstName"/>
+				<Label id="lastName"/>
+			</View>
 			<Label id="rowTitle"/>
 			<View id="edit">
 				<ImageView id="editIcon"/>
