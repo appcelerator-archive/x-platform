@@ -5,6 +5,6 @@
 			<Label id="lblMobileNo">
 			<TextField id="txtMobileNo"></TextField>
 		</View>	
-		<Button id="sendSms">
+		<Button id="sendSms" onClick="openSmsDialog">
 	</Window>
 </Alloy>

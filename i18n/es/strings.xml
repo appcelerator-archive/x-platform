@@ -117,4 +117,7 @@
 	<string name="sms">SMS</string>
 	<string name="mobile_number">número Móvil :</string>
 	<string name="send_sms">Enviar SMS</string>
+	<string name="sms_alert_title">No compatible</string>
+	<string name="sms_failure_message">Este dispositivo no admite el envío de mensajes de texto</string>
+	<string name="sms_message">Texto de la muestra</string>
 </resources>

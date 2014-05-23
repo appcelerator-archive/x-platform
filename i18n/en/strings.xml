@@ -117,4 +117,7 @@
 	<string name="sms">SMS</string>
 	<string name="mobile_number">Mobile No :</string>
 	<string name="send_sms">Send SMS</string>
+	<string name="sms_alert_title">Not Supported</string>
+	<string name="sms_failure_message">This device doesn't support sending text messages</string>
+	<string name="sms_message">Sample text</string>
 </resources>

@@ -23,8 +23,8 @@
 	textAlign: "left",
 	borderColor: "#444",
 	borderWidth: 1,
-	keyboardType:Ti.UI.KEYBOARD_NUMBER_PAD,
-	maxLength:10
+	keyboardType:Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
+	returnKeyType:Ti.UI.RETURNKEY_DONE
 },
 "#sendSms":{
 	top: 20,
