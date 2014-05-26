@@ -13,6 +13,9 @@
 	  right:10,
 	  top:20
 },
+"#buttonView[platform=android]":{
+	  top:100
+},
 "#localVideo":{
 	 top:0,
 	 left:0,
