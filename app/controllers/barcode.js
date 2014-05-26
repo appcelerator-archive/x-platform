@@ -71,8 +71,8 @@ function buildUI() {
 		var oLogo = Ti.UI.createImageView({
 			height : 40,
 			width : 40,
-			top : 10,
-			left : 10,
+			top : 30,
+			left : 5,
 			image : "/appicon.png"
 		});
 		overlay.add(oLogo);
@@ -122,7 +122,7 @@ function buildUI() {
 			opacity : 0.5,
 			width : 220,
 			height : 30,
-			top : 20
+			top : 30
 		});
 		cancelButton.addEventListener('click', function() {
 			Barcode.cancel();
