@@ -1,5 +1,17 @@
 <Alloy>
 	<Window id="modelWin" class="childContainer">
 		<Require id="topBar" src="partials/topbar"></Require>
+		<View id="inputView">
+			<View id="titleView">
+				<Label id="title"></Label>
+				<TextField id="titleVal"></TextField>
+			</View>
+			<View id="authorView">
+				<Label id="author"></Label>
+				<TextField id="authorVal"></TextField>
+			</View>
+			<Button id="add" onClick="addBook"/>
+		</View>
+		<TableView id="tblBooks"/>
 	</Window>
 </Alloy>

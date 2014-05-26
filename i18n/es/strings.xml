@@ -125,4 +125,7 @@
 	<string name="message_error">error</string>
 	<string name="message_status">estado</string>
 	<string name="model">Modelos</string>
+	<string name="title">título</string>
+	<string name="author">autor</string>
+	<string name="add_book">Añadir libro</string>
 </resources>

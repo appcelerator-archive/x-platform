@@ -125,4 +125,7 @@
 	<string name="message_error">Error</string>
 	<string name="message_status">Status</string>
 	<string name="model">Models</string>
+	<string name="title">Title :</string>
+	<string name="author">Author :</string>
+	<string name="add_book">Add Book</string>
 </resources>

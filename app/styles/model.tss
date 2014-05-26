@@ -1,0 +1,76 @@
+"#inputView":{
+	layout: "vertical",
+	height: Ti.UI.SIZE,
+	top: 20
+},
+"#titleView":{
+	height: Ti.UI.SIZE,
+	layout: "horizontal"
+	
+},
+"#titleView[platform=ios,blackberry]":{
+	right:10
+},
+"#title":{
+	left: 10,
+	text: L("title"),
+	width: Ti.UI.SIZE,
+	font: {
+		fontSize: 18
+	},
+	color: "#555",
+	textAlign: "left"
+},
+"#titleVal":{
+	width: Ti.UI.FILL,
+	left: 30,
+	height: 38,
+	font: {
+		fontSize: 18
+	},
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#authorView":{
+	height: Ti.UI.SIZE,
+	top: 15,
+	layout: "horizontal"
+},
+"#authorView[platform=ios,blackberry]":{
+	right:10
+},
+"#author":{
+	left: 10,
+	text: L("author"),
+	width: Ti.UI.SIZE,
+	font: {
+		fontSize: 18
+	},
+	color: "#555",
+	textAlign: "left"
+},
+"#authorVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	font: {
+		fontSize: 18
+	},
+	height: 38,
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#add":{
+	width:200,
+	top: 20,
+	textAlign: "center",
+	title:L("add_book")
+},
+"#tblBooks":{
+	left: 10,
+	right: 10,
+	top: 20,
+	height: 210,
+	borderColor: "#eeeeee",
+	borderWidth: 1,
+	separatorStyle : "none"
+}
