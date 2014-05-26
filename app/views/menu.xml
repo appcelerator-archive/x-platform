@@ -48,5 +48,8 @@
 		<View id="sms" class="menuItem" platform="ios,android">
 			<Label id="lblSms"/>
 		</View>
+		<View id="model" class="menuItem" platform="ios,android">
+			<Label id="lblModel"/>
+		</View>
 	</ScrollView>
 </Alloy>

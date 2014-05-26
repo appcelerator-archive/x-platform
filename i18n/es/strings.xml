@@ -124,4 +124,5 @@
 	<string name="message_cancelled">Mensaje cancelado</string>
 	<string name="message_error">error</string>
 	<string name="message_status">estado</string>
+	<string name="model">Modelos</string>
 </resources>

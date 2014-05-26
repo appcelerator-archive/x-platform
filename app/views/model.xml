@@ -1,0 +1,5 @@
+<Alloy>
+	<Window id="modelWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+	</Window>
+</Alloy>

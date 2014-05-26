@@ -1,18 +1,18 @@
-".container" :{
+".container":{
 	 backgroundColor:'#333',
 	 layout:'vertical',
 	 scrollType:"vertical",
 	 contentHeight: "auto"
 	 
  },
- ".menuItem" : {
+ ".menuItem": {
 	backgroundColor:'#444',
 	width:'100%',
 	height:40,
 	top:5
  },
 
- "Label" : {
+ "Label": {
 	 color:'#fff',
 	 font: {
 	 fontSize: 16
@@ -20,60 +20,63 @@
 	 left:'20',
 	 touchEnabled:false
 }
-"#lblhome" :{
+"#lblhome":{
 	text: L('home')
 },
-"#lblmap" :{
+"#lblmap":{
 	text: L('map')
 },
-"#lblcamera" :{
+"#lblcamera":{
 	text: L('camera')
 },
-"#lblbarcode" :{
+"#lblbarcode":{
 	text: L('barcode')
 },
-"#lblcharts" :{
+"#lblcharts":{
 	text: L('charts')
 },
-"#lblcalendar" :{
+"#lblcalendar":{
 	text: L('calendar')
 },
-"#lblencryption" :{
+"#lblencryption":{
 	text: L('encryption')
 },
-"#lblpush" :{
+"#lblpush":{
 	text: L('pushNotification')
 },
-"#lblremoteHtml" :{
+"#lblremoteHtml":{
 	text: L('remoteHtml')
 },
-"#lbllocalHtml" :{
+"#lbllocalHtml":{
 	text: L('localHtml')
 },
-"#lbllocalPdf" :{
+"#lbllocalPdf":{
 	text: L('localPdf')
 },
-"#lblgeneratePdf" :{
+"#lblgeneratePdf":{
 	text: L('generatePdf')
 },
-"#RemoteHtml" :{
+"#RemoteHtml":{
 	titleText:L('remoteHtml')
 },
-"#localHtml" :{
+"#localHtml":{
 	titleText:L('localHtml')
 },
-"#localPdf" :{
+"#localPdf":{
 	titleText:L('localPdf')
 },
-"#lblLocalDB" :{
+"#lblLocalDB":{
 	text: L('localDB')
 },
-"#lblVideoPlayer" :{
+"#lblVideoPlayer":{
 	text: L('videoPlayer')
 },
-"#lblAudioPlayer" :{
+"#lblAudioPlayer":{
 	text: L('audioPlayer')
 },
-"#lblSms" :{
+"#lblSms":{
 	text: L('sms')
+},
+"#lblModel":{
+	text: L('model')
 }
