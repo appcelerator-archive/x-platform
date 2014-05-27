@@ -14,7 +14,7 @@
 "#title":{
 	left: 10,
 	text: L("title"),
-	width: Ti.UI.SIZE,
+	width: 65,
 	font: {
 		fontSize: 18
 	},
@@ -23,7 +23,7 @@
 },
 "#titleVal":{
 	width: Ti.UI.FILL,
-	left: 30,
+	left: 10,
 	height: 38,
 	font: {
 		fontSize: 18
@@ -42,7 +42,7 @@
 "#author":{
 	left: 10,
 	text: L("author"),
-	width: Ti.UI.SIZE,
+	width: 65,
 	font: {
 		fontSize: 18
 	},

@@ -43,3 +43,8 @@ Alloy.Globals.adjustStatusBar = function(container) {
  * Name of Local DB
  */
 Alloy.Globals.db = "Employee";
+
+/**
+ * Adding book collection to alloy 
+ * */
+Alloy.Collections.book = Alloy.createCollection('book');

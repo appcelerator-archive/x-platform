@@ -1,4 +1,6 @@
 <Alloy>
+	<!-- Instance of the model -->
+    <Collection src="book" />
 	<Window id="modelWin" class="childContainer">
 		<Require id="topBar" src="partials/topbar"></Require>
 		<View id="inputView">
@@ -10,8 +12,11 @@
 				<Label id="author"></Label>
 				<TextField id="authorVal"></TextField>
 			</View>
-			<Button id="add" onClick="addBook"/>
+			<Button id="add" onClick="addupdate"/>
 		</View>
-		<TableView id="tblBooks"/>
+		<!-- Specifies the collection singleton or instance to bind to the table. -->
+		<TableView id="tblBooks" dataCollection="book" onClick="performOperation">
+			<Require src="partials/bookRow">
+		</TableView>	
 	</Window>
 </Alloy>

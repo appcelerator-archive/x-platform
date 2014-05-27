@@ -131,4 +131,5 @@
 	<string name="config_json">Config JSON ramificación</string>
 	<string name="build_on">Basarse en </string>
 	<string name="env_is"> Y Medio Ambiente es </string>
+	<string name="update_book">Update libro</string>
 </resources>

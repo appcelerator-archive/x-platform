@@ -131,4 +131,5 @@
 	<string name="config_json">Config JSON Branching</string>
 	<string name="build_on">Build on </string>
 	<string name="env_is"> & Environment is </string>
+	<string name="update_book">Update Book</string>
 </resources>
