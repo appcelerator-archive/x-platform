@@ -1,0 +1,6 @@
+<Alloy>
+	<Window id="configJsonWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+		<Label id="lblConfig"></Label>
+	</Window>
+</Alloy>

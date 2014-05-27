@@ -128,4 +128,7 @@
 	<string name="title">título</string>
 	<string name="author">autor</string>
 	<string name="add_book">Añadir libro</string>
+	<string name="config_json">Config JSON ramificación</string>
+	<string name="build_on">Basarse en </string>
+	<string name="env_is"> Y Medio Ambiente es </string>
 </resources>

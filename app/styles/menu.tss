@@ -79,4 +79,7 @@
 },
 "#lblModel":{
 	text: L('model')
+},
+"#lblConfig":{
+	text: L('config_json')
 }

@@ -51,5 +51,8 @@
 		<View id="model" class="menuItem" platform="ios,android">
 			<Label id="lblModel"/>
 		</View>
+		<View id="configJson" class="menuItem" platform="ios,android,blackberry">
+			<Label id="lblConfig"/>
+		</View>
 	</ScrollView>
 </Alloy>

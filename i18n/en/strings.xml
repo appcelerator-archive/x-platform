@@ -128,4 +128,7 @@
 	<string name="title">Title :</string>
 	<string name="author">Author :</string>
 	<string name="add_book">Add Book</string>
+	<string name="config_json">Config JSON Branching</string>
+	<string name="build_on">Build on </string>
+	<string name="env_is"> & Environment is </string>
 </resources>

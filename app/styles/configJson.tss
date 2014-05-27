@@ -1,0 +1,10 @@
+
+"#lblConfig":{
+	top:10,
+	font: {fontSize: 26},
+	color: "#555",
+	left: 10,
+	right: 10,
+	height: 400,
+	textAlign: "center"
+}
