@@ -1,0 +1,16 @@
+<Alloy>
+	<TableViewRow id="bookRow">
+		<View id="rowView">
+			<View id="dataView">
+				<Label id="title" text="{title}"/>
+				<Label id="author" text="{author}"/>
+			</View>
+			<View id="edit" rowid="{id}" type="edit" author="{author}" title="{title}">
+				<ImageView id="editIcon"/>
+			</View>
+			<View id="del" rowid="{id}" type="delete">
+				<ImageView id="delIcon"/>
+			</View>
+		</View>
+	</TableViewRow>
+</Alloy>

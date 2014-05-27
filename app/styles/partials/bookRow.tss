@@ -1,0 +1,74 @@
+"#bookRow":{
+	height: 70,
+	selectionStyle: "none"
+},
+"#bookRow[platform=blackberry]":{
+	height: 80,
+},
+"#rowView":{
+	top: 0,
+	bottom: 10,
+	backgroundColor: "#eeeeee"
+}
+"#dataView": {
+	left: 0,
+	right: 88,
+	top: 0,
+	bottom: 0,
+	layout: "vertical",
+	bubbleParent: false
+},
+"#title": {
+	font: {
+		fontFamily: "HelveticaNeue",
+		fontSize: "18"
+	},
+	height: "60%",
+	left: 5,
+	right: 0,
+	color: "#555",
+	textAlign: "center",
+	wordWrap: false,
+	ellipsize: true,
+	bubbleParent: false
+},
+"#author": {
+	font: {
+		fontFamily: "HelveticaNeue",
+		fontSize: "16"
+	},
+	height: "40%",
+	left: 5,
+	right: 0,
+	color: "#555",
+	wordWrap: false,
+	ellipsize: true,
+	textAlign: "center",
+	bubbleParent: false
+},
+"#edit": {
+	top: 8,
+	bottom: 8,
+	right: 44,
+	width: 44,
+	height: 44
+},
+"#del": {
+	top: 8,
+	bottom: 8,
+	right: 0,
+	width: 44,
+	height: 44
+},
+"#editIcon": {
+	width: 26,
+	height: 28,
+	image: "/images/edit.png",
+	touchEnabled: false
+},
+"#delIcon": {
+	width: 26,
+	height: 28,
+	image: "/images/delete.png",
+	touchEnabled: false
+}

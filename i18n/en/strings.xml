@@ -128,4 +128,5 @@
 	<string name="title">Title :</string>
 	<string name="author">Author :</string>
 	<string name="add_book">Add Book</string>
+	<string name="update_book">Update Book</string>
 </resources>
