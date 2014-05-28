@@ -132,4 +132,6 @@
 	<string name="build_on">Build on </string>
 	<string name="env_is"> & Environment is </string>
 	<string name="update_book">Update Book</string>
+	<string name="androidDensity">Android Density</string>
+	<string name="densityInfo">The above text image should state the density on Android, "default" on all other platforms.</string>
 </resources>

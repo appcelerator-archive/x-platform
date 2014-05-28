@@ -1,0 +1,32 @@
+"#densityImage":{
+	top: 20,
+	height: 300,
+	width: 300,
+	backgroundColor: "#555"
+},
+
+".footer": {
+	height: '60dp',
+	width: 300,
+	top: 20,
+	backgroundColor: '#eee'
+}
+
+"#image": {
+	image: '/images/theImage.png',
+	height: 270,
+	width: 270,
+	opacity: 0.75
+}
+
+"#info": {
+	color: '#000',
+	font: {
+		fontSize: '14dp',
+		fontWeight: 'normal'
+	},
+	height: Ti.UI.SIZE,
+	width: '90%',
+	text: L('densityInfo'),
+	textAlign: 'center'
+}

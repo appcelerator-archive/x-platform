@@ -1,0 +1,11 @@
+<Alloy>
+	<Window id="androidDensityWin" class="childContainer"> 
+		<Require id="topBar" src="partials/topbar"></Require>
+		<View id="densityImage">
+			<ImageView id="image"/>
+		</View>
+		<View class="footer">
+			<Label id="info"/>
+		</View>
+	</Window>
+</Alloy>

@@ -54,5 +54,8 @@
 		<View id="configJson" class="menuItem" platform="ios,android,blackberry">
 			<Label id="lblConfig"/>
 		</View>
+		<View id="androidDensity" class="menuItem">
+			<Label id="lblAndroid"/>
+		</View>
 	</ScrollView>
 </Alloy>
