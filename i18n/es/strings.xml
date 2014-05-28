@@ -132,6 +132,6 @@
 	<string name="build_on">Basarse en </string>
 	<string name="env_is"> Y Medio Ambiente es </string>
 	<string name="update_book">Update libro</string>
-	<string name="androidDensity">Densidad Android</string>
-	<string name="densityInfo">La imagen de texto anterior debe indicar la densidad en Android, "default" en el resto de plataformas.</string>
+	<string name="androidDensity">Densidad de imagen</string>
+	<string name="densityInfo">La imagen de texto anterior indica la densidad de la imagen en Android, "default" en el resto de plataformas.</string>
 </resources>
