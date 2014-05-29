@@ -9,7 +9,7 @@
 	"os:ios env:development": {"os": "iOS", "env":"development"},
 	"os:ios env:test": {"os": "iOS", "env":"test"},
 	"os:ios env:production": {"os": "iOS", "env":"production"},
-	"os:mobileweb ": {"os": "Mobileweb"},
+	"os:mobileweb": {"os": "Mobileweb"},
 	"dependencies": {
 		"com.appcelerator.sidemenu": "2.0",
 		"loadingIndicator": "1.0"
