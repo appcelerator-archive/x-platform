@@ -47,4 +47,6 @@ Alloy.Globals.db = "Employee";
 /**
  * Adding book collection to alloy 
  * */
-Alloy.Collections.book = Alloy.createCollection('book');
+if(OS_IOS || OS_ANDROID || OS_BLACKBERRY){
+	Alloy.Collections.book = Alloy.createCollection('book');
+}
