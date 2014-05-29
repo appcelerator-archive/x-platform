@@ -54,7 +54,7 @@
 		<View id="configJson" class="menuItem" platform="ios,android,blackberry">
 			<Label id="lblConfig"/>
 		</View>
-		<View id="androidDensity" class="menuItem">
+		<View id="androidDensity" class="menuItem" platform="ios,android,mobileweb">
 			<Label id="lblAndroid"/>
 		</View>
 		<View id="layout" class="menuItem">
