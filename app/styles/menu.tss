@@ -86,6 +86,11 @@
 "#lblAndroid":{
 	text: L('androidDensity')
 },
+"#lblBuiltins":{
+	text: L('builtins')
+}
 "#lblLayout":{
 	text: L('layouts')
+
 }
+

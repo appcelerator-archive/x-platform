@@ -132,6 +132,16 @@
 	<string name="build_on">Build on </string>
 	<string name="env_is"> &amp; Environment is </string>
 	<string name="update_book">Update Book</string>
+	<string name="androidDensity">Android Density</string>
+	<string name="densityInfo">The above text image should state the density on Android, "default" on all other platforms.</string>
+	<string name="builtins">Builtins</string>
+	<string name="shake">Shake</string>
+	<string name="flash">Flash</string>
+	<string name="flip">Flip</string>
+	<string name="fade_in">Fade In</string>
+	<string name="fade_out">Fade Out</string>
+	<string name="front">Front</string>
+	<string name="back">Back</string>
 	<string name="androidDensity">Image Density</string>
 	<string name="densityInfo">The above text image states the image density on Android, "default" on all other platforms.</string>
 	<string name="layouts">Layouts</string>
