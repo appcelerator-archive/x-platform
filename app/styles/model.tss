@@ -21,6 +21,9 @@
 	color: "#555",
 	textAlign: "left"
 },
+"#title[platform=blackberry]":{
+	width: 85
+},
 "#titleVal":{
 	width: Ti.UI.FILL,
 	left: 10,
@@ -48,6 +51,9 @@
 	},
 	color: "#555",
 	textAlign: "left"
+},
+"#author[platform=blackberry]":{
+	width: 85
 },
 "#authorVal":{
 	width: Ti.UI.FILL,

@@ -5,10 +5,12 @@
 				<Label id="title" text="{title}"/>
 				<Label id="author" text="{author}"/>
 			</View>
-			<View id="edit" rowid="{id}" type="edit" author="{author}" title="{title}">
+			<!--adding the edit/del feature for ios/android as for blackberry events are not getting bubbled up-->
+			<View id="edit" rowid="{id}" type="edit" author="{author}" title="{title}" platform="ios,android">
 				<ImageView id="editIcon"/>
 			</View>
-			<View id="del" rowid="{id}" type="delete">
+			<!--adding the edit/del feature for ios/android as for blackberry events are not getting bubbled up-->
+			<View id="del" rowid="{id}" type="delete" platform="ios,android">
 				<ImageView id="delIcon"/>
 			</View>
 		</View>
