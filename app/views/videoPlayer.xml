@@ -5,7 +5,7 @@
 			<VideoPlayer id="movie"/>
 		</View>
 		<View id="buttonView">
-			<Button id="localVideo" onClick="playLocal"/>
+			<Button id="localVideo" onClick="playLocal" platform="ios,android,blackberry"/>
 			<Button id="remoteVideo"  onClick="playRemote"/>
 		</View>
 	</Window>

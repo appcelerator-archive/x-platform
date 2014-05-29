@@ -24,7 +24,9 @@
 },
 "#remoteVideo":{
 	 top:0,
-	 right:0,
 	 width:"40%",
 	 title: L('playRemote')
+},
+"#remoteVideo[platform=ios,android,blackberry]":{
+	 right:0,
 }
