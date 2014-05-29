@@ -23,9 +23,6 @@ function generateViews(max, view){
 		width : 50,
 		backgroundColor : "#555",
 		textAlign : "center",
-		font : {
-			fontSize : 16
-		},
 		color: "white"
 	};
 	for (var i = 1; i <= max; i++) {
