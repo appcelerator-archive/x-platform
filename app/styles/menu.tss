@@ -85,4 +85,7 @@
 },
 "#lblAndroid":{
 	text: L('androidDensity')
+},
+"#lblLayout":{
+	text: L('layouts')
 }

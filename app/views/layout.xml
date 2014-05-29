@@ -1,0 +1,11 @@
+<Alloy>
+	<Window id="layoutWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+		<ScrollView id="view">
+			<Label id="lblFixed"/>
+			<View id="fixedLayout"></View>
+			<Label id="lblDynamic"/>
+			<View id="dynamicLayout"></View>
+		</ScrollView>
+	</Window>
+</Alloy>

@@ -134,4 +134,7 @@
 	<string name="update_book">Update Book</string>
 	<string name="androidDensity">Image Density</string>
 	<string name="densityInfo">The above text image states the image density on Android, "default" on all other platforms.</string>
+	<string name="layouts">Layouts</string>
+	<string name="fixedLayout">Fixed Layout</string>
+	<string name="dynamicLayout">Dynamic Layout</string>
 </resources>

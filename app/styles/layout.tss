@@ -1,0 +1,26 @@
+"#view":{
+	layout:"vertical",
+	scrollType:"vertical"
+},
+"#lblFixed":{
+	text: L('fixedLayout'),
+	top: 10,
+	color: "#555"
+},
+"#fixedLayout":{
+	 width:180,
+	 layout:"horizontal",
+	 top:10,
+	 height:200
+},
+"#lblDynamic":{
+	text: L('dynamicLayout'),
+	color: "#555"
+},
+"#dynamicLayout":{
+	 layout:"horizontal",
+	 left: 10,
+	 right: 10,
+	 top:10,
+	 height: 230
+}
