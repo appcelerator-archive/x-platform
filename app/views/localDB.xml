@@ -10,7 +10,10 @@
 				<Label id="lastName"></Label>
 				<TextField id="lastNameVal"></TextField>
 			</View>
-			<Button id="add" onClick="addData"/>
+			<View id="buttonView">
+				<Button id="add" onClick="addData"/>
+				<Button id="encrypt" onClick="setEncryption"/>
+			</View>
 		</View>
 		<TableView id="namesTable" onClick="performOperations"/>
 	</Window>

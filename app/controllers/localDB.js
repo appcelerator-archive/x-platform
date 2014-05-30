@@ -1,6 +1,6 @@
 var id;
 var database = Alloy.Globals.db;
-var encrypt = true;
+var encryptON = true;
 /**
  * Screen Initialization
  * */
@@ -118,7 +118,7 @@ function addData(e) {
 		$.lastNameVal.value = ($.lastNameVal.value === undefined) ? "" : $.lastNameVal.value;
 		var firstName = $.firstNameVal.value;
 		var lastName = $.lastNameVal.value;
-		if(encrypt == true){
+		if(encryptON == true){
 			var crypto = require("/crypto");
 			crypto.init("KEYSIZE_AES128");
 			firstName = crypto.encrypt({
@@ -168,6 +168,13 @@ function performOperations(e) {
 			break;
 	}
 
+}
+/**
+ * Set Encryption On/Off
+ */
+function setEncryption(){
+	encryptON=encryptON==false?true:false;
+	$.encrypt.backgroundImage = encryptON==true?"/lock.png":"/unlock.png";
 }
 
 /**

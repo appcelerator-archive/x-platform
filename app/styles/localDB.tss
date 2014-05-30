@@ -52,17 +52,32 @@
 	borderColor: "#555",
 	borderWidth: 1
 },
+"#buttonView":{
+	layout:"horizontal",
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
+}
 "#add":{
 	width:200,
 	top: 20,
+	left:20,
 	textAlign: "center"
 },
 "#namesTable":{
 	left: 10,
 	right: 10,
 	top: 20,
-	height: 210,
+	bottom:10,
 	borderColor: "#eeeeee",
 	borderWidth: 1,
 	separatorStyle : "none"
+}
+"#encrypt":{
+	top:20,
+	right:20,
+	left:20,
+	height:40,
+	width:40,
+	backgroundImage:"/lock.png"
+	
 }
