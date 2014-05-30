@@ -1,5 +1,6 @@
 var id;
 var database = Alloy.Globals.db;
+var encrypt = true;
 /**
  * Screen Initialization
  * */
@@ -114,17 +115,30 @@ function addData(e) {
 	$.lastNameVal.blur();
 	if (($.firstNameVal.value).trim() !== "" && $.firstNameVal.value !== undefined) {
 		var db = Ti.Database.open(database);
+		$.lastNameVal.value = ($.lastNameVal.value === undefined) ? "" : $.lastNameVal.value;
+		var firstName = $.firstNameVal.value;
+		var lastName = $.lastNameVal.value;
+		if(encrypt == true){
+			var crypto = require("/crypto");
+			crypto.init("KEYSIZE_AES128");
+			firstName = crypto.encrypt({
+				source : $.firstNameVal.value,
+				type : "TYPE_HEXSTRING"
+			});
+			lastName = crypto.encrypt({
+				source : $.lastNameVal.value,
+				type : "TYPE_HEXSTRING"
+			});
+		}
 		if (id) {
-			db.execute('UPDATE Employee SET firstName = ? , lastName = ? WHERE id = ?', $.firstNameVal.value, $.lastNameVal.value, id);
+			db.execute('UPDATE Employee SET firstName = ? , lastName = ? WHERE id = ?', firstName, lastName, id);
 			Ti.UI.createAlertDialog({
 				message : L('record_updated'),
 				ok : L("ok")
 			}).show();
 			id = "";
 		} else {
-			$.lastNameVal.value = ($.lastNameVal.value === undefined) ? "" : $.lastNameVal.value;
-			db.execute('INSERT INTO Employee (firstName, lastName) VALUES (?, ?)', $.firstNameVal.value, $.lastNameVal.value);
-
+			db.execute('INSERT INTO Employee (firstName, lastName) VALUES (?, ?)', firstName, lastName);
 		}
 		db.close();
 		fetchData();
