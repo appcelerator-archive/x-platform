@@ -137,4 +137,8 @@
 	<string name="layouts">Presentaciones</string>
 	<string name="fixedLayout">Layout Fijo</string>
 	<string name="dynamicLayout">Diseño Dinámico</string>
+	<string name="background">Fondo</string>
+	<string name="bg_stretch">Estiramiento De Fondo</string>
+	<string name="stretch">Tramo</string>
+	<string name="bg_repeat">Repita Antecedentes</string>
 </resources>

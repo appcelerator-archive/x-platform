@@ -1,0 +1,33 @@
+"#bgImageStretch":{
+	text: L('bg_stretch'),
+	top: 10,
+	color: "#555"
+},
+"#backgroundImageView":{
+	right: 10,
+	left: 10,
+	top: 10,
+	height: 100
+},
+"#bgImage":{
+	backgroundImage: "/images/ball.png",
+	height: 100,
+	width: 100
+},
+"#stretch":{
+	top: 10,
+	title: L('stretch'),
+	width: 100
+},
+"#bgRepeat":{
+	text: L('bg_repeat'),
+	top: 40,
+	color: "#555"
+},
+"#bgView":{
+	backgroundRepeat: true,
+	backgroundImage: "/images/flex.png",
+	width: 300,
+	top: 10,
+	height: 52
+}

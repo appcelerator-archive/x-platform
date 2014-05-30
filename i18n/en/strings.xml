@@ -137,4 +137,8 @@
 	<string name="layouts">Layouts</string>
 	<string name="fixedLayout">Fixed Layout</string>
 	<string name="dynamicLayout">Dynamic Layout</string>
+	<string name="background">Background</string>
+	<string name="bg_stretch">Background Stretch</string>
+	<string name="stretch">Stretch</string>
+	<string name="bg_repeat">Background Repeat</string>
 </resources>

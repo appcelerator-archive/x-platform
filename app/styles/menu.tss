@@ -88,4 +88,7 @@
 },
 "#lblLayout":{
 	text: L('layouts')
+},
+"#lblBackground":{
+	text: L('background')
 }

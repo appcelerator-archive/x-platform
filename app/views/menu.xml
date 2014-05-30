@@ -60,5 +60,8 @@
 		<View id="layout" class="menuItem">
 			<Label id="lblLayout"/>
 		</View>
+		<View id="background" class="menuItem" platform="ios,android,mobileweb">
+			<Label id="lblBackground"/>
+		</View>
 	</ScrollView>
 </Alloy>

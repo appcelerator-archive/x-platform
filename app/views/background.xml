@@ -1,0 +1,12 @@
+<Alloy>
+	<Window id="backgroundWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+		<Label id="bgImageStretch"/>
+		<View id="backgroundImageView">
+			<View id="bgImage"></View>
+		</View>
+		<Button id="stretch" onClick="stretchImage"/>
+		<Label id="bgRepeat"/>
+		<View id="bgView"></View>
+	</Window>
+</Alloy>
