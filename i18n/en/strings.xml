@@ -147,4 +147,6 @@
 	<string name="layouts">Layouts</string>
 	<string name="fixedLayout">Fixed Layout</string>
 	<string name="dynamicLayout">Dynamic Layout</string>
+	<string name="dialog">Dialog</string>
+	
 </resources>

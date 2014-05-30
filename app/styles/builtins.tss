@@ -1,3 +1,7 @@
+"#scrollView":{
+	width:Ti.UI.FILL,
+	layout:"vertical"
+},
 "#label": {
 	color: "#eee",
 	font: {
@@ -8,6 +12,7 @@
 "#buttonHolder":{
 	layout:"horizontal",
 	top: 10,
+	height:Ti.UI.SIZE
 },
 "#shake":{
 	title:L('shake'),
@@ -53,4 +58,10 @@
 	textAlign: "center",
 	height: 100,
 	width: 100
+},
+"#customDialog":{
+	top:10,
+	width:"70%",
+	title:"Dialog"
 }
+

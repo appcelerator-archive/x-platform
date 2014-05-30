@@ -1,5 +1,6 @@
 //http://docs.appcelerator.com/titanium/latest/#!/api/Alloy.builtins.animation
 var animation = require('alloy/animation');
+var dialogs = require('alloy/dialogs');
 
 /**
  * Screen Initialization
@@ -62,6 +63,16 @@ function fadeOut(e) {
  * */
 function closeWindow() {
 	$.builtinsWin.close();
+}
+
+
+/* Open dialog*/
+function openDialog(e){
+	dialogs.confirm({
+		yes:L('ok'),
+		no:L('cancel'),
+		callback: function(e){Ti.API.info('You have selected yes button.');}
+	});
 }
 
 initialize();

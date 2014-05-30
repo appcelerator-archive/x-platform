@@ -147,4 +147,6 @@
 	<string name="layouts">Presentaciones</string>
 	<string name="fixedLayout">Layout Fijo</string>
 	<string name="dynamicLayout">Diseño Dinámico</string>
+	<string name="dialog">Diálogo</string>
+	
 </resources>
