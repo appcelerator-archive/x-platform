@@ -132,6 +132,16 @@
 	<string name="build_on">Basarse en </string>
 	<string name="env_is"> Y Medio Ambiente es </string>
 	<string name="update_book">Update libro</string>
+	<string name="androidDensity">Densidad Android</string>
+	<string name="densityInfo">La imagen de texto anterior debe indicar la densidad en Android, "default" en el resto de plataformas.</string>
+	<string name="builtins">Builtins</string>
+	<string name="shake">Sacudir</string>
+	<string name="flash">Flash</string>
+	<string name="flip">Flip</string>
+	<string name="fade_in">Fade In</string>
+	<string name="fade_out">Desaparece</string>
+	<string name="front">Frente</string>
+	<string name="back">Espalda</string>
 	<string name="androidDensity">Densidad de imagen</string>
 	<string name="densityInfo">La imagen de texto anterior indica la densidad de la imagen en Android, "default" en el resto de plataformas.</string>
 	<string name="layouts">Presentaciones</string>
@@ -141,4 +151,5 @@
 	<string name="bg_stretch">Estiramiento De Fondo</string>
 	<string name="stretch">Tramo</string>
 	<string name="bg_repeat">Repita Antecedentes</string>
+	<string name="dialog">Diálogo</string>
 </resources>

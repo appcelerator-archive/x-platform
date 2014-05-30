@@ -57,6 +57,9 @@
 		<View id="androidDensity" class="menuItem" platform="ios,android,mobileweb">
 			<Label id="lblAndroid"/>
 		</View>
+		<View id="builtins" class="menuItem">
+			<Label id="lblBuiltins"/>
+		</View>	
 		<View id="layout" class="menuItem">
 			<Label id="lblLayout"/>
 		</View>

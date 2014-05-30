@@ -1,0 +1,67 @@
+"#scrollView":{
+	width:Ti.UI.FILL,
+	layout:"vertical"
+},
+"#label": {
+	color: "#eee",
+	font: {
+		fontSize: 18,
+		fontWeight: "bold"
+	},
+},
+"#buttonHolder":{
+	layout:"horizontal",
+	top: 10,
+	height:Ti.UI.SIZE
+},
+"#shake":{
+	title:L('shake'),
+	top:5,
+	left:5,
+	width:90
+},
+"#flash":{
+	title:L('flash'),
+	top:5,
+	left:5,
+	width:90
+},
+"#flipper": {
+	top:10,
+	height: 100,
+	width: 100
+},
+"#fadeIn":{
+	title:L('fade_in'),
+	top:5,
+	left:5,
+	width:90
+},
+"#fadeOut":{
+	title:L('fade_out'),
+	top:5,
+	left:5,
+	width:90
+},
+"#front": {
+	text: L('front'),
+	color: "white",
+	backgroundColor : "#444",
+	textAlign: "center",
+	height: 100,
+	width: 100
+},
+"#back": {
+	text: L('back'),
+	color: "white",
+	backgroundColor : "green",
+	textAlign: "center",
+	height: 100,
+	width: 100
+},
+"#customDialog":{
+	top:10,
+	width:"70%",
+	title:"Dialog"
+}
+

@@ -1,0 +1,19 @@
+<Alloy>
+	<Window id="builtinsWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+		<ScrollView id="scrollView">
+			<View id="flipper" >
+				<Label id="back" onClick="flip"/>
+				<Label id="front" onClick="flip"/>
+			</View>
+			<View id="buttonHolder">
+				<Button id="shake" onClick="shake"></Button>
+				<Button id="flash" onClick="flash"></Button>
+				<Button id="fadeOut" onClick="fadeOut"></Button>
+				<Button id="fadeIn" onClick="fadeIn"></Button>
+			</View>
+			<Button id="customDialog" onClick="openDialog"></Button>
+		</ScrollView>
+
+	</Window>
+</Alloy>
