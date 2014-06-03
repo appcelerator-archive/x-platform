@@ -19,6 +19,7 @@ function initialize() {
 		latitude : 37.389569,
 		longitude : -122.050212,
 		title : 'Appcelerator',
+		subtitle:"440 Bernardo Ave",
 		image : "http://media.tumblr.com/tumblr_m1hzbmMNrs1qznie6.jpg",
 		phone : '+1-650-200-4255'
 	}, {
@@ -77,6 +78,7 @@ function addLocationsToTable(data) {
 				latitude : data[i].latitude,
 				longitude : data[i].longitude,
 				title : data[i].title,
+				subtitle:data[i].subtitle || "",
 				animated : true
 			}));
 			row = Alloy.createController('partials/locationRow', {
@@ -112,7 +114,7 @@ function addLocationsToTable(data) {
  * add Contacts to Phonebook
  **/
 function addContact(params) {
-	Alloy.Globals.apm.leaveBreadcrumb("addContact()");
+	Alloy.Globals.apm.leaveBreadcrumb("map:addContact()");
 	Ti.Analytics.featureEvent('BussinessAddedAsContact');
 
 	if (OS_IOS || OS_ANDROID) {
@@ -185,7 +187,7 @@ function addMap() {
  * Marks the location on map
  */
 function tblClick(e) {
-	Alloy.Globals.apm.leaveBreadcrumb("tblClick()");
+	Alloy.Globals.apm.leaveBreadcrumb("map:tblClick()");
 	Ti.Analytics.featureEvent('BusinessClicked');
 
 	var index = this.index;
