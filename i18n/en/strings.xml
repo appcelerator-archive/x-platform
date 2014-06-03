@@ -163,4 +163,6 @@
 	<string name="text">Text:</string>
 	<string name="text_sample">The quick brown fox jumps over the lazy dog.</string>
 	<string name="result_sha1">Result:</string>
+	<string name="acs_user">ACS User</string>
+	<string name="crash_app">Crash App</string>
 </resources>
