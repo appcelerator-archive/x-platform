@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript" src="jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="highcharts.js"></script>
+		<script type="text/javascript" src="highcharts-more.js"></script>
+		<script type="text/javascript" src="exporting.js"></script>
+
+	</head>
+
+	<body>
+		<div id="container"></div>
+		<script type="text/javascript">
+		
+			function setChartOptions(_params){
+				if(_params.options){
+					Highcharts.setOptions(_params.options);
+				}
+				if(_params.size){
+					$("#container").height(_params.size.height-10);
+					$("#container").width(_params.size.width-10);
+				}
+				
+			}
+
+			function plotChart(_params) {
+				if(_params.options || _params.size){
+					setChartOptions(_params);
+				}
+		        $("#container").highcharts(_params.chartData);
+			}
+			
+			function updateChart(_params){
+				$("#container").highcharts().series[0].update(_params);
+			}
+
+		</script>
+		
+	</body>
+</html>

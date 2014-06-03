@@ -1,3 +1,7 @@
+//Using HighCharts: http://api.highcharts.com/highcharts
+
+var charts = require("chartData");
+var chartCount = 0;
 /**
  * Screen Initialization
  * */
@@ -8,13 +12,28 @@ function initialize() {
 
 //EVENT LISTENER
 function doChart() {
-	var options = {};
-	options.data = new Array(Math.floor(Math.random() * 1001), Math.floor(Math.random() * 1001), Math.floor(Math.random() * 1001), Math.floor(Math.random() * 1001), Math.floor(Math.random() * 1001));
-	setTimeout(function() {
-		Ti.App.fireEvent('renderChart', options);
-	}, 400);
-
+	
+	if(chartCount<charts.length-1){
+		chartCount++;
+	} else {
+		chartCount = 0;
+	}
+	
+	$.chart.plotChart({chartData:charts[chartCount]});
 };
+
+$.chart = Alloy.createWidget("com.appcelerator.charts",{
+	chartData:charts[0], 
+	size:{
+		height:$.chartView.height,
+		width:$.chartView.width
+	},
+	options:{
+		colors:["red","blue","green","yellow","purple","gray"]
+	}
+});
+
+$.chartView.add($.chart.getView());
 
 /**
  * Closes the window

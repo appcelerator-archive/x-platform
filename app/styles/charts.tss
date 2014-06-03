@@ -1,12 +1,10 @@
 "#chartView" :{
-	height : 250,
-	left : 10,
-	right:10,
-	top : 10,
-	showScrollbars : false,
-	//touchEnabled : false,
-	url : '/charts/chart.html',
-	backgroundColor : "#444"
+	height:500,
+	width:500
+},
+"#chartView[formFactor=handheld]" :{
+	height:300,
+	width:300
 },
 "#generateChart" :{
 	title: L('generate_chart'),

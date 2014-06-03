@@ -1,0 +1,10 @@
+"#webView" : {
+	url: "./html/com.appcelerator.charts/index.html",
+	backgroundColor:"transparent",
+	hideLoadIndicator:true,
+	showScrollbars:false
+}
+"#webView[platform=android]" : {
+	url: "/html/com.appcelerator.charts/index.html",
+	enableZoomControls:false,
+}
