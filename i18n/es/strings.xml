@@ -140,8 +140,6 @@
 	<string name="flip">Flip</string>
 	<string name="fade_in">Fade In</string>
 	<string name="fade_out">Desaparece</string>
-	<string name="front">Frente</string>
-	<string name="back">Espalda</string>
 	<string name="androidDensity">Densidad de imagen</string>
 	<string name="densityInfo">La imagen de texto anterior indica la densidad de la imagen en Android, "default" en el resto de plataformas.</string>
 	<string name="layouts">Presentaciones</string>
@@ -152,4 +150,12 @@
 	<string name="stretch">Tramo</string>
 	<string name="bg_repeat">Repita Antecedentes</string>
 	<string name="dialog">Diálogo</string>
+	<string name="dp_to_px">DpToPx</string>
+	<string name="dp">Dp:</string>
+	<string name="px">Px:</string>
+	<string name="date">Date:</string>
+	<string name="date_sample">12-25-1995</string>
+	<string name="format">Formato:</string>
+	<string name="format_date">Formato</string>
+	<string name="sample_format">dddd, MMMM Do YYYY, h:mm:ss a</string>
 </resources>

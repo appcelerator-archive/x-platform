@@ -9,59 +9,228 @@
 		fontWeight: "bold"
 	},
 },
-"#buttonHolder":{
-	layout:"horizontal",
-	top: 10,
-	height:Ti.UI.SIZE
+"#animationParent":{
+	top:10,
+	left : 10,
+	right:10,
+	height:Ti.UI.SIZE,
+	borderColor:"#a22621",
+	borderWidth:1
+},
+"#animationViewHolder":{
+	top:10,
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
 },
 "#shake":{
 	title:L('shake'),
-	top:5,
-	left:5,
-	width:90
+	top:0,
+	left:0,
+	width:80
 },
 "#flash":{
 	title:L('flash'),
-	top:5,
-	left:5,
-	width:90
+	top:50,
+	left:0,
+	width:80
 },
 "#flipper": {
-	top:10,
-	height: 100,
-	width: 100
+	top:0,
+	left:90,
+	height: 90,
+	width: 90,
+	bottom:10
 },
 "#fadeIn":{
 	title:L('fade_in'),
-	top:5,
-	left:5,
-	width:90
+	top:50,
+	left:190,
+	width:110
 },
 "#fadeOut":{
 	title:L('fade_out'),
-	top:5,
-	left:5,
-	width:90
+	top:0,
+	left:190,
+	width:110
 },
 "#front": {
-	text: L('front'),
+	text: L('flip'),
 	color: "white",
-	backgroundColor : "#444",
-	textAlign: "center",
-	height: 100,
-	width: 100
+	backgroundColor:"#444",
+	textAlign:"center",
+	height:100,
+	width:100
 },
 "#back": {
-	text: L('back'),
+	text: L('flip'),
 	color: "white",
-	backgroundColor : "green",
-	textAlign: "center",
-	height: 100,
-	width: 100
+	backgroundColor:"green",
+	textAlign:"center",
+	height:100,
+	width:100
 },
-"#customDialog":{
+"#measurmentView":{
 	top:10,
-	width:"70%",
-	title:"Dialog"
+	left : 10,
+	right:10,
+	height:Ti.UI.SIZE,
+	borderColor:"#a22621",
+	borderWidth:1	
+},
+"#dpWrapper":{
+	top:10,
+	bottom:10,
+	left:10,
+	width:"25%",
+	height:40,
+	borderWidth:2
+},
+"#dpLabel":{
+	left:2,
+	text:L('dp'),
+	width:30,
+	color:"black"
+},
+"#dpField":{
+	left:30,
+	right:0,
+	maxLength:4,
+	keyboardType:Titanium.UI.KEYBOARD_NUMBER_PAD
+	
+},
+"#pxWrapper":{
+	top:10,
+	width:"25%",
+	height:40,
+	borderWidth:2
+},
+"#pxLabel":{
+	left:2,
+	text:L('px'),
+	width:30,
+	color:"black"
+},
+"#pxField":{
+	left:30,
+	right:0,
+	focusable:false,
+	editable:false
+},
+"#dpToPXButton":{
+	right:10,
+	title:L('dp_to_px'),
+	width:"25%",
+	height:Ti.UI.SIZE,
+},
+"#dateParent":{
+	top:10,
+	left : 10,
+	right:10,
+	height:Ti.UI.SIZE,
+	borderColor:"#a22621",
+	borderWidth:1
+},
+"#dateViewWrapper":{
+	layout:"vertical",
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
+},
+"#dateInputWrapper":{
+	top:10,
+	height:Ti.UI.SIZE,
+	width:290
+},
+"#dateInputLabel":{
+	left:5,
+	width:60,
+	font:{
+		fontSize:12,
+	},
+	text:L('date'),
+	color:"black"
+},
+"#dateInput":{
+	left:65,
+	height:30,
+	font:{
+		fontSize:12,
+	},
+	width:220,
+	value:L('date_sample'),
+	borderColor:"black"
+},
+"#dateOutputWrapper":{
+	top:10,
+	height:Ti.UI.SIZE,
+	width:290
+},
+"#dateOutputLabel":{
+	left:5,
+	width:60,
+	text:L('format'),
+	font:{
+		fontSize:12,
+	},
+	color:"black",
+},
+"#dateFormat":{
+	left:65,
+	height:30,
+	value:L('sample_format'),
+	borderColor:"black",
+	width:220,
+	font:{
+		fontSize:12,
+	},
+},
+"#formatButtonHolder":{
+	top:10,
+	height:Ti.UI.SIZE,
+	width:227
+},
+"#format":{
+	left:0,
+	width:110,
+	title:L('format_date')
+},
+"#clear":{
+	left:115,
+	width:110,
+	title:L('clear_text')
+},
+"#resultWrapper":{
+	top:10,
+	height:Ti.UI.SIZE,
+	width:290
+},
+"#formatHeadLabel":{
+	left:5,
+	width:70,
+	font:{
+		fontSize:12,
+	},
+	color:"black",
+	text:L('result')
+},
+"#resultDate":{
+	left:65,
+	width:220,
+	height:30,
+	borderColor:"black",
+	color:"black",
+	borderWidth:1,
+	font:{
+		fontSize:12,
+	},
+},
+"#paddingView":{
+	height:10
 }
+
+
+
+
+
+
+
 
