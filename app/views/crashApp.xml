@@ -1,0 +1,7 @@
+<Alloy>
+	<Window id="crashAppWin" class="childContainer">
+		<Require id="topBar" src="partials/topbar"></Require>
+		<Button id="crashApp" onClick="crash"></Button>
+		<Button id="exception" onClick="exception"></Button>
+	</Window>
+</Alloy>

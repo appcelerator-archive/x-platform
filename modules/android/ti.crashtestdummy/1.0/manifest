@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+apiversion: 2
+description: Allows simulation and testing of various fatal and nonfatal runtime errors
+author: Blain Hamon
+license: Specify your license
+copyright: 2013 Appcelerator
+
+
+# these should not be edited
+name: CrashTestDummyAndroid
+moduleid: ti.crashtestdummy
+guid: 76e669f0-b05e-43e6-b05e-adfbf77aed0a
+platform: android
+minsdk: 3.0.0.GA

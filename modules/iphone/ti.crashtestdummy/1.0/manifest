@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+apiversion: 2
+description: Allows simulation and testing of various fatal and nonfatal runtime errors
+author: Blain Hamon
+license: Specify your license
+copyright: ©2013 Appcelerator
+
+
+# these should not be edited
+name: CrashTestDummy
+moduleid: ti.crashtestdummy
+guid: b3d5679b-c9b2-4956-92f6-d65c4a132763
+platform: iphone
+minsdk: 3.0.0.GA

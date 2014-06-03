@@ -1,0 +1,14 @@
+"#crashApp" :{
+	title: L('crash_app'),
+	left: 40,
+	right: 40,
+	top: 40,
+	color: "#ffffff"
+}
+"#exception" : {
+	title: L('handled_exception'),
+	left: 40,
+	right: 40,
+	top: 40,
+	color: "#ffffff"
+}
