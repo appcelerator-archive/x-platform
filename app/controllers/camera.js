@@ -13,7 +13,7 @@ function initialize(){
  * Opens camera to capture picture / picture gallery and send the same as attachment.
  */
 function emailPicture(){
-	Alloy.Globals.apm.leaveBreadcrumb("emailPicture()"); 
+	Alloy.Globals.apm.leaveBreadcrumb("camera:emailPicture()"); 
 	Ti.Analytics.featureEvent('EmailPhoto');
 	
 	if(Ti.Media.availableCameras && Ti.Media.availableCameras.length==0){
