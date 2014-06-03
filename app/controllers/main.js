@@ -99,7 +99,7 @@ function addCoupons(couponsArray) {
  * adds coupons to favorite coupons list
  */
 function couponClick(e) {
-	Alloy.Globals.apm.leaveBreadcrumb("couponClick()");
+	Alloy.Globals.apm.leaveBreadcrumb("main:couponClick()");
 	Ti.Analytics.featureEvent('CouponClicked');
 	var couponIndex = parseInt(e.row.index);
 	if (favoriteCoupons.indexOf(couponsArray[couponIndex]) != "-1") {
