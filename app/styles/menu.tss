@@ -101,4 +101,6 @@
 "#lblAcsUser":{
 	text: L('acs_user')
 }
-
+"#lblCrashApp":{
+	text: L('crash_exceptions')
+}
