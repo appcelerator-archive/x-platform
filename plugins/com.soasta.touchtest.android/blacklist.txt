@@ -1,0 +1,5 @@
+# Blacklist a module from being processed by adding the name of the
+# module to this list.  One module name per line.  Enable blacklisted
+# modules by commenting it out with a '#' sign.  Use the module
+# name you see in the Modules section of the tiapp.xml, displayed in the
+# Module column. For example: com.soasta.testblacklist

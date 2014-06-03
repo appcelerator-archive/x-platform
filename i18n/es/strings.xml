@@ -164,5 +164,7 @@
 	<string name="text_sample">El fox marrón rápido salta sobre el perro perezoso.</string>
 	<string name="result_sha1">Resultado:</string>
 	<string name="acs_user">ACS Usuario</string>
+	<string name="crash_exceptions">Choque/Excepción</string>
 	<string name="crash_app">Choque Aplicación</string>
+	<string name="handled_exception">Manejó Excepción</string>
 </resources>
