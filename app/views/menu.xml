@@ -66,5 +66,8 @@
 		<View id="background" class="menuItem" platform="ios,android,mobileweb">
 			<Label id="lblBackground"/>
 		</View>
+		<View id="mapDrawing" class="menuItem">
+			<Label id="lblmapdraw"/>
+		</View>
 	</ScrollView>
 </Alloy>

@@ -40,6 +40,7 @@
 	<string name="original_text">This is my text to be encrypted.</string>
 	<string name="home">Home</string>
 	<string name="map">Map</string>
+	<string name="mapdraw">Map Drawing</string>
 	<string name="camera">Camera &amp; Photo</string>
 	<string name="barcode">Barcode</string>
 	<string name="charts">Charts</string>

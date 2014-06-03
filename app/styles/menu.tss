@@ -26,6 +26,9 @@
 "#lblmap":{
 	text: L('map')
 },
+"#lblmapdraw":{
+	text: L('mapdraw')
+},
 "#lblcamera":{
 	text: L('camera')
 },

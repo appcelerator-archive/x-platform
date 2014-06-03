@@ -40,6 +40,7 @@
 	<string name="original_text">Este es mi texto a cifrar.</string>
 	<string name="home">Casa</string>
 	<string name="map">Mapa</string>
+	<string name="mapdraw">Mapa Dibujar</string>
 	<string name="camera">Cámara y Foto</string>
 	<string name="barcode">Código de barras</string>
 	<string name="charts">Gráficos</string>
