@@ -12,6 +12,8 @@
 	"os:mobileweb": {"os": "Mobileweb"},
 	"dependencies": {
 		"com.appcelerator.sidemenu": "2.0",
-		"loadingIndicator": "1.0"
+		"loadingIndicator": "1.0",
+		"com.n3wc.TiDrawableMap":"1.0",
+		"com.appcelerator.charts":"1.0"
 	}
 }
