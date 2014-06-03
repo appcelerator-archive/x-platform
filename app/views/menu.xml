@@ -66,5 +66,8 @@
 		<View id="background" class="menuItem" platform="ios,android,mobileweb">
 			<Label id="lblBackground"/>
 		</View>
+		<View id="acsuser" class="menuItem" platform="ios,android">
+			<Label id="lblAcsUser"/>
+		</View>
 	</ScrollView>
 </Alloy>
