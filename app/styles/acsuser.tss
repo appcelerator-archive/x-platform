@@ -1,0 +1,231 @@
+"#contentScroll":{
+	width:Ti.UI.SIZE, 
+	layout:"vertical"
+},
+"#create":{
+	title: L( 'create'),
+	top: 10,
+	color: "#ffffff",
+	left: 30,
+	right: 30
+},
+"#login":{
+	title: L( 'login'),
+	top: 10,
+	color: "#ffffff",
+	left: 30,
+	right: 30
+},
+".contentView":{
+	height: 1,
+	top: 10,
+	visible: false,
+	left: 10,
+	right: 10,
+	layout: "vertical"
+},
+"#userNameView":{
+	height: Ti.UI.SIZE,
+	layout: "horizontal"
+},
+"#userNameView[platform=ios,blackberry]":{
+	right:10
+},
+"#userName":{
+	left: 10,
+	text: L('user_name'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#userNameVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#passwordView":{
+	height: Ti.UI.SIZE,
+	layout: "horizontal",
+	top:15
+},
+"#passwordView[platform=ios,blackberry]":{
+	right:10
+},
+"#password":{
+	left: 10,
+	text: L('password'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#passwordVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#cnfpasswordView":{
+	height: Ti.UI.SIZE,
+	layout: "horizontal",
+	top:15
+},
+"#cnfpasswordView[platform=ios,blackberry]":{
+	right:10
+},
+"#cnfpassword":{
+	left: 10,
+	text: L('confirm_password'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#cnfpasswordVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#firstNameView":{
+	height: Ti.UI.SIZE,
+	top: 15,
+	layout: "horizontal"
+},
+"#firstNameView[platform=ios,blackberry]":{
+	right:10
+},
+"#firstName":{
+	left: 10,
+	text: L('first_name'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#firstNameVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#lastNameView":{
+	height: Ti.UI.SIZE,
+	top: 15,
+	layout: "horizontal"
+},
+"#lastNameView[platform=ios,blackberry]":{
+	right:10
+},
+"#lastName":{
+	left: 10,
+	text: L('last_name'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#lastNameVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	font: {fontSize: 18},
+	height: 30,
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#emailView":{
+	height: Ti.UI.SIZE,
+	top: 15,
+	layout: "horizontal"
+},
+"#emailView[platform=ios,blackberry]":{
+	right:10
+},
+"#email":{
+	left: 10,
+	text: L('email'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#emailVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#createUser":{
+	title: L('create_user'),
+	top: 10,
+	color: "#ffffff",
+	left: 30,
+	right: 30
+},
+"#lusernameView":{
+	height: Ti.UI.SIZE,
+	top: 15,
+	layout: "horizontal"
+},
+"#lusernameView[platform=ios,blackberry]":{
+	right:10
+},
+"#lusername":{
+	left: 10,
+	text: L('user_name'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#lusernameVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#lpasswordView":{
+	height: Ti.UI.SIZE,
+	top: 15,
+	layout: "horizontal"
+},
+"#lpasswordView[platform=ios,blackberry]":{
+	right:10
+},
+"#lpassword":{
+	left: 10,
+	text: L('password'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#lpasswordVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#login":{
+	title: L('login'),
+	top: 10,
+	color: "#ffffff",
+	left: 30,
+	right: 30
+},

@@ -69,5 +69,8 @@
 		<View id="mapDrawing" class="menuItem">
 			<Label id="lblmapdraw"/>
 		</View>
+		<View id="acsuser" class="menuItem" platform="ios,android">
+			<Label id="lblAcsUser"/>
+		</View>
 	</ScrollView>
 </Alloy>

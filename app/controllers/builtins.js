@@ -1,6 +1,12 @@
 //http://docs.appcelerator.com/titanium/latest/#!/api/Alloy.builtins.animation
 var animation = require('alloy/animation');
+//http://docs.appcelerator.com/titanium/latest/#!/api/Alloy.builtins.dialogs
 var dialogs = require('alloy/dialogs');
+//http://docs.appcelerator.com/titanium/latest/#!/api/Alloy.builtins.measurement
+var measurement = require('alloy/measurement');
+//http://docs.appcelerator.com/titanium/latest/#!/api/Alloy.builtins.sha1//http://docs.appcelerator.com/titanium/latest/#!/api/Alloy.builtins.moment
+var moment = require('alloy/moment');
+var sha1 = require('alloy/sha1');
 
 /**
  * Screen Initialization
@@ -8,7 +14,6 @@ var dialogs = require('alloy/dialogs');
 function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
 	$.topBar.setTitle(L('builtins'));
-
 }
 
 /**
@@ -66,13 +71,52 @@ function closeWindow() {
 }
 
 
-/* Open dialog*/
-function openDialog(e){
+/**
+ * Changes unit from dp to px
+ * @param {Object} e
+ */
+function changedpToPX(e){
+	if($.dpField.value.trim() !== "" && !isNaN($.dpField.value.trim())){
+		$.pxField.value = measurement.dpToPX($.dpField.value.trim()) ;
+	}
+}
+
+/**
+ * Formats date using the Alloy builtin date formatter
+ * @param {Object} e
+ */
+function formatDate(e){
+	if($.dateInput.value.trim() !== ""){
+		var day = moment($.dateInput.value.trim(), "MM-DD-YYYY");
+		$.resultDate.text = day.format($.dateFormat.value.trim());
+	}
+}
+
+/**
+ * Clears the text from the input fields
+ * @param {Object} e
+ */
+function clearFields(e){
+	//Open the dialog to take the user confirmation
 	dialogs.confirm({
 		yes:L('ok'),
 		no:L('cancel'),
-		callback: function(e){Ti.API.info('You have selected yes button.');}
+		callback: function(e){
+			$.dateInput.value = "";
+			$.resultDate.text = "";
+			$.dateFormat.value = "";
+		}
 	});
+}
+
+/**
+ * SHA1 encryption
+ * @param {Object} e
+ */
+function encryptSha1 (e) {
+ if($.sha1Input.value.trim() !== ""){
+ 	$.sha1ResultLabel.text = sha1.b64_sha1($.sha1Input.value.trim());
+ } 
 }
 
 initialize();

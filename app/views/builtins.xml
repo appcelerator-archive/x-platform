@@ -2,18 +2,66 @@
 	<Window id="builtinsWin" class="childContainer">
 		<Require id="topBar" src="partials/topbar"></Require>
 		<ScrollView id="scrollView">
-			<View id="flipper" >
-				<Label id="back" onClick="flip"/>
-				<Label id="front" onClick="flip"/>
+			<View id="animationParent">
+				<View id="animationViewHolder">
+					<Button id="shake" onClick="shake"></Button>
+					<Button id="flash" onClick="flash"></Button>
+					<View id="flipper" >
+						<Label id="back" onClick="flip"/>
+						<Label id="front" onClick="flip"/>
+					</View>
+					<Button id="fadeOut" onClick="fadeOut"></Button>
+					<Button id="fadeIn" onClick="fadeIn"></Button>
+				</View>
 			</View>
-			<View id="buttonHolder">
-				<Button id="shake" onClick="shake"></Button>
-				<Button id="flash" onClick="flash"></Button>
-				<Button id="fadeOut" onClick="fadeOut"></Button>
-				<Button id="fadeIn" onClick="fadeIn"></Button>
+			<View id="measurmentView" platform="android">
+				<View id="dpWrapper">
+					<Label id="dpLabel"></Label>
+					<TextField id="dpField"></TextField>
+				</View>
+				<View id="pxWrapper">
+					<Label id="pxLabel"></Label>
+					<TextField id="pxField"></TextField>
+				</View>
+				<Button id="dpToPXButton" onClick="changedpToPX"></Button>
 			</View>
-			<Button id="customDialog" onClick="openDialog"></Button>
+			<View id="dateParent">
+				<View id="dateViewWrapper">
+					<View id="dateInputWrapper">
+						<Label id="dateInputLabel"></Label>
+						<TextField id="dateInput"></TextField>
+					</View>
+					<View id="dateOutputWrapper">
+						<Label id="dateOutputLabel"></Label>
+						<TextField id="dateFormat"></TextField>
+					</View>
+					<View id="resultWrapper">
+						<Label id="formatHeadLabel"></Label>
+						<Label id="resultDate"></Label>
+					</View>
+					<View id="formatButtonHolder">
+						<Button id="format" onClick="formatDate"></Button>
+						<Button id="clear" onClick="clearFields"></Button>
+					</View>
+					<View id="paddingView"></View>
+				</View>
+			</View>
+			<View id="sha1Parent">
+				<View id="sha1ViewWrapper">
+					<View id="sha1InputWrapper">
+						<Label id="sha1InputLabel"></Label>
+						<TextField id="sha1Input"></TextField>
+					</View>
+					<View id="sha1resultWrapper">
+						<Label id="sha1ResultHead"></Label>
+						<Label id="sha1ResultLabel"></Label>
+					</View>
+					<View id="sha1ButtonHolder">
+						<Button id="encryptButton" onClick="encryptSha1"></Button>
+					</View>
+					<View id="paddingView"></View>
+				</View>
+			</View>
 		</ScrollView>
-
 	</Window>
 </Alloy>

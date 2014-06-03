@@ -97,5 +97,8 @@
 },
 "#lblBackground":{
 	text: L('background')
+},
+"#lblAcsUser":{
+	text: L('acs_user')
 }
 
