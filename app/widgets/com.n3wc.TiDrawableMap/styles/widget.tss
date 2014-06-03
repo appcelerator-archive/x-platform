@@ -1,0 +1,15 @@
+"#TiDrawableMapContainer":{
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL
+},
+"#TiDrawableMapView":{
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	zIndex: 2,
+	mapType: Alloy.Globals.Map.NORMAL_TYPE
+},
+"#TiDrawableMapDrawingView":{
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	zIndex: 1
+}
