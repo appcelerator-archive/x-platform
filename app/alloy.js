@@ -12,13 +12,16 @@ if (OS_IOS || OS_ANDROID) {
 	Alloy.Globals.apm && Alloy.Globals.apm.init && Alloy.Globals.apm.init();
 } else {
 	Alloy.Globals.apm = {};
+	
+	//In case apm is not installed, so the leaveBreadcrumb calls to break the app.
 	Alloy.Globals.apm.leaveBreadcrumb = function() {
 	};
 }
 // END: APM code injection
 
-// //Setup V2 Maps Module
-// var map = OS_IOS || OS_ANDROID?require("ti.map"):Ti.Map;
+// //Setup V2 Maps Module (Used for mapDrawing module);
+
+Alloy.Globals.Map = OS_IOS || OS_ANDROID?require("ti.map"):Ti.Map;
 
 Alloy.Globals.customMapView = (function() {
 	return Ti.UI.createView({
