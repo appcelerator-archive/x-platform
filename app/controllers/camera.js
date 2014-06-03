@@ -23,11 +23,31 @@ function emailPicture(){
 			error:function(){}
 		});
 	} else {
-		Ti.Media.showCamera({
-			success:email,
-			cancel:function(){},
-			error:function(){}
+		var alertDialog = Ti.UI.createAlertDialog({
+			title:"Camera or Gallery",
+			message:"Would you like to take a photo or select a photo from your gallery.",
+			buttonNames:["Gallery","Camera"]
 		});
+		
+		alertDialog.show();
+		
+		alertDialog.addEventListener("click",function(e){
+			if(e.index == 0){
+				Ti.Media.openPhotoGallery({
+					success:email,
+					cancel:function(){},
+					error:function(){}
+				});
+			} else {
+				Ti.Media.showCamera({
+					success:email,
+					cancel:function(){},
+					error:function(){}
+				});
+			}
+			
+		});
+		
 	}
 	
 	function email(event){
