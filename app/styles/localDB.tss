@@ -5,49 +5,33 @@
 	top: 20
 },
 "#firstNameView":{
-	height: Ti.UI.SIZE,
-	layout: "horizontal"
+	height: Ti.UI.SIZE
 	
 },
 "#firstNameView[platform=ios,blackberry]":{
 	right:10
-},
-"#firstName":{
-	left: 10,
-	text: L('first_name'),
-	width: Ti.UI.SIZE,
-	font: {fontSize: 18},
-	color: "#555",
-	textAlign: "left"
 },
 "#firstNameVal":{
 	width: Ti.UI.FILL,
 	left: 10,
 	height: 38,
 	font: {fontSize: 18},
+	hintText: L('first_name'),
 	borderColor: "#555",
 	borderWidth: 1
 },
 "#lastNameView":{
 	height: Ti.UI.SIZE,
-	top: 15,
-	layout: "horizontal"
+	top: 15
 },
 "#lastNameView[platform=ios,blackberry]":{
 	right:10
-},
-"#lastName":{
-	left: 10,
-	text: L('last_name'),
-	width: Ti.UI.SIZE,
-	font: {fontSize: 18},
-	color: "#555",
-	textAlign: "left"
 },
 "#lastNameVal":{
 	width: Ti.UI.FILL,
 	left: 10,
 	font: {fontSize: 18},
+	hintText: L('last_name'),
 	height: 38,
 	borderColor: "#555",
 	borderWidth: 1
