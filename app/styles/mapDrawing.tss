@@ -3,15 +3,15 @@
 	layout : "vertical"
 },
 "#btnView": {
-        height:50,
-        bottom:10,
+        height:60,
         width:Ti.UI.FILL,
         backgroundColor:"#CCCCCC",
         layout : "horizontal"
 },
 "#btnClear":{
 	 left:25,
-	 top:20
+	 top:10,
+	 height:40
 },
 "#btnConvexHull":{
 	 top:20
@@ -21,11 +21,13 @@
 	 top:20,
 	 font: {
 		fontSize: 10
-	}
+	},
+	color:"#000000"
 },
 "#btnDraw":{
 	left:25,
-	 top:20
+	 top:10,
+	 height:40
 },
 "#svPoints":{
 	 height:75,
