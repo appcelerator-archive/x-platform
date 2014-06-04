@@ -1,6 +1,16 @@
+"#acsAclWin":{
+	layout: 'none'
+},
 "#contentScroll":{
-	width:Ti.UI.SIZE, 
-	layout:"vertical"
+	top: 80,
+	width:Ti.UI.SIZE,
+	layout: 'vertical'
+},
+"#tableContent":{
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	backgroundColor: 'transparent',
+	visible: false
 },
 "#create":{
 	title: L('create')
@@ -50,6 +60,27 @@
 "#removeUser":{
 	title: L('remove_acluser')
 },
+"#transparentView":{
+	backgroundColor: '#000000',
+	opacity: '0.5',
+	height: '100%',
+	width: '100%'
+},
+"#containerView":{
+	height: Ti.UI.SIZE,
+	layout: 'vertical'
+},
+"#userTable": {
+	backgroundColor : '#fff',
+	height: 300,
+	width:'80%'
+},
+"#doneBtn":{
+	top: 0,
+	height: 30,
+	width: '80%',
+	title: 'Done'
+},
 ".outerButton":{
 	top: 10,
 	color: "#ffffff",
@@ -65,7 +96,7 @@
 	layout: "vertical"
 },
 ".nameTxt":{
-	width: Ti.UI.FILL,
+	top: 0,
 	left: 30,
 	right:30,
 	height: 30,
