@@ -164,7 +164,18 @@
 	<string name="text_sample">El fox marrón rápido salta sobre el perro perezoso.</string>
 	<string name="result_sha1">Resultado:</string>
 	<string name="acs_user">ACS Usuario</string>
+	<string name="create">crear</string>
+	<string name="login">login</string>
+	<string name="user_name">Nombre de usuario:</string>
+	<string name="password">contraseña:</string>
+	<string name="confirm_password">confirmar Contraseña:</string>
+	<string name="email">Email</string>
+	<string name="create_user">Crear usuario</string>
 	<string name="crash_exceptions">Choque/Excepción</string>
 	<string name="crash_app">Choque Aplicación</string>
 	<string name="handled_exception">Manejó Excepción</string>
+	<string name="password_not_matched">Las contraseñas no coinciden!</string>
+	<string name="created_logged_in_as">Creado! Ahora está conectado como</string>
+	<string name="logged_in_as">Conectado! Ahora está conectado como</string>
+	<string name="submit">presentar</string>
 </resources>

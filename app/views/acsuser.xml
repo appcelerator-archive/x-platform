@@ -28,7 +28,7 @@
 				<Label id="email"></Label>
 				<TextField id="emailVal"></TextField>
 			</View>
-			<Button id="createUser" onClick="openCreateView"/>
+			<Button id="createUser" onClick="submitForm" class="innerButton"/>
 		</View>
 		<Button id="login" onClick="openLoginView"/>
 		<View id="loginView" class="contentView">
@@ -40,6 +40,7 @@
 				<Label id="lpassword"></Label>
 				<TextField id="lpasswordVal"></TextField>
 			</View>
+			<Button id="submit" onClick="loginUser" class="innerButton"/>
 		</View>
 		</ScrollView>
 	</Window>

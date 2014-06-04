@@ -164,7 +164,20 @@
 	<string name="text_sample">The quick brown fox jumps over the lazy dog.</string>
 	<string name="result_sha1">Result:</string>
 	<string name="acs_user">ACS User</string>
+	<string name="create">Create</string>
+	<string name="login">Login</string>
+	<string name="user_name">User Name</string>
+	<string name="password">Password</string>
+	<string name="confirm_password">Confirm Password</string>
+	<string name="acs_first_name">First Name</string>
+	<string name="acs_last_name">Last Name</string>
+	<string name="email">Email</string>
+	<string name="create_user">Create User</string>
 	<string name="crash_exceptions">Crash/Exceptions</string>
 	<string name="crash_app">Crash App</string>
 	<string name="handled_exception">Handled Exception</string>
+	<string name="password_not_matched">Passwords do not match!</string>
+	<string name="created_logged_in_as">Created! You are now logged in as</string>
+	<string name="logged_in_as">Logged in! You are now logged in as</string>
+	<string name="submit">Submit</string>
 </resources>
