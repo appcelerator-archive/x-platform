@@ -5,27 +5,21 @@
 		<Button id="create" onClick="openCreateView"/>
 		<View id="userView" class="contentView">
 			<View id="userNameView">
-				<Label id="userName"></Label>
 				<TextField id="userNameVal"></TextField>
 			</View>
 			<View id="passwordView">
-				<Label id="password"></Label>
 				<TextField id="passwordVal"></TextField>
 			</View>
 			<View id="cnfpasswordView">
-				<Label id="cnfpassword"></Label>
 				<TextField id="cnfpasswordVal"></TextField>
 			</View>
 			<View id="firstNameView">
-				<Label id="firstName"></Label>
 				<TextField id="firstNameVal"></TextField>
 			</View>
 			<View id="lastNameView">
-				<Label id="lastName"></Label>
 				<TextField id="lastNameVal"></TextField>
 			</View>
 			<View id="emailView">
-				<Label id="email"></Label>
 				<TextField id="emailVal"></TextField>
 			</View>
 			<Button id="createUser" onClick="submitForm" class="innerButton"/>
@@ -33,11 +27,9 @@
 		<Button id="login" onClick="openLoginView"/>
 		<View id="loginView" class="contentView">
 			<View id="lusernameView">
-				<Label id="lusername"></Label>
 				<TextField id="lusernameVal"></TextField>
 			</View>
 			<View id="lpasswordView">
-				<Label id="lpassword"></Label>
 				<TextField id="lpasswordVal"></TextField>
 			</View>
 			<Button id="submit" onClick="loginUser" class="innerButton"/>
