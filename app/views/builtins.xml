@@ -62,6 +62,27 @@
 					<View id="paddingView"></View>
 				</View>
 			</View>
+			<View id="stringParent">
+				<View id="stringViewWrapper">
+					<View id="stringInputWrapper">
+						<Label id="stringInputLabel"></Label>
+						<TextField id="stringInput"></TextField>
+					</View>
+					<View id="stringResultWrapper">
+						<Label id="stringResultHead"></Label>
+						<Label id="stringResultLabel"></Label>
+					</View>
+					<View id="stringButtonHolder">
+						<Button id="ucFirstButton" onClick="upperCaseFirstCharacter"></Button>
+						<Button id="lcFirstButton" onClick="lowerCaseFirstCharacter"></Button>
+					</View>
+					<View id="stringButtonHolder2">
+						<Button id="trimZerosButton" onClick="trimZeros"></Button>
+						<Button id="trim" onClick="trim"></Button>
+					</View>
+					<View id="paddingView"></View>
+				</View>
+			</View>
 		</ScrollView>
 	</Window>
 </Alloy>
