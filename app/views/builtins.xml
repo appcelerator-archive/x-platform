@@ -46,6 +46,22 @@
 					<View id="paddingView"></View>
 				</View>
 			</View>
+			<View id="sha1Parent">
+				<View id="sha1ViewWrapper">
+					<View id="sha1InputWrapper">
+						<Label id="sha1InputLabel"></Label>
+						<TextField id="sha1Input"></TextField>
+					</View>
+					<View id="sha1resultWrapper">
+						<Label id="sha1ResultHead"></Label>
+						<Label id="sha1ResultLabel"></Label>
+					</View>
+					<View id="sha1ButtonHolder">
+						<Button id="encryptButton" onClick="encryptSha1"></Button>
+					</View>
+					<View id="paddingView"></View>
+				</View>
+			</View>
 		</ScrollView>
 	</Window>
 </Alloy>

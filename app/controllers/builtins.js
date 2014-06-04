@@ -4,8 +4,9 @@ var animation = require('alloy/animation');
 var dialogs = require('alloy/dialogs');
 //http://docs.appcelerator.com/titanium/latest/#!/api/Alloy.builtins.measurement
 var measurement = require('alloy/measurement');
-//http://docs.appcelerator.com/titanium/latest/#!/api/Alloy.builtins.moment
+//http://docs.appcelerator.com/titanium/latest/#!/api/Alloy.builtins.sha1//http://docs.appcelerator.com/titanium/latest/#!/api/Alloy.builtins.moment
 var moment = require('alloy/moment');
+var sha1 = require('alloy/sha1');
 
 /**
  * Screen Initialization
@@ -106,6 +107,16 @@ function clearFields(e){
 			$.dateFormat.value = "";
 		}
 	});
+}
+
+/**
+ * SHA1 encryption
+ * @param {Object} e
+ */
+function encryptSha1 (e) {
+ if($.sha1Input.value.trim() !== ""){
+ 	$.sha1ResultLabel.text = sha1.b64_sha1($.sha1Input.value.trim());
+ } 
 }
 
 initialize();

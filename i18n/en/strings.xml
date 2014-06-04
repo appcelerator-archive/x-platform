@@ -158,4 +158,8 @@
 	<string name="format">Format:</string>
 	<string name="format_date">Format</string>
 	<string name="sample_format">dddd, MMMM Do YYYY, h:mm:ss a</string>
+	<string name="encrypt">Encrypt(SHA-1)</string>
+	<string name="text">Text:</string>
+	<string name="text_sample">The quick brown fox jumps over the lazy dog.</string>
+	<string name="result_sha1">Result:</string>
 </resources>
