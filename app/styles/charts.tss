@@ -1,9 +1,10 @@
 "#chartView" :{
 	height:500,
-	width:"100%"
+	width:500
 },
 "#chartView[formFactor=handheld]" :{
-	height:300
+	height:300,
+	width:"100%"
 },
 "#generateChart" :{
 	title: L('generate_chart'),

@@ -16,11 +16,9 @@
 			</View>
 			<View id="measurmentView" platform="android">
 				<View id="dpWrapper">
-					<Label id="dpLabel"></Label>
 					<TextField id="dpField"></TextField>
 				</View>
 				<View id="pxWrapper">
-					<Label id="pxLabel"></Label>
 					<TextField id="pxField"></TextField>
 				</View>
 				<Button id="dpToPXButton" onClick="changedpToPX"></Button>
@@ -28,15 +26,12 @@
 			<View id="dateParent">
 				<View id="dateViewWrapper">
 					<View id="dateInputWrapper">
-						<Label id="dateInputLabel"></Label>
 						<TextField id="dateInput"></TextField>
 					</View>
 					<View id="dateOutputWrapper">
-						<Label id="dateOutputLabel"></Label>
 						<TextField id="dateFormat"></TextField>
 					</View>
 					<View id="resultWrapper">
-						<Label id="formatHeadLabel"></Label>
 						<Label id="resultDate"></Label>
 					</View>
 					<View id="formatButtonHolder">
@@ -49,7 +44,6 @@
 			<View id="sha1Parent">
 				<View id="sha1ViewWrapper">
 					<View id="sha1InputWrapper">
-						<Label id="sha1InputLabel"></Label>
 						<TextField id="sha1Input"></TextField>
 					</View>
 					<View id="sha1resultWrapper">

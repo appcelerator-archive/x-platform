@@ -11,19 +11,6 @@
 "#titleView[platform=ios,blackberry]":{
 	right:10
 },
-"#title":{
-	left: 10,
-	text: L("title"),
-	width: 65,
-	font: {
-		fontSize: 18
-	},
-	color: "#555",
-	textAlign: "left"
-},
-"#title[platform=blackberry]":{
-	width: 85
-},
 "#titleVal":{
 	width: Ti.UI.FILL,
 	left: 10,
@@ -31,6 +18,7 @@
 	font: {
 		fontSize: 18
 	},
+	hintText: L('title'),
 	borderColor: "#555",
 	borderWidth: 1
 },
@@ -42,19 +30,6 @@
 "#authorView[platform=ios,blackberry]":{
 	right:10
 },
-"#author":{
-	left: 10,
-	text: L("author"),
-	width: 65,
-	font: {
-		fontSize: 18
-	},
-	color: "#555",
-	textAlign: "left"
-},
-"#author[platform=blackberry]":{
-	width: 85
-},
 "#authorVal":{
 	width: Ti.UI.FILL,
 	left: 10,
@@ -62,6 +37,7 @@
 		fontSize: 18
 	},
 	height: 38,
+	hintText: L('author'),
 	borderColor: "#555",
 	borderWidth: 1
 },

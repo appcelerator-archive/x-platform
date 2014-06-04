@@ -2,20 +2,9 @@
 	left:0, 
 	top:30,
 	height:Ti.UI.SIZE, 
-	width:Ti.UI.FILL ,
-	layout:"horizontal"
-},
-"#lblMobileNo":{
-	left:20,
-	width:Ti.UI.SIZE,
-	text:L("mobile_number"),
-	font: {
-		fontSize: 18
-	},
-	color: "#555" 
+	width:Ti.UI.FILL 
 },
 "#txtMobileNo":{
-	left : 10,
 	top: 0,
 	height: 38,
 	width:160,
@@ -23,6 +12,7 @@
 	textAlign: "left",
 	borderColor: "#444",
 	borderWidth: 1,
+	hintText:L("mobile_number"),
 	keyboardType:Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
 	returnKeyType:Ti.UI.RETURNKEY_DONE
 },
