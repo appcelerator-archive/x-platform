@@ -103,7 +103,7 @@ function clearFields(e){
 		no:L('cancel'),
 		callback: function(e){
 			$.dateInput.value = "";
-			$.resultDate.text = "";
+			$.resultDate.text = L('result');
 			$.dateFormat.value = "";
 		}
 	});
