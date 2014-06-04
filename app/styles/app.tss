@@ -1,17 +1,23 @@
-".childContainer" : {
+".childContainer":{
 	layout:"vertical",
 	width:"100%",
 	backgroundColor:'white',
 	navBarHidden:true
 },
-"Button[platform=ios]" :{
+"Button[platform=ios]":{
 	style: Titanium.UI.iPhone.SystemButtonStyle.PLAIN,
 	height: 40,
 	backgroundColor: "#a22621"
 },
 
 //Button[platform=blackberry] background color not working as per Bug TIMOB-10417
-"Button[platform=android, mobileweb]" :{
+"Button[platform=android, mobileweb]":{
 	height: 40,
 	backgroundColor: "#a22621"
+},
+".innerButton":{
+	left:80,
+	right:80,
+	top: 10,
+	color: "#ffffff"
 }

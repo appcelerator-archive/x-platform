@@ -298,6 +298,99 @@
 	width:150,
 	title:L('encrypt')
 }
+"#stringParent":{
+	top:10,
+	left : 10,
+	right:10,
+	height:Ti.UI.SIZE,
+	borderColor:"#a22621",
+	borderWidth:1
+},
+"#stringViewWrapper":{
+	layout:"vertical",
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
+},
+"#stringInputWrapper":{
+	top:10,
+	height:Ti.UI.SIZE,
+	width:290
+},
+"#stringInputLabel":{
+	left:0,
+	width:60,
+	font:{
+		fontSize:12,
+	},
+	text:L('text'),
+	color:"black"
+},
+"#stringInput":{
+	left:60,
+	height:30,
+	font:{
+		fontSize:12,
+	},
+	width:225,,
+	value:L('string_sample'),
+	borderColor:"black"
+},
+"#stringResultWrapper":{
+	top:10,
+	height:Ti.UI.SIZE,
+	width:290
+},
+"#stringResultHead":{
+	left:0,
+	width:60,
+	font:{
+		fontSize:12,
+	},
+	color:"black",
+	text:L('result_sha1')
+},
+"#stringResultLabel":{
+	left:60,
+	width:225,
+	height:30,
+	borderColor:"black",
+	color:"black",
+	borderWidth:1,
+	font:{
+		fontSize:12,
+	},
+},
+"#stringButtonHolder":{
+	top:10,
+	height:Ti.UI.SIZE,
+	width:275
+},
+"#ucFirstButton":{
+	left:0,
+	width:135,
+	title:L('uc_first')
+},
+"#lcFirstButton":{
+	left:140,
+	width:135,
+	title:L('lc_first')
+}
+"#stringButtonHolder2":{
+	top:10,
+	height:Ti.UI.SIZE,
+	width:275
+},
+"#trim":{
+	left:0,
+	width:135,
+	title:L('trim')
+},
+"#trimZerosButton":{
+	left:140,
+	width:135,
+	title:L('trim_zeros')
+}
+
 
 
 
