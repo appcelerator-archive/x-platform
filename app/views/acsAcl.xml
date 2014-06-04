@@ -1,0 +1,49 @@
+<Alloy>
+	<Window id="acsAclWin" class="childContainer" >
+		<Require id="topBar" src="partials/topbar"></Require>
+		<ScrollView id="contentScroll">
+		<Button id="create" onClick="openCreateView"/>
+		<View id="createView" class="contentView">
+			<View id="nameView">
+				<Label id="name"></Label>
+				<TextField id="nameVal"></TextField>
+			</View>
+			<Button id="selectReader" onClick="openCreateView"/>
+			<Button id="selectWriter" onClick="openCreateView"/>
+			<Button id="createACL" onClick="openCreateView"/>
+		</View>
+		<Button id="show" onClick="openShowView"/>
+		<View id="showView" class="contentView">
+			<View id="snameView">
+				<Label id="sname"></Label>
+				<TextField id="snameVal"></TextField>
+			</View>
+			<Button id="sselectReader" onClick="openShowView"/>
+			<Button id="sselectWriter" onClick="openShowView"/>
+			<Button id="showACL" onClick="openShowView"/>
+			<Button id="updateACL" onClick="openShowView"/>
+			<Button id="removeACL" onClick="openShowView"/>
+		</View>
+		
+		<Button id="update" onClick="openUpdateView"/>
+		<View id="updateView" class="contentView">
+			<View id="unameView">
+				<Label id="uname"></Label>
+				<TextField id="unameVal"></TextField>
+			</View>
+			<Button id="uselectReader" onClick="openUpdateView"/>
+			<Button id="uselectWriter" onClick="openUpdateView"/>
+			<Button id="addUser" onClick="openUpdateView"/>
+			<Button id="removeUser" onClick="openUpdateView"/>
+		</View>
+		
+		<Button id="check" onClick="openCheckView"/>
+		<View id="checkView" class="contentView">
+			<View id="cnameView">
+				<Label id="cname"></Label>
+				<TextField id="cnameVal"></TextField>
+			</View>
+		</View>
+		</ScrollView>
+	</Window>
+</Alloy>

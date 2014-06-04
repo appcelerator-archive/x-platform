@@ -1,0 +1,171 @@
+"#contentScroll":{
+	width:Ti.UI.SIZE, 
+	layout:"vertical"
+},
+"#create":{
+	title: L( 'create_acl'),
+	top: 10,
+	color: "#ffffff",
+	left: 30,
+	right: 30
+},
+"#show":{
+	title: L( 'show_acl'),
+	top: 10,
+	color: "#ffffff",
+	left: 30,
+	right: 30
+},
+"#update":{
+	title: L( 'update_aclusers'),
+	top: 10,
+	color: "#ffffff",
+	left: 30,
+	right: 30
+},
+"#check":{
+	title: L( 'check_aclpermission'),
+	top: 10,
+	color: "#ffffff",
+	left: 30,
+	right: 30
+},
+".contentView":{
+	height: 1,
+	top: 10,
+	visible: false,
+	left: 10,
+	right: 10,
+	layout: "vertical"
+},
+"#nameView":{
+	height: Ti.UI.SIZE,
+	layout: "horizontal"
+},
+"#nameView[platform=ios,blackberry]":{
+	right:10
+},
+"#name":{
+	left: 10,
+	text: L('acl_name'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#nameVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#selectReader":{
+	title: L('select_reader')
+},
+"#selectWriter":{
+	title: L('select_writer')
+},
+"#createACL":{
+	title: L('create_acl')
+},
+"#snameView":{
+	height: Ti.UI.SIZE,
+	top: 15,
+	layout: "horizontal"
+},
+"#snameView[platform=ios,blackberry]":{
+	right:10
+},
+"#sname":{
+	left: 10,
+	text: L('acl_name'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#snameVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#sselectReader":{
+	title: L('select_reader')
+},
+"#sselectWriter":{
+	title: L('select_writer')
+},
+"#showACL":{
+	title: L('show_acl')
+},
+"#updateACL":{
+	title: L('update_acl')
+},
+"#removeACL":{
+	title: L('remove_acl')
+},
+"#unameView":{
+	height: Ti.UI.SIZE,
+	top: 15,
+	layout: "horizontal"
+},
+"#unameView[platform=ios,blackberry]":{
+	right:10
+},
+"#uname":{
+	left: 10,
+	text: L('acl_name'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#unameVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1
+},
+"#uselectReader":{
+	title: L('select_reader')
+},
+"#uselectWriter":{
+	title: L('select_writer')
+},
+"#addUser":{
+	title: L('add_acluser')
+},
+"#removeUser":{
+	title: L('remove_acluser')
+},
+"#cnameView":{
+	height: Ti.UI.SIZE,
+	top: 15,
+	layout: "horizontal"
+},
+"#cnameView[platform=ios,blackberry]":{
+	right:10
+},
+"#cname":{
+	left: 10,
+	text: L('acl_name'),
+	width: Ti.UI.SIZE,
+	font: {fontSize: 18},
+	color: "#555",
+	textAlign: "left"
+},
+"#cnameVal":{
+	width: Ti.UI.FILL,
+	left: 10,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1
+}

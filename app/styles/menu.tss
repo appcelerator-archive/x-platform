@@ -100,7 +100,10 @@
 },
 "#lblAcsUser":{
 	text: L('acs_user')
-}
+},
+"#lblAcsAcl":{
+	text: L('acs_acl')
+},
 "#lblCrashApp":{
 	text: L('crash_exceptions')
 }
