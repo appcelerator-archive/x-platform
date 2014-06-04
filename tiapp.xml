@@ -76,9 +76,9 @@
             <!-- Specify OpenGL ES 2.0 as a requirement -->
             <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
             <!-- Replace <com.domain.appid> with your application ID -->
-            <uses-permission android:name="com.appcelerator.cross.permission.MAPS_RECEIVE"/>
+            <uses-permission android:name="com.appcelerator.crossplatform.permission.MAPS_RECEIVE"/>
             <permission
-                android:name="com.appcelerator.cross.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+                android:name="com.appcelerator.crossplatform.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
             <application>
                 <!-- Replace "PASTE YOUR GOOGLE MAPS API KEY HERE" with the Google API key you obtained -->
                 <meta-data
@@ -152,10 +152,9 @@
         <target device="mobileweb">true</target>
         <target device="tizen">true</target>
     </deployment-targets>
-    <sdk-version>3.2.2.GA</sdk-version>
+    <sdk-version>3.2.0.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
-        <!--<plugin>com.soasta.touchtest.android</plugin>-->
         <plugin>com.soasta.touchtest.android</plugin>
     </plugins>
     <tizen appid="1nWLDDpOmg" xmlns:tizen="http://ti.appcelerator.org">

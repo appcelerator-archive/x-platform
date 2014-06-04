@@ -4,7 +4,7 @@
 },
 "#chartView[formFactor=handheld]" :{
 	height:300,
-	width:300
+	width:"100%"
 },
 "#generateChart" :{
 	title: L('generate_chart'),

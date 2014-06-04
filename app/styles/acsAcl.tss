@@ -1,0 +1,76 @@
+"#contentScroll":{
+	width:Ti.UI.SIZE, 
+	layout:"vertical"
+},
+"#create":{
+	title: L('create')
+},
+"#show":{
+	title: L('show')
+},
+"#update":{
+	title: L('update_aclusers')
+},
+"#check":{
+	title: L('check_aclpermission')
+},
+"#selectReader":{
+	title: L('select_reader')
+},
+"#selectWriter":{
+	title: L('select_writer')
+},
+"#createACL":{
+	title: L('create')
+},
+"#sselectReader":{
+	title: L('select_reader')
+},
+"#sselectWriter":{
+	title: L('select_writer')
+},
+"#showACL":{
+	title: L('show')
+},
+"#updateACL":{
+	title: L('update_acl')
+},
+"#removeACL":{
+	title: L('remove_acl')
+},
+"#uselectReader":{
+	title: L('select_reader')
+},
+"#uselectWriter":{
+	title: L('select_writer')
+},
+"#addUser":{
+	title: L('add_acluser')
+},
+"#removeUser":{
+	title: L('remove_acluser')
+},
+".outerButton":{
+	top: 10,
+	color: "#ffffff",
+	left: 30,
+	right: 30
+},
+".contentView":{
+	height: 1,
+	top: 10,
+	visible: false,
+	left: 10,
+	right: 10,
+	layout: "vertical"
+},
+".nameTxt":{
+	width: Ti.UI.FILL,
+	left: 30,
+	right:30,
+	height: 30,
+	font: {fontSize: 18},
+	borderColor: "#555",
+	borderWidth: 1,
+	hintText:L('acl_name')
+}

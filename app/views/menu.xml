@@ -72,6 +72,9 @@
 		<View id="acsuser" class="menuItem" platform="ios,android">
 			<Label id="lblAcsUser"/>
 		</View>
+		<View id="acsAcl" class="menuItem" platform="ios,android">
+			<Label id="lblAcsAcl"/>
+		</View>
 		<View id="crashApp" class="menuItem" platform="ios,android">
 			<Label id="lblCrashApp"/>
 		</View>
