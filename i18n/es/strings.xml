@@ -176,6 +176,17 @@
 	<string name="confirm_password">confirmar Contraseña:</string>
 	<string name="email">Email</string>
 	<string name="create_user">Crear usuario</string>
+	<string name="acs_acl">ACS ACL</string>
+	<string name="show">Show</string>
+	<string name="update_aclusers">Actualizar Usuarios</string>
+	<string name="check_aclpermission">Comprobar permisos</string>
+	<string name="acl_name">Nombre</string>
+	<string name="select_reader">Seleccione Reader</string>
+	<string name="select_writer">Seleccione escritor</string>
+	<string name="update_acl">Actualización</string>
+	<string name="remove_acl">Eliminar</string>
+	<string name="add_acluser">Añadir ACL usuario</string>
+	<string name="remove_acluser">Retire ACL usuario</string>
 	<string name="crash_exceptions">Choque/Excepción</string>
 	<string name="crash_app">Choque Aplicación</string>
 	<string name="handled_exception">Manejó Excepción</string>
