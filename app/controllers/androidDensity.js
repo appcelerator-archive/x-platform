@@ -4,7 +4,7 @@
 function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
 	$.topBar.setTitle( L('androidDensity'));
-	$.info.text=+"\n"+Ti.Platform.displayCaps.platformWidth+" x "+Ti.Platform.displayCaps.platformHeight;
+	$.info.text=$.info.text+"\n"+Ti.Platform.displayCaps.platformWidth+" x "+Ti.Platform.displayCaps.platformHeight+"\n"+Ti.Platform.displayCaps.density+" density";
 }
 
 /**
@@ -13,6 +13,5 @@ function initialize() {
 function closeWindow() {
 	$.androidDensityWin.close();
 }
-
 
 initialize();
