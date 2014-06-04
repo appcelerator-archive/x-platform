@@ -27,9 +27,6 @@ $.chart = Alloy.createWidget("com.appcelerator.charts",{
 	size:{
 		height:$.chartView.height,
 		width:$.chartView.width
-	},
-	options:{
-		colors:["red","blue","green","yellow","purple","gray"]
 	}
 });
 

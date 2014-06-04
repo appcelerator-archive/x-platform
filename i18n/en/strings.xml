@@ -163,6 +163,11 @@
 	<string name="text">Text:</string>
 	<string name="text_sample">The quick brown fox jumps over the lazy dog.</string>
 	<string name="result_sha1">Result:</string>
+	<string name="string_sample">string sample</string>
+	<string name="uc_first">UC First</string>
+	<string name="lc_first">LC First</string>
+	<string name="trim_zeros">Trim Zeros</string>
+	<string name="trim">Trim</string>
 	<string name="acs_user">ACS User</string>
 	<string name="create">Create</string>
 	<string name="login">Login</string>
