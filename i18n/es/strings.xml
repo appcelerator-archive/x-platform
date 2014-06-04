@@ -163,6 +163,11 @@
 	<string name="text">Texto:</string>
 	<string name="text_sample">El fox marrón rápido salta sobre el perro perezoso.</string>
 	<string name="result_sha1">Resultado:</string>
+	<string name="string_sample">muestra de cadena</string>
+	<string name="uc_first">UC Primera</string>
+	<string name="lc_first">LC Primera</string>
+	<string name="trim_zeros">Recortar Zeros</string>
+	<string name="trim">Recortar</string>
 	<string name="acs_user">ACS Usuario</string>
 	<string name="crash_exceptions">Choque/Excepción</string>
 	<string name="crash_app">Choque Aplicación</string>
