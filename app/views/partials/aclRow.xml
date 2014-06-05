@@ -1,0 +1,7 @@
+<Alloy>
+	<TableViewRow id="aclRow">
+		<View id="rowView">
+			<Label id="rowTitle"/>
+		</View>
+	</TableViewRow>
+</Alloy>
