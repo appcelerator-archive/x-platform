@@ -79,7 +79,7 @@
 	top: 0,
 	height: 30,
 	width: '70%',
-	title: 'Done'
+	title: L('done')
 },
 ".outerButton":{
 	top: 10,

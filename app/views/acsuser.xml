@@ -2,8 +2,8 @@
 	<Window id="acsuserWin" class="childContainer" >
 		<Require id="topBar" src="partials/topbar"></Require>
 		<ScrollView id="contentScroll">
-		<Button id="create" onClick="openCreateView"/>
-		<View id="userView" class="contentView">
+		<Button id="create" onClick="animateView"/>
+		<View id="createView" class="contentView">
 			<View id="userNameView">
 				<TextField id="userNameVal"></TextField>
 			</View>
@@ -24,7 +24,7 @@
 			</View>
 			<Button id="createUser" onClick="submitForm" class="innerButton"/>
 		</View>
-		<Button id="login" onClick="openLoginView"/>
+		<Button id="login" onClick="animateView"/>
 		<View id="loginView" class="contentView">
 			<View id="lusernameView">
 				<TextField id="lusernameVal"></TextField>

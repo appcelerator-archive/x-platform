@@ -20,7 +20,7 @@ function initialize() {
 	$.topBar.imageContainer.addEventListener('click', closeWindow);
 	$.topBar.setTitle(L('acs_acl'));
 	$.userTable.setData([{
-		title : 'Loading, please wait...'
+		title : L('loading')
 	}]);
 }
 
@@ -47,6 +47,9 @@ function selectUser(evt) {
 	}
 }
 
+/**
+ * Animate the forms
+ * */
 function animateView(e) {
 	var source = $[e.source.id + 'View'];
 	source.visible = true;
@@ -90,9 +93,9 @@ function createACL() {
 		public_write : writers.publicAccess
 	}, function(e) {
 		if (e.success) {
-			alert('Created!');
+			alert(L('created') + '!');
 		} else {
-			error(e);
+			Ti.API.info(JSON.stringify(e));
 		}
 	});
 }
@@ -111,9 +114,9 @@ function showAcl() {
 			readers.ids = acls.readers || [];
 			writers.publicAccess = acls.public_write || false;
 			writers.ids = acls.writers || [];
-			alert('Shown!');
+			alert(L('shown') + '!');
 		} else {
-			error(e);
+			Ti.API.info(JSON.stringify(e));
 		}
 	});
 }
@@ -127,9 +130,9 @@ function updateACL() {
 		public_write : writers.publicAccess
 	}, function(e) {
 		if (e.success) {
-			alert('Updated!');
+			alert(L('updated') + '!');
 		} else {
-			error(e);
+			Ti.API.info(JSON.stringify(e));
 		}
 	});
 }
@@ -139,9 +142,9 @@ function removeACL() {
 		name : $.snameVal.value
 	}, function(e) {
 		if (e.success) {
-			alert('Removed!');
+			alert(L('removed') + '!');
 		} else {
-			error(e);
+			Ti.API.info(JSON.stringify(e));
 		}
 	});
 }
@@ -157,9 +160,9 @@ function addUser() {
 		writer_ids : writers.ids.join(',')
 	}, function(e) {
 		if (e.success) {
-			alert('Added!');
+			alert(L('added') + '!');
 		} else {
-			error(e);
+			Ti.API.info(JSON.stringify(e));
 		}
 	});
 }
@@ -171,9 +174,9 @@ function removeUser() {
 		writer_ids : writers.ids.join(',')
 	}, function(e) {
 		if (e.success) {
-			alert('Removed!');
+			alert(L('removed') + '!');
 		} else {
-			error(e);
+			Ti.API.info(JSON.stringify(e));
 		}
 	});
 }
@@ -183,17 +186,21 @@ function hideTable() {
 }
 
 function queryUsers() {
+	$.userTable.setData([{
+		title : L('loading')
+	}]);
+	$.tableContent.visible = true;
 	Cloud.Users.query(function(e) {
 		if (e.success) {
 			if (e.users.length == 0) {
 				$.userTable.setData([{
-					title : 'No Users!'
+					title : L('no_users')
 				}]);
 			} else {
 				var data = [];
 				if ( typeof access.publicAccess != 'undefined') {
 					var rowData = {
-						title : '<Public Access>',
+						title : '<'+L('public_access')+'>',
 						id : 'publicAccess',
 						hasCheck : access.publicAccess || false
 					};
@@ -211,19 +218,14 @@ function queryUsers() {
 					data.push(row.getView());
 				}
 				$.userTable.setData(data);
-				$.tableContent.visible = true;
 			}
 		} else {
 			$.userTable.setData([{
 				title : (e.error && e.message) || e
 			}]);
-			error(e);
+			Ti.API.info(JSON.stringify(e));
 		}
 	});
-}
-
-function error(e) {
-	Ti.API.info(JSON.stringify(e));
 }
 
 initialize();

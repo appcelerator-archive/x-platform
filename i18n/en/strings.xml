@@ -189,6 +189,13 @@
 	<string name="remove_acl">Remove</string>
 	<string name="add_acluser">Add ACL User</string>
 	<string name="remove_acluser">Remove ACL User</string>
+	<string name="created">Created</string>
+	<string name="shown">Shown</string>
+	<string name="updated">Updated</string>
+	<string name="removed">Removed</string>
+	<string name="added">Added</string>
+	<string name="no_users">No Users</string>
+	<string name="public_access">Public Access</string>
 	<string name="crash_exceptions">Crash/Exceptions</string>
 	<string name="crash_app">Crash App</string>
 	<string name="handled_exception">Handled Exception</string>
