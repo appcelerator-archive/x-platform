@@ -3,7 +3,9 @@
 	width:500
 },
 "#chartView[formFactor=handheld]" :{
-	height:300,
+	height:300
+},
+"#chartView[platform=ios]" : {
 	width:"100%"
 },
 "#generateChart" :{
