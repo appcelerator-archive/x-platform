@@ -54,6 +54,10 @@ if(OS_IOS || OS_ANDROID || OS_BLACKBERRY){
 	Alloy.Collections.book = Alloy.createCollection('book');
 }
 
+/*
+ * Adding required variables and functions to quickly wrap the ti.cloud examples
+ * TODO: Should be cleaned up and added to commonJS module for acsExamples
+ */
 var Cloud = require('ti.cloud');
 var pushToken = '';
 Cloud.debug = true;
