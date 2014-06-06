@@ -9,9 +9,10 @@
         layout : "horizontal"
 },
 "#btnClear":{
-	 left:25,
+	 left:10,
 	 top:10,
-	 height:40
+	 height:40,
+	 title: L('clear')
 },
 "#btnConvexHull":{
 	 top:20
@@ -25,9 +26,10 @@
 	color:"#000000"
 },
 "#btnDraw":{
-	left:25,
+	left:10,
 	 top:10,
-	 height:40
+	 height:40,
+	 title: L('start_draw')
 },
 "#svPoints":{
 	 height:75,

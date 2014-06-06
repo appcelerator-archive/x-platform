@@ -91,8 +91,7 @@
 ".outerButton":{
 	top: 10,
 	color: "#ffffff",
-	left: 30,
-	right: 30
+	width: '80%',
 },
 ".contentView":{
 	height: 1,
@@ -104,8 +103,7 @@
 },
 ".nameTxt":{
 	top: 0,
-	left: 30,
-	right:30,
+	width: '80%',
 	height: 38,
 	font: {fontSize: 18},
 	borderColor: "#555",

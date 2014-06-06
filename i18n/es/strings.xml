@@ -194,6 +194,8 @@
 	<string name="added">Adicional</string>
 	<string name="no_users">No hay usuarios</string>
 	<string name="public_access">Acceso Público</string>
+	<string name="start_draw">Comience Draw</string>
+	<string name="clear">Claro</string>
 	<string name="crash_exceptions">Choque/Excepción</string>
 	<string name="crash_app">Choque Aplicación</string>
 	<string name="handled_exception">Manejó Excepción</string>

@@ -196,6 +196,8 @@
 	<string name="added">Added</string>
 	<string name="no_users">No Users</string>
 	<string name="public_access">Public Access</string>
+	<string name="start_draw">Start Draw</string>
+	<string name="clear">Clear</string>
 	<string name="crash_exceptions">Crash/Exceptions</string>
 	<string name="crash_app">Crash App</string>
 	<string name="handled_exception">Handled Exception</string>
