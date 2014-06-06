@@ -78,5 +78,8 @@
 		<View id="crashApp" class="menuItem" platform="ios,android">
 			<Label id="lblCrashApp"/>
 		</View>
+		<View id="acsExamples" class="menuItem" platform="ios,android">
+			<Label id="lblAcsExample"/>
+		</View>
 	</ScrollView>
 </Alloy>

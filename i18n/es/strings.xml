@@ -194,4 +194,5 @@
 	<string name="created_logged_in_as">Creado! Ahora está conectado como</string>
 	<string name="logged_in_as">Conectado! Ahora está conectado como</string>
 	<string name="submit">presentar</string>
+	<string name="acs_examples">ACS Ejemplos</string>
 </resources>

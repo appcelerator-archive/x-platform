@@ -196,4 +196,5 @@
 	<string name="created_logged_in_as">Created! You are now logged in as</string>
 	<string name="logged_in_as">Logged in! You are now logged in as</string>
 	<string name="submit">Submit</string>
+	<string name="acs_examples">ACS Examples</string>
 </resources>

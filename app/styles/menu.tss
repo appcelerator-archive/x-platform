@@ -107,3 +107,6 @@
 "#lblCrashApp":{
 	text: L('crash_exceptions')
 }
+"#lblAcsExample":{
+	text:L('acs_examples')
+}

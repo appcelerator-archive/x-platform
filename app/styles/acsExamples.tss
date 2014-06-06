@@ -1,0 +1,7 @@
+
+".container" : {
+    backgroundColor: '#fff',
+    navBarHidden: true,
+    exitOnClose: true,
+    layout:"vertical"
+}
