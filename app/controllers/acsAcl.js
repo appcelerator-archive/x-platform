@@ -68,6 +68,43 @@ function animateView(e) {
 		source.height = height;
 		source.visible = source.height === 1 ? false : true;
 	}
+	if(e.source.id === 'check'){
+		$.permissionTable.setData([{
+			title : L('loading')
+		}]);
+		populateUsers();
+	}
+}
+
+function populateUsers() {
+	Cloud.Users.query(function(e) {
+		if (e.success) {
+			if (e.users.length == 0) {
+				$.permissionTable.setData([{
+					title : 'No Users!'
+				}]);
+			} else {
+				var data = [];
+				for (var i = 0, l = e.users.length; i < l; i++) {
+					var user = e.users[i];
+					var rowData = {
+						title : user.first_name + ' ' + user.last_name,
+						id : user.id
+					};
+					var row = Alloy.createController('partials/aclRow', {
+						data : rowData
+					});
+					data.push(row.getView());
+				}
+				$.permissionTable.setData(data);
+			}
+		} else {
+			$.permissionTable.setData([{
+				title : (e.error && e.message) || e
+			}]);
+			Ti.API.info(JSON.stringify(e));
+		}
+	});
 }
 
 function selectReader() {
@@ -183,6 +220,26 @@ function removeUser() {
 
 function hideTable() {
 	$.tableContent.visible = false;
+}
+
+function checkUserPermission(evt){
+	if ($.cnameVal.value.length == 0) {
+    		$.cnameVal.focus();
+    		return;
+    	}
+        if (evt.row.id) {
+    		Cloud.ACLs.checkUser({
+    			name: $.cnameVal.value,
+            	user_id: evt.row.id
+        	}, function (e) {
+            	if (e.success) {
+					alert('Read Permission: ' + (e.permission['read_permission'] ? 'Yes': 'No') +  
+						  '\nWrite Permission: ' + (e.permission['write_permission'] ? 'Yes': 'No'));
+            	} else {
+                	Ti.API.info(JSON.stringify(e));
+            	}
+        	});
+        }
 }
 
 function queryUsers() {

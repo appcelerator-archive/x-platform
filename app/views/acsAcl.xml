@@ -29,6 +29,7 @@
 			<Button id="check" onClick="animateView" class="outerButton"/>
 			<View id="checkView" class="contentView">
 				<TextField id="cnameVal" class="nameTxt"></TextField>
+				<TableView id="permissionTable" onClick="checkUserPermission"/>
 			</View>
 		</ScrollView>
 		<View id="tableContent">
