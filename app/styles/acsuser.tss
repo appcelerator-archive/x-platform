@@ -6,15 +6,13 @@
 	title: L( 'create'),
 	top: 10,
 	color: "#ffffff",
-	left: 30,
-	right: 30
+	width: 200
 },
 "#login":{
 	title: L( 'login'),
 	top: 10,
 	color: "#ffffff",
-	left: 30,
-	right: 30
+	width: 200
 },
 ".contentView":{
 	height: 1,
@@ -173,13 +171,6 @@
 	passwordMask:true,
 	hintText:L('password')	
 },
-"#login":{
-	title: L('login'),
-	top: 10,
-	color: "#ffffff",
-	left: 30,
-	right: 30
-},
 "#submit":{
-	title: L('submit'),
+	title: L('submit')
 }

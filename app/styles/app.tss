@@ -16,7 +16,7 @@
 	backgroundColor: "#a22621"
 },
 ".innerButton":{
-	width: '50%',
+	width: 160,
 	top: 10,
 	color: "#ffffff"
 }
