@@ -108,7 +108,8 @@ addBackButton = function (win) {
     }
     var back = Ti.UI.createButton({
         title: 'Back',
-        color: '#fff', backgroundColor: '#000',
+        color: '#fff', 
+        backgroundColor: "#a22621",
         style: 0,
         top: top, left: 0, right: 0,
         height: 40 + u
