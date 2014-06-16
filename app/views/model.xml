@@ -16,7 +16,7 @@
 		</View>
 		<!-- Specifies the collection singleton or instance to bind to the table. -->
 		<TableView id="tblBooks" dataCollection="book" onClick="performOperation">
-			<Require src="partials/bookRow">
+			<Require src="partials/bookRow"/>
 		</TableView>	
 	</Window>
 </Alloy>
