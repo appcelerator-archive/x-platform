@@ -6,15 +6,13 @@
 	title: L( 'create'),
 	top: 10,
 	color: "#ffffff",
-	left: 30,
-	right: 30
+	width: 200
 },
 "#login":{
 	title: L( 'login'),
 	top: 10,
 	color: "#ffffff",
-	left: 30,
-	right: 30
+	width: 200
 },
 ".contentView":{
 	height: 1,
@@ -35,7 +33,7 @@
 	width: Ti.UI.FILL,
 	left: 30,
 	right:30,
-	height: 30,
+	height: 38,
 	font: {fontSize: 18},
 	borderColor: "#555",
 	borderWidth: 1,
@@ -53,7 +51,7 @@
 	width: Ti.UI.FILL,
 	left: 30,
 	right:30,
-	height: 30,
+	height: 38,
 	font: {fontSize: 18},
 	borderColor: "#555",
 	borderWidth: 1,
@@ -72,7 +70,7 @@
 	width: Ti.UI.FILL,
 	left: 30,
 	right:30,
-	height: 30,
+	height: 38,
 	font: {fontSize: 18},
 	borderColor: "#555",
 	borderWidth: 1,
@@ -91,7 +89,7 @@
 	width: Ti.UI.FILL,
 	left: 30,
 	right:30,
-	height: 30,
+	height: 38,
 	font: {fontSize: 18},
 	borderColor: "#555",
 	borderWidth: 1,
@@ -110,7 +108,7 @@
 	left: 30,
 	right:30,
 	font: {fontSize: 18},
-	height: 30,
+	height: 38,
 	borderColor: "#555",
 	borderWidth: 1,
 	hintText:L('acs_last_name')
@@ -127,7 +125,7 @@
 	width: Ti.UI.FILL,
 	left: 30,
 	right:30,
-	height: 30,
+	height: 38,
 	font: {fontSize: 18},
 	borderColor: "#555",
 	borderWidth: 1,
@@ -148,7 +146,7 @@
 	width: Ti.UI.FILL,
 	left: 30,
 	right:30,
-	height: 30,
+	height: 38,
 	font: {fontSize: 18},
 	borderColor: "#555",
 	borderWidth: 1,
@@ -166,20 +164,13 @@
 	width: Ti.UI.FILL,
 	left: 30,
 	right:30,
-	height: 30,
+	height: 38,
 	font: {fontSize: 18},
 	borderColor: "#555",
 	borderWidth: 1,
 	passwordMask:true,
 	hintText:L('password')	
 },
-"#login":{
-	title: L('login'),
-	top: 10,
-	color: "#ffffff",
-	left: 30,
-	right: 30
-},
 "#submit":{
-	title: L('submit'),
+	title: L('submit')
 }

@@ -1,0 +1,22 @@
+"#aclRow" :{
+	height: 40,
+	backgroundColor :"#ffffff",
+	selectionStyle: "none"
+},
+"#aclRow[platform=blackberry]":{
+	height: 50
+},
+"#rowView" :{
+	backgroundColor: "#eeeeee",
+	width:"100%",
+	top: 0,
+	bottom: 5,
+	touchEnabled: false
+},
+"#rowTitle" : {
+	width: "auto",
+	left: 20,
+	font: {fontFamily: "HelveticaNeue", fontSize :"14"},
+	color: "#505050",
+	touchEnabled: false
+}

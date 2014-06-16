@@ -16,34 +16,28 @@ function closeWindow() {
 }
 
 /**
- * Animate the create user form
+ * Animate the create/login user form
  * */
-function openCreateView(e) {
-	$.userView.visible = true;
-	var height = $.userView.height === 1 ? Ti.UI.SIZE : 1;
-	$.userView.animate(Ti.UI.createAnimation({
-		height : height,
-		duration : 200
-	}), function() {
-		$.userView.height = height;
-		$.userView.visible = $.userView.height === 1 ? false : true;
-	});
+function animateView(e) {
+	var source = $[e.source.id + 'View'];
+	source.visible = true;
+	var height = source.height === 1 ? Ti.UI.SIZE : 1;
+	if (OS_IOS) {
+		var animationObject = Ti.UI.createAnimation({
+			height : height,
+			duration : 200
+		});
+		animationObject.addEventListener('complete', function() {
+			source.height = height;
+			source.visible = source.height === 1 ? false : true;
+		});
+		source.animate(animationObject);
+	} else {
+		source.height = height;
+		source.visible = source.height === 1 ? false : true;
+	}
 }
 
-/**
- * Animat ethe Login Form
- * */
-function openLoginView(e) {
-	$.loginView.visible = true;
-	var height = $.loginView.height === 1 ? Ti.UI.SIZE : 1;
-	$.loginView.animate({
-		height : height,
-		duration : 200
-	}, function() {
-		$.loginView.height = height;
-		$.loginView.visible = $.loginView.height === 1 ? false : true;
-	});
-}
 
 /**
  * Creates user on cloud

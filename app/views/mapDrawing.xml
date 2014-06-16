@@ -4,8 +4,8 @@
 		<View id="btnView">
 			<Label id="lblConvexHull">Convex\nHull</Label>
 			<Switch id="btnConvexHull" value="true" onChange="ConvexHull"/>
-			<Button id="btnDraw" onClick="startDraw">Start Draw</Button>
-			<Button id="btnClear" onClick="clearRoute" >Clear</Button>
+			<Button id="btnDraw" onClick="startDraw"></Button>
+			<Button id="btnClear" onClick="clearRoute" ></Button>
 		</View>
 		<ScrollView id="svPoints">
 			<Label id="lblRoute" />
