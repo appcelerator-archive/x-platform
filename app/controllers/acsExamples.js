@@ -11,10 +11,10 @@ function initialize() {
  * Closes the window
  * */
 function closeWindow() {
-	$.acsExamples.close();
+	$.win.close();
 }
 
-initialize() 
+initialize();
 /*
  * We'll follow a really simple paradigm in this example app. It's going to be a hierarchy of tables where you can drill
  * in to individual examples for each ACS namespace.
@@ -52,7 +52,6 @@ Ti.include(
     '/acsExamples/windows/users/table.js',
     '/acsExamples/windows/accessControlLists/table.js'
 );
-
 
 var table = Ti.UI.createTableView({
     backgroundColor: '#fff',
