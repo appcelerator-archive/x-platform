@@ -12,7 +12,7 @@
 		<View id="barcode" class="menuItem">
 			<Label  id="lblbarcode"/>
 		</View>
-		<View id="charts" class="menuItem" platform="ios,android">
+		<View id="charts" class="menuItem" platform="ios,android, mobileweb">
 			<Label id="lblcharts"/>
 		</View>
 		<View id="calendar" class="menuItem" platform="ios,android">
