@@ -30,7 +30,7 @@
 		<View id="localHtml" controller="fileViewer" title="Local HTML File" class="menuItem" print="false" url="/html/index.html">
 			<Label  id="lbllocalHtml"/>
 		</View>
-		<View id="localPdf" controller="fileViewer" title="Local PDF File" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios">
+		<View id="localPdf" controller="fileViewer" title="Local PDF File" class="menuItem" print="true" url="/Data_Sheet.pdf" platform="ios, mobileweb">
 			<Label id="lbllocalPdf"/>
 		</View>
 		<View id="jsPDF" class="menuItem" platform="ios,android">
