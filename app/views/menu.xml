@@ -24,7 +24,7 @@
 		<View id="pushnotifications" class="menuItem" platform="ios,android">
 			<Label  id="lblpush"/>
 		</View>
-		<View id="RemoteHtml" controller="fileViewer" title="Remote HTML File" class="menuItem" print="false" url="http://www.appcelerator.com">
+		<View id="RemoteHtml" controller="fileViewer" title="Remote HTML File" class="menuItem" print="false" url="http://www.wikipedia.com">
 			<Label  id="lblremoteHtml"/>
 		</View>
 		<View id="localHtml" controller="fileViewer" title="Local HTML File" class="menuItem" print="false" url="/html/index.html">
