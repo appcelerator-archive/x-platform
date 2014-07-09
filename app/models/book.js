@@ -38,7 +38,7 @@ exports.definition = {
 			// Implement the comparator method.
     	    comparator : function(book) {
         	    return book.get('title');
-            }
+           }
 		});
 
 		return Collection;

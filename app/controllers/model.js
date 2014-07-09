@@ -18,6 +18,15 @@ function closeWindow() {
 };
 
 /**
+ * This will clear out the view binding on the tableView
+ * @method clearBinding
+ */
+var clearBinding = function(){
+	$.destroy();
+};
+$.modelWin.addEventListener("close", clearBinding );
+
+/**
  * Add the book in DB
  * */
 function addBook() {
@@ -35,6 +44,8 @@ function addBook() {
 		});
 		book.save();
 		clearData();
+		$.titleVal.blur();
+		$.authorVal.blur();
 	}
 };
 
